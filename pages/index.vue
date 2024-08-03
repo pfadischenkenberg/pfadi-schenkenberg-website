@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Hello Vue!!</h1>
+    <img src="assets/img/hero_fin.jpg" alt="">
   </div>
 </template>
 

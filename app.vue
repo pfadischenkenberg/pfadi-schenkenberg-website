@@ -1,6 +1,7 @@
 <template>
   <div>
     <NuxtRouteAnnouncer/>
+    <AppHeader/>
     <NuxtPage/>
   </div>
 </template>
@@ -9,7 +10,4 @@
 @use "assets/scss/main";
 @import "assets/scss/variables";
 
-div {
-  background-color: $asparagus-500;
-}
 </style>

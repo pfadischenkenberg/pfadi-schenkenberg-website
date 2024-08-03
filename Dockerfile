@@ -12,6 +12,7 @@ FROM base as build
 COPY --link package.json package-lock.json .
 RUN npm install
 
+# Install dependencies
 RUN npm install -D sass
 
 # Run

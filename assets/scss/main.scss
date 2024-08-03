@@ -1,7 +1,15 @@
 @import "variables";
 @import "fonts";
+@import "reset";
 
 body {
   font-family: Fira Sans, sans-serif;
-  background-color: $burnt-sienna-400;
+  color: $burnt-sienna-950;
+  background-color: $burnt-sienna-50;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1.5rem;
 }
