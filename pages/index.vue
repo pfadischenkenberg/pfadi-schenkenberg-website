@@ -67,6 +67,10 @@ main {
 
         transform: rotate(10deg);
       }
+
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
     }
   }
 
