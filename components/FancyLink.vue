@@ -41,6 +41,17 @@ const props = defineProps({
     z-index: -1;
 
     background-color: $tan-hide-400;
+    transition: top 0.15s ease, left 0.15s ease;
+
+  }
+
+  &:hover::after {
+    left: 0.4rem;
+    top: 1.2rem;
+  }
+   &:active::after {
+    left: 0;
+    top: 1rem;
   }
 }
 </style>
