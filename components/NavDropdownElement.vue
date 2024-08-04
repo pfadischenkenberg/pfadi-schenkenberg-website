@@ -31,12 +31,10 @@ let expanded = ref(false);
 
 function openDropdown() {
   expanded.value = true;
-  console.log("EXPANDED")
 }
 
 function closeDropdown() {
   expanded.value = false;
-  console.log("COLLAPSED")
 }
 </script>
 
@@ -61,7 +59,7 @@ function closeDropdown() {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
 
     padding-top: 0.5rem;
     min-width: 100%;
@@ -72,12 +70,13 @@ function closeDropdown() {
 
       list-style-type: none;
       border-radius: 4px;
-      background-color: rgba($tan-hide-100, 0.2);
+      background-color: rgba($tan-hide-100, 0.5);
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
 
       & > * {
         margin-block: 0.2rem;
+        text-align: left;
       }
     }
   }

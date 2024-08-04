@@ -35,6 +35,19 @@
       color: $text-dark;
       line-height: 1.6rem;
     }
+
+    @media screen and (max-width: $screen-size-small) {
+      gap: 0.5rem;
+
+      img {
+        height: 2.5rem;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1rem;
+      }
+    }
   }
+
 }
 </style>
