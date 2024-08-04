@@ -13,7 +13,16 @@
           <li>
             <RouterLink to="/">Administratives</RouterLink>
           </li>
-          <li>Tips und Tricks</li>
+          <li>
+            <NavDropdownElement text="Tips & Tricks">
+              <li>
+                <RouterLink to="/links">Links</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/faq">FAQs</RouterLink>
+              </li>
+            </NavDropdownElement>
+          </li>
         </ul>
       </nav>
     </header>
@@ -59,6 +68,10 @@ header {
         a {
           text-decoration: none;
           color: $text-dark;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
