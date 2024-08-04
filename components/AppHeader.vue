@@ -8,10 +8,10 @@
             <RouterLink to="/">Startseite</RouterLink>
           </li>
           <li>
-            <RouterLink to="/">Stufen</RouterLink>
+            <RouterLink to="/stufen">Stufen</RouterLink>
           </li>
           <li>
-            <RouterLink to="/">Administratives</RouterLink>
+            <RouterLink to="/administratives">Administratives</RouterLink>
           </li>
           <li>
             <NavDropdownElement text="Tips & Tricks">

@@ -64,6 +64,11 @@ function closeDropdown() {
     padding-top: 0.5rem;
     min-width: 100%;
 
+
+    @media screen and (max-width: $screen-size-small) {
+      min-width: 50%;
+    }
+
     .dropdown {
       padding: 0.5rem 0.8rem;
       white-space: nowrap;
@@ -76,7 +81,6 @@ function closeDropdown() {
 
       & > * {
         margin-block: 0.2rem;
-        text-align: left;
       }
     }
   }
