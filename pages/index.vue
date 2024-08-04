@@ -1,21 +1,12 @@
 <template>
   <div>
-    <img src="assets/img/hero_fin.jpg" alt="">
-    <img src="assets/img/hero_fin.jpg" alt="">
-    <img src="assets/img/hero_fin.jpg" alt="">
-    <img src="assets/img/hero_fin.jpg" alt="">
-    <img src="assets/img/hero_fin.jpg" alt="">
-    <img src="assets/img/hero_fin.jpg" alt="">
-    <img src="assets/img/hero_fin.jpg" alt="">
-    <img src="assets/img/hero_fin.jpg" alt="">
-    <img src="assets/img/hero_fin.jpg" alt="">
-    <img src="assets/img/hero_fin.jpg" alt="">
-    <img src="assets/img/hero_fin.jpg" alt="">
+    <AppHero>Willkommen bei der</AppHero>
   </div>
 </template>
 
 <script setup lang="ts">
 
+import AppHero from "~/components/AppHero.vue";
 </script>
 
 <style lang="scss" scoped>

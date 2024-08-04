@@ -20,4 +20,4 @@ FROM base
 
 COPY --from=build /src/node_modules /src/node_modules
 
-CMD [ "npm", "run", "dev" ]
+CMD ["rm", "-rf", "/tmp/nitro", "npm", "run", "dev" ]

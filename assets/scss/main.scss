@@ -13,3 +13,11 @@ body {
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 1.5rem;
 }
+
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  ::selection, ::-moz-selection {
+    color: $burnt-sienna-100;
+    background: $asparagus-400;
+  }
+}
