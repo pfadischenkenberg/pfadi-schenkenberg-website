@@ -26,7 +26,7 @@
   height: 38rem;
 
   z-index: -1;
-  background-image: url("assets/img/fotos/hero.png");
+  background-image: url("assets/img/fotos/hero.jpg");
   background-position: center;
   background-size: cover;
 
