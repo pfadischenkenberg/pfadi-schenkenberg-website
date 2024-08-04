@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AppHero>Die Stufen der</AppHero>
+    <DefaultHero>Die Stufen der</DefaultHero>
     <h1>Srufen</h1>
   </div>
 </template>

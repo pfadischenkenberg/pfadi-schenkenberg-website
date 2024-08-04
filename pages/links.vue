@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AppHero>Nützliche Links zur</AppHero>
+    <DefaultHero>Nützliche Links zur</DefaultHero>
   </div>
 </template>
 

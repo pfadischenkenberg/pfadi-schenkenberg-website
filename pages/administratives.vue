@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AppHero>Administratives zur</AppHero>
+    <DefaultHero>Administratives zur</DefaultHero>
   </div>
 </template>
 
