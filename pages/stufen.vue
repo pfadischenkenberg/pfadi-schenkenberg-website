@@ -1,5 +1,6 @@
 <template>
   <div>
+    <AppHero>Die Stufen der</AppHero>
     <h1>Srufen</h1>
   </div>
 </template>

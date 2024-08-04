@@ -1,6 +1,6 @@
 <template>
   <div>
-
+    <AppHero>Mögliche Fragen zur</AppHero>
   </div>
 </template>
 
