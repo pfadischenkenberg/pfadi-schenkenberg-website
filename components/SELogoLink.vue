@@ -34,6 +34,7 @@
       font-weight: bold;
       color: $text-dark;
       line-height: 1.6rem;
+    margin: 0;
     }
 
     @media screen and (max-width: $screen-size-small) {

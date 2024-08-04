@@ -1,3 +1,4 @@
+/* Fira Sans Font Faces */
 @font-face {
   font-family: "Fira Sans";
   font-weight: 100;
@@ -9,7 +10,7 @@
   font-family: "Fira Sans";
   font-weight: 100;
   font-style: italic;
-  src: url('/fonts/Fira_Sans/FiraSans-Thinltalic.ttf') format('truetype');
+  src: url('/fonts/Fira_Sans/FiraSans-ThinItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -23,7 +24,7 @@
   font-family: "Fira Sans";
   font-weight: 200;
   font-style: italic;
-  src: url('/fonts/Fira_Sans/FiraSans-ExtraLightltalic.ttf') format('truetype');
+  src: url('/fonts/Fira_Sans/FiraSans-ExtraLightItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -37,7 +38,7 @@
   font-family: "Fira Sans";
   font-weight: 300;
   font-style: italic;
-  src: url('/fonts/Fira_Sans/FiraSans-Lightltalic.ttf') format('truetype');
+  src: url('/fonts/Fira_Sans/FiraSans-LightItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -51,7 +52,7 @@
   font-family: "Fira Sans";
   font-weight: 400;
   font-style: italic;
-  src: url('/fonts/Fira_Sans/FiraSans-ltalic.ttf') format('truetype');
+  src: url('/fonts/Fira_Sans/FiraSans-Italic.ttf') format('truetype');
 }
 
 @font-face {
@@ -65,7 +66,7 @@
   font-family: "Fira Sans";
   font-weight: 500;
   font-style: italic;
-  src: url('/fonts/Fira_Sans/FiraSans-Mediumltalic.ttf') format('truetype');
+  src: url('/fonts/Fira_Sans/FiraSans-MediumItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -79,7 +80,7 @@
   font-family: "Fira Sans";
   font-weight: 600;
   font-style: italic;
-  src: url('/fonts/Fira_Sans/FiraSans-SemiBoldltalic.ttf') format('truetype');
+  src: url('/fonts/Fira_Sans/FiraSans-SemiBoldItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -93,7 +94,7 @@
   font-family: "Fira Sans";
   font-weight: 700;
   font-style: italic;
-  src: url('/fonts/Fira_Sans/FiraSans-Boldltalic.ttf') format('truetype');
+  src: url('/fonts/Fira_Sans/FiraSans-BoldItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -107,7 +108,7 @@
   font-family: "Fira Sans";
   font-weight: 800;
   font-style: italic;
-  src: url('/fonts/Fira_Sans/FiraSans-ExtraBoldltalic.ttf') format('truetype');
+  src: url('/fonts/Fira_Sans/FiraSans-ExtraBoldItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -121,9 +122,10 @@
   font-family: "Fira Sans";
   font-weight: 900;
   font-style: italic;
-  src: url('/fonts/Fira_Sans/FiraSans-Blackltalic.ttf') format('truetype');
+  src: url('/fonts/Fira_Sans/FiraSans-BlackItalic.ttf') format('truetype');
 }
 
+/* Patrick Hand Font Face */
 @font-face {
   font-family: "Patrick Hand";
   font-weight: 400;
@@ -131,6 +133,7 @@
   src: url('/fonts/Patrick_Hand/PatrickHand-Regular.ttf') format('truetype');
 }
 
+/* Istok Web Font Face */
 @font-face {
   font-family: "Istok Web";
   font-weight: bold;

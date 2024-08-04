@@ -65,7 +65,8 @@ header {
 
       li {
 
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
         font-weight: 600;
         white-space: nowrap;
 

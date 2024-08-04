@@ -35,6 +35,7 @@
     font-family: "Patrick Hand", sans-serif;
     font-size: 4rem;
     line-height: 4rem;
+    margin: 0;
 
     color: $tan-hide-400;
   }

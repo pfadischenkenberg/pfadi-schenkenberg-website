@@ -30,6 +30,7 @@
     font-family: "Patrick Hand", sans-serif;
     font-size: 3.2rem;
     line-height: 3.2rem;
+    margin: 0;
   }
 }
 
