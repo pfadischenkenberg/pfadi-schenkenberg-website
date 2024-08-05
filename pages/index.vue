@@ -23,7 +23,7 @@
           Bei Fragen geben wir gerne Auskunft.<br>
           Wir freuen uns auf dich!</p>
         <div class="anmelde-link">
-          <FancyLink to="www.google.com">Jetzt vorbeischauen!</FancyLink>
+          <FancyLink to="/administratives#schnuppern">Jetzt vorbeischauen!</FancyLink>
         </div>
         <div id="note-ages">
           <img src="assets/img/arrow-note-ages.svg" alt="Gestrichelter Pfeil" draggable="false">
