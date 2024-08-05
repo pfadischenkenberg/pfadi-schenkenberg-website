@@ -1,75 +1,30 @@
-# Nuxt 3 Minimal Starter
+# Pfadi Schenkenberg Website
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Das repo zur Website der Pfadi Schenkenberg
+
+[pfadischenkenberg.ch](pfadischenkenberg.ch)
 
 ## Setup
 
-Make sure to install the dependencies:
+### Mit Docker (empfohlen)
 
 ```bash
-# npm
+docker compose up
+```
+
+<details>
+  <summary><h3 style="display: inline">Mit node</h3></summary>
+
+![](https://img.shields.io/badge/Node-20.16.0-green)
+
+```bash
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+</details>
 
-Build the application for production:
+## Committen
+Niemals auf `main`!!!
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Nur in `dev` bzw. ein Feature Branch erstellen.

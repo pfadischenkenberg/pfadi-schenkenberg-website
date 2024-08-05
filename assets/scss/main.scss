@@ -1,0 +1,57 @@
+@import "variables";
+@import "fonts";
+@import "reset";
+
+body {
+  font-family: Fira Sans, sans-serif;
+  color: $burnt-sienna-950;
+  background-color: $burnt-sienna-50;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1.5rem;
+}
+
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  ::selection {
+    color: $burnt-sienna-100;
+    background: $asparagus-400;
+
+  }
+
+  ::-moz-selection {
+    color: $burnt-sienna-100;
+    background: $asparagus-400;
+  }
+
+  main {
+    margin: 6rem $default-inline-padding 8rem;
+  }
+
+  h1 {
+    margin-bottom: 3rem;
+    font-size: 5rem;
+    line-height: 5rem;
+    font-family: "Patrick Hand", sans-serif;
+    color: $burnt-sienna-700;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+    margin-block: 1rem;
+  }
+
+  i, em {
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  b, strong {
+    font-weight: 600;
+    color: $asparagus-600;
+  }
+}
