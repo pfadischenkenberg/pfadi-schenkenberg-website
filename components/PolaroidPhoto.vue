@@ -24,7 +24,7 @@ const props = defineProps({
 @import "assets/scss/variables";
 
 .polaroid-photo {
-  padding: 2rem 2rem 1rem;
+  padding: 1.4rem 1.4rem 1rem;
   height: max-content;
   margin: 0;
 
