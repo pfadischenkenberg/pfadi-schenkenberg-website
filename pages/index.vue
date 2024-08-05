@@ -31,6 +31,10 @@
             grobe Richtwerte</p>
         </div>
       </div>
+      <div class="photo-wrapper">
+        <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg">Abteilungs-Gruppenfoto Aufla 24</PolaroidPhoto>
+        <PolaroidPhoto src="/img/kinder-spielen.jpg">PfiLa 2021</PolaroidPhoto>
+      </div>
     </main>
   </div>
 </template>
@@ -72,6 +76,14 @@ main {
         display: none;
       }
     }
+  }
+
+  .photo-wrapper {
+    grid-column: 8/13;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
   }
 
 }
