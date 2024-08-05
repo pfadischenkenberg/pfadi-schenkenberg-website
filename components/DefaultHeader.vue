@@ -1,33 +1,31 @@
 <template>
-  <div class="app-header">
-    <header>
-      <SELogoLink/>
-      <nav>
-        <ul :class="{expanded: expanded}">
-          <li class="first">
-            <RouterLink to="/">Startseite</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/stufen">Stufen</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/administratives">Administratives</RouterLink>
-          </li>
-          <li>
-            <NavDropdownElement text="Tips & Tricks">
-              <li>
-                <RouterLink to="/links">Links</RouterLink>
-              </li>
-              <li>
-                <RouterLink to="/faq">FAQs</RouterLink>
-              </li>
-            </NavDropdownElement>
-          </li>
-        </ul>
-        <HamburgerButton v-model:expanded="expanded"/>
-      </nav>
-    </header>
-  </div>
+  <header>
+    <SELogoLink/>
+    <nav>
+      <ul :class="{expanded: expanded}">
+        <li class="first">
+          <NuxtLink to="/">Startseite</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/stufen">Stufen</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/administratives">Administratives</NuxtLink>
+        </li>
+        <li>
+          <NavDropdownElement text="Tips & Tricks">
+            <li>
+              <NuxtLink to="/links">Links</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/faq">FAQs</NuxtLink>
+            </li>
+          </NavDropdownElement>
+        </li>
+      </ul>
+      <HamburgerButton v-model:expanded="expanded"/>
+    </nav>
+  </header>
 </template>
 
 <script setup lang="ts">

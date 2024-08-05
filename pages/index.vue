@@ -58,6 +58,8 @@ main {
       position: relative;
       bottom: 17.8rem;
       left: -7.5rem;
+      margin-bottom: -20rem;
+      margin-right: -7.5rem;
       z-index: -1;
 
       img {

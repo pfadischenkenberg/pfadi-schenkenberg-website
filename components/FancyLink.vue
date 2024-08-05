@@ -1,7 +1,7 @@
 <template>
-  <a :href="props.to" class="fancy-link">
+  <NuxtLink :to="props.to" class="fancy-link">
     <slot/>
-  </a>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
