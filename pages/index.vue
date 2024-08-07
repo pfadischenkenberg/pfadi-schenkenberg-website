@@ -44,6 +44,8 @@
 
 <style lang="scss" scoped>
 main {
+  margin-top: 6rem;
+
   .text {
     grid-column: 1/8;
 
