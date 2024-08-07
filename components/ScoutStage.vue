@@ -84,6 +84,9 @@ const contentHtml = `<p>${stage.text.intro}</p><p>${stage.text.main}</p>`;
 
     .scout-stage-side {
       grid-column: 8/13;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
 
       .scout-stage-data {
         display: flex;
@@ -95,6 +98,7 @@ const contentHtml = `<p>${stage.text.intro}</p><p>${stage.text.main}</p>`;
           color: $burnt-sienna-400;
         }
 
+
         p, a {
           font-size: 1.2rem;
           line-height: 1.2rem;
@@ -103,6 +107,20 @@ const contentHtml = `<p>${stage.text.intro}</p><p>${stage.text.main}</p>`;
 
         p {
           font-weight: 500;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+
+          gap: 1rem;
+
+        }
+
+        .scout-stage-leaders {
+          div {
+            gap: 0.4rem;
+          }
         }
       }
     }
