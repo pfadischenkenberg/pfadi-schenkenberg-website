@@ -24,7 +24,7 @@ const props = defineProps({
 @import "assets/scss/variables";
 
 .polaroid-photo {
-  padding: 1.4rem 1.4rem 1rem;
+  padding: 2rem 2rem 1rem;
   height: max-content;
   margin: 0;
 
@@ -42,6 +42,7 @@ const props = defineProps({
   figcaption {
     font-family: "Patrick Hand", sans-serif;
     font-size: 2rem;
+    margin-block: 0.5rem;
   }
 }
 </style>
