@@ -1,15 +1,15 @@
 <template>
   <div>
-    <DefaultHero>Willkommen bei der</DefaultHero>
-    <AnmeldenBanner/>
+    <DefaultHero wave="false">Willkommen bei der</DefaultHero>
+    <AnmeldenBanner />
     <main class="grid-container">
       <div class="text">
         <h1>Das sind wir</h1>
         <p>Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, die sich
-          wie
-          die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig. Denn wir treffen
-          uns
-          jeden Samstagnachmittag, meist rund um Basel und draussen in der Natur: Gemeinsam spielen, eine Schnitzeljagd
+          wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig. Denn wir
+          treffen
+          uns jeden Samstagnachmittag, meist rund um Basel und draussen in der Natur: Gemeinsam spielen, eine
+          Schnitzeljagd
           machen, lustigen Kreaturen helfen, fein essen, etwas Sinnvolles lernen oder es einfach schön miteinander
           haben.</p>
         <p>Wir schaffen unvergessliche Momente in drei Altersstufen:<br>
