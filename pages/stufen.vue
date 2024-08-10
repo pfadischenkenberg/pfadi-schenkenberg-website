@@ -16,6 +16,7 @@ const stages = [
   {
     title: "Die Wölfli",
     targetGroup: "6-11 Jahre",
+    email: "woelfli@pfadischenkenberg.ch",
     image: {
       src: "/img/leitungsteam-woelfli.jpg",
       alt: "Leitungsteam der Wölflistufe der Pfadi Schenkenberg im AufLa 2024",
@@ -26,7 +27,6 @@ const stages = [
       list: [{
         name: "Jara Senn",
         vulgo: "Mononoke",
-        email: "jara.senn@gmx.ch"
       }]
     },
     calendar: {
@@ -45,6 +45,7 @@ Wir freuen uns auf dich!`
   {
     title: "Die Pfadis",
     targetGroup: "11-14 Jahre",
+    email: "pfadi@pfadischenkenberg.ch",
     image: {
       src: "/img/leitungsteam-pfadi.jpg",
       alt: "Leitungsteam der Pfadistufe der Pfadi Schenkenberg im AufLa 2024",
@@ -55,11 +56,9 @@ Wir freuen uns auf dich!`
       list: [{
         name: "Dan Malzacher",
         vulgo: "Faramir",
-        email: "dan.malzacher25@gmail.com"
       }, {
         name: "Zora Landolt",
         vulgo: "Guarda",
-        email: "zora.landolt@gmx.ch"
       }]
     },
     calendar: {
@@ -78,6 +77,7 @@ Wir freuen uns auf dich!`
   {
     title: "Die Pios",
     targetGroup: "14-16 Jahre",
+    email: "pio@pfadischenkenberg.ch",
     image: {
       src: "/img/leitungsteam-pio.jpg",
       alt: "Leitungsteam der Piostufe der Pfadi Schenkenberg um AufLa 2024",
@@ -88,7 +88,6 @@ Wir freuen uns auf dich!`
       list: [{
         name: "Raphael Purtschert",
         vulgo: "Spuko",
-        email: "raphaelpurtschert@gmail.com"
       }]
     },
     calendar: {
@@ -104,6 +103,7 @@ Wenn die Pios kein eigenes Programm haben, können sie immer auch an den regulä
   {
     title: "Der APV",
     targetGroup: "Altpfadfinder*innenverein",
+    email: "apv@pfadischenkenberg.ch",
     image: {
       src: "/img/foto-apv.jpg",
       alt: "Der Altpfadvinderverein der Pfadi Schenkenberg an einem APV-Anlass gemeinsamen am Abendessen.",
@@ -114,7 +114,6 @@ Wenn die Pios kein eigenes Programm haben, können sie immer auch an den regulä
       list: [{
         name: "Tim Purtschert",
         vulgo: "Chirpa",
-        email: "chirpa.schenkenberg@gmail.com"
       }]
     },
     calendar: {

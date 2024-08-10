@@ -14,10 +14,8 @@
         <div class="scout-stage-data">
           <div class="scout-stage-leaders">
             <h4>{{ stage.leaders.label }}</h4>
-            <div v-for="leader in stage.leaders.list">
-              <p>{{ `${leader.name} v/o ${leader.vulgo}` }}</p>
-              <a :href="`mailto:${leader.email}`">{{ leader.email }}</a>
-            </div>
+              <p v-for="leader in stage.leaders.list">{{ `${leader.name} v/o ${leader.vulgo}` }}</p>
+              <a :href="`mailto:${stage.email}`">{{ stage.email }}</a>
           </div>
 
           <div v-if="stage.calendar.existing" class="scout-stage-calendar">
@@ -35,6 +33,7 @@
 interface ScoutStageProps {
   title: string,
   targetGroup: string,
+  email: string,
   image: {
     src: string,
     alt: string,
@@ -45,7 +44,6 @@ interface ScoutStageProps {
     list: [{
       name: string,
       vulgo: string,
-      email: string
     }]
   },
   calendar: {
