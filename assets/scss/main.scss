@@ -2,10 +2,15 @@
 @import "fonts";
 @import "reset";
 
+html {
+  scroll-padding-top: 8rem;
+}
+
 body {
   font-family: Fira Sans, sans-serif;
   color: $burnt-sienna-950;
   background-color: $burnt-sienna-50;
+  scroll-behavior: smooth;
 }
 
 .grid-container {
@@ -63,6 +68,11 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     font-size: 1.5rem;
     line-height: 2.1rem;
     margin-block: 1rem;
+    text-wrap: balance;
+
+    @supports (text-wrap: pretty) {
+      text-wrap: pretty;
+    }
   }
 
   a {

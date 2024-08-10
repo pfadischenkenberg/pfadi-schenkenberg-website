@@ -1,7 +1,7 @@
 <template>
   <div class="anmelden-banner">
     <p>Lust, Pfadiluft zu schnuppern?</p>
-    <FancyLink to="/stufen">Zur Anmeldung</FancyLink>
+    <FancyLink to="/administratives#schnuppern">Zur Anmeldung</FancyLink>
   </div>
 </template>
 

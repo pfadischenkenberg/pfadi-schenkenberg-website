@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="props.src" download external>
+  <NuxtLink :to="props.src" download external class="file">
     {{ fileName }}
   </NuxtLink>
 </template>
@@ -25,6 +25,7 @@ a::before {
   content: "";
   width: 2rem;
   height: 2rem;
+  margin-right: 0.5rem;
   display: inline-block;
   background-image: url("assets/img/file-icon.svg");
   background-size: contain;
