@@ -12,6 +12,16 @@
 </template>
 
 <script setup lang="ts">
+
+useSeoMeta({
+  title: "Stufen | Pfadi Schenkenberg",
+  ogTitle: "Stufen | Pfadi Schenkenberg",
+  description: "Bist du zwischen 6 und 11 Jahre alt und willst die Welt der Wölfli sowie viele verschiedene Abenteuer erleben? Dann bist du bei uns in der Wölfli-Stufe der Pfadi Schenkenberg genau Richtig!",
+  ogDescription: "Bist du zwischen 6 und 11 Jahre alt und willst die Welt der Wölfli sowie viele verschiedene Abenteuer erleben? Dann bist du bei uns in der Wölfli-Stufe der Pfadi Schenkenberg genau Richtig!",
+  ogImage: "/img/gruppenfoto-abteilung.jpg",
+  twitterCard: "summary_large_image"
+});
+
 const stages = [
   {
     title: "Die Wölfli",

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <DefaultHero wave="false">Willkommen bei der</DefaultHero>
+    <DefaultHero :wave="false">Willkommen bei der</DefaultHero>
     <AnmeldenBanner />
     <main class="grid-container">
       <div class="text">
@@ -32,14 +32,27 @@
         </div>
       </div>
       <div class="photo-wrapper">
-        <PolaroidPhoto src="/img/kinder-spielen.jpg">PfiLa 2021</PolaroidPhoto>
-        <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg">Abteilungs-Gruppenfoto Aufla 24</PolaroidPhoto>
+        <PolaroidPhoto src="/img/kinder-spielen.jpg"
+                       alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021">PfiLa 2021
+        </PolaroidPhoto>
+        <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
+                       alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024">
+          Abteilungs-Gruppenfoto Aufla 24
+        </PolaroidPhoto>
       </div>
     </main>
   </div>
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: "Startseite | Pfadi Schenkenberg",
+  ogTitle: "Startseite | Pfadi Schenkenberg",
+  description: "Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, die sich wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig!",
+  ogDescription: "Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, die sich wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig!",
+  ogImage: "/img/kinder-spielen.jpg",
+  twitterCard: "summary_large_image"
+});
 </script>
 
 <style lang="scss" scoped>

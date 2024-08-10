@@ -17,7 +17,7 @@
             </li>
           </ul>
         </nav>
-        <NuxtLink class="footer-link-instagram" to="https://www.instagram.com/pfadi_schenkenberg/" target="_blank"/>
+        <NuxtLink class="footer-link-instagram" to="https://www.instagram.com/pfadi_schenkenberg/" target="_blank" title="Link zum Schenkenberg Instagram Account"/>
       </div>
     </div>
   </footer>
