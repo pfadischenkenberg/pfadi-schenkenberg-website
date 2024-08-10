@@ -36,7 +36,7 @@ const stages = [
       label: "Stufenleitung",
       list: [{
         name: "Jara Senn",
-        vulgo: "Mononoke",
+        vulgo: "Mononoke"
       }]
     },
     calendar: {
@@ -65,10 +65,10 @@ Wir freuen uns auf dich!`
       label: "Stufenleitung",
       list: [{
         name: "Dan Malzacher",
-        vulgo: "Faramir",
+        vulgo: "Faramir"
       }, {
         name: "Zora Landolt",
-        vulgo: "Guarda",
+        vulgo: "Guarda"
       }]
     },
     calendar: {
@@ -97,7 +97,7 @@ Wir freuen uns auf dich!`
       label: "Stufenleitung",
       list: [{
         name: "Raphael Purtschert",
-        vulgo: "Spuko",
+        vulgo: "Spuko"
       }]
     },
     calendar: {
@@ -123,11 +123,11 @@ Wenn die Pios kein eigenes Programm haben, können sie immer auch an den regulä
       label: "APV-Verantwortlicher",
       list: [{
         name: "Tim Purtschert",
-        vulgo: "Chirpa",
+        vulgo: "Chirpa"
       }]
     },
     calendar: {
-      existing: false,
+      existing: false
     },
     text: {
       intro: "Der APV ist ein wichtiges Organ in der Vereinsstruktur des Schenkenbergs. Ehemalige Leitpersonen können weiterhin über die aktuellen Geschehnisse des Pfadialltags informiert oder miteinbezogen werden.",
