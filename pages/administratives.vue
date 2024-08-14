@@ -5,7 +5,7 @@
       <h1>Alles Administrative</h1>
       <div class="admin-content grid-container">
         <div class="admin-segment grid-container">
-          <h2>Kontakte</h2>
+          <h2 id="kontakte">Kontakte</h2>
           <p class="admin-segment-text">Bei Fragen und Anliegen kannst du dich in erster Linie an die Stufenleitung der
             betreffenden Stufe wenden.
             Für allgemeine Fragen und Anliegen, die nicht spezifisch eine bestimmte Stufe betreffen, steht die
