@@ -30,11 +30,17 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
+
+const seo = {
   title: "Links | Pfadi Schenkenberg",
-  ogTitle: "Links | Pfadi Schenkenberg",
-  description: "Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, die sich wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig!",
-  ogDescription: "Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, die sich wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig!",
+  description: "Die praktischsten Links rund um den Pfadialltag findest du hier! Alles von der richtigen Pfadiausrüstung bis zur Geschichte der Pfadi."
+};
+
+useSeoMeta({
+  title: seo.title,
+  ogTitle: seo.title,
+  description: seo.description,
+  ogDescription: seo.description,
   ogImage: "/img/gruppenfoto-abteilung.jpg",
   twitterCard: "summary_large_image"
 });

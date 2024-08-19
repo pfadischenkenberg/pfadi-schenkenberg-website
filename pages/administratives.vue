@@ -62,12 +62,17 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
+const seo = {
   title: "Administratives | Pfadi Schenkenberg",
-  ogTitle: "Administratives | Pfadi Schenkenberg",
-  description: "Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, die sich wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig!",
-  ogDescription: "Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, die sich wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig!",
-  ogImage: "/img/gruppenfoto-abteilung.jpg",
+  description: "Willst du bei der Pfadi Schenkenberg in Basel vorbeischauen oder suchst du Dokumente und deine Ansprechpersonen? Hier findest du alles Administrative."
+
+}
+
+useSeoMeta({
+  title: seo.title,
+  ogTitle: seo.title,
+  description: seo.description,
+  ogDescription: seo.description,ogImage: "/img/gruppenfoto-abteilung.jpg",
   twitterCard: "summary_large_image"
 });
 
