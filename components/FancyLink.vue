@@ -25,6 +25,7 @@ const props = defineProps({
 
   text-decoration: none;
   color: $text-dark;
+  cursor: pointer;
 
   &:hover {
     color: $text-dark;
