@@ -45,11 +45,17 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
+
+const seo = {
   title: "Startseite | Pfadi Schenkenberg",
-  ogTitle: "Startseite | Pfadi Schenkenberg",
-  description: "Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, die sich wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig!",
-  ogDescription: "Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, die sich wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig!",
+  description: "Wenn du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, und eine Menge Spass für dein Kind bist, dann bist du bei der Pfadi Schenkenberg in Basel genau richtig!"
+}
+
+useSeoMeta({
+  title: seo.title,
+  ogTitle: seo.title,
+  description: seo.description,
+  ogDescription: seo.description,
   ogImage: "/img/kinder-spielen.jpg",
   twitterCard: "summary_large_image"
 });

@@ -5,7 +5,7 @@
       <h1>Alles Administrative</h1>
       <div class="admin-content grid-container">
         <div class="admin-segment grid-container">
-          <h2>Kontakte</h2>
+          <h2 id="kontakte">Kontakte</h2>
           <p class="admin-segment-text">Bei Fragen und Anliegen kannst du dich in erster Linie an die Stufenleitung der
             betreffenden Stufe wenden.
             Für allgemeine Fragen und Anliegen, die nicht spezifisch eine bestimmte Stufe betreffen, steht die
@@ -62,12 +62,17 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
+const seo = {
   title: "Administratives | Pfadi Schenkenberg",
-  ogTitle: "Administratives | Pfadi Schenkenberg",
-  description: "Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, die sich wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig!",
-  ogDescription: "Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, die sich wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig!",
-  ogImage: "/img/gruppenfoto-abteilung.jpg",
+  description: "Willst du bei der Pfadi Schenkenberg in Basel vorbeischauen oder suchst du Dokumente und deine Ansprechpersonen? Hier findest du alles Administrative."
+
+}
+
+useSeoMeta({
+  title: seo.title,
+  ogTitle: seo.title,
+  description: seo.description,
+  ogDescription: seo.description,ogImage: "/img/gruppenfoto-abteilung.jpg",
   twitterCard: "summary_large_image"
 });
 

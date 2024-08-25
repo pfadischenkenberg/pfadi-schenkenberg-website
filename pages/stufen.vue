@@ -13,11 +13,16 @@
 
 <script setup lang="ts">
 
-useSeoMeta({
+const seo = {
   title: "Stufen | Pfadi Schenkenberg",
-  ogTitle: "Stufen | Pfadi Schenkenberg",
-  description: "Bist du zwischen 6 und 11 Jahre alt und willst die Welt der Wölfli sowie viele verschiedene Abenteuer erleben? Dann bist du bei uns in der Wölfli-Stufe der Pfadi Schenkenberg genau Richtig!",
-  ogDescription: "Bist du zwischen 6 und 11 Jahre alt und willst die Welt der Wölfli sowie viele verschiedene Abenteuer erleben? Dann bist du bei uns in der Wölfli-Stufe der Pfadi Schenkenberg genau Richtig!",
+  description: "Die Pfadi Schenkenberg trifft sich in der Wölfli-, Pfadi- und Piostufe regelmässig an den Samstagnachmittagen in der Region um Basel."
+};
+
+useSeoMeta({
+  title: seo.title,
+  ogTitle: seo.title,
+  description: seo.description,
+  ogDescription: seo.description,
   ogImage: "/img/gruppenfoto-abteilung.jpg",
   twitterCard: "summary_large_image"
 });
