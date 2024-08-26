@@ -10,7 +10,7 @@
                        link-text="hajk.ch" />
         <LinkContainer title="Pfadilädeli"
                        text="Für alles, was man in der Pfadi so braucht"
-                       href="https://www.pfadi-region-basel.ch/pfadiladen"
+                       href="https://pfadi-region-basel.ch/projekte/pfadilaedeli/"
                        link-text="pfadi-region-basel.ch/pfadiladen" />
         <LinkContainer title="Pfadi Region Basel"
                        text="Alles, was man über den Kantonalverband wissen muss"
@@ -18,7 +18,7 @@
                        link-text="pfadi-region-basel.ch" />
         <LinkContainer title="XCout"
                        text="Die Radiosendung der Pfadi Region Basel"
-                       href="https://www.pfadi-region-basel.ch/xcout"
+                       href="https://pfadi-region-basel.ch/projekte/xcout/"
                        link-text="pfadi-region-basel.ch/xcout" />
         <LinkContainer title="Geschichte der Pfadi"
                        text="Die ganze Geschichte der Schweizer Pfadibewegung und mehr"
