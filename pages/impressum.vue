@@ -13,9 +13,8 @@
       <section class="grid-container">
         <h2>Design und Programmierung</h2>
 
-        <p>Das Design und die Entwicklung entstanden durch Tim Landolt <span>v/o</span> Balu und in enger Zusammenarbeit
-          mit seinen
-          Mitleiterinnen:</p>
+        <p>Das Design und die Entwicklung entstanden durch <NuxtLink to="https://github.com/timlandolt">Tim Landolt v/o Balu</NuxtLink> und in enger Zusammenarbeit
+          mit den Mitleiterinnen:</p>
         <ul>
           <li>Jara Senn v/o Mononoke</li>
           <li>Solenne Saltel v/o Paloma</li>
@@ -28,11 +27,9 @@
 
         <p>Die verwendeten Icons stammen in farblich angepasster Form u.a. von:</p>
         <ul>
-          <li><a href="https://dazzleui.gumroad.com/l/dazzleiconsfree?ref=svgrepo.com" target="_blank">Dazzle Ui</a> und
-            stehen unter der CC Attribution Lizenz via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>.
+          <li><a href="https://dazzleui.gumroad.com/l/dazzleiconsfree?ref=svgrepo.com" target="_blank">Dazzle Ui</a>
+            unter der CC Attribution Lizenz via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>.
           </li>
-          <li><a href="https://www.primefaces.org/diamond/icons.xhtml?ref=svgrepo.com" target="_blank">Primefaces</a>
-            unter der MIT Lizenz via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a></li>
         </ul>
       </section>
     </main>
@@ -43,7 +40,7 @@
 const seo = {
   title: "Impressum | Pfadi Schenkenberg",
   description: "Auf dieser Seite findest du rechtliche Informationen zur Website sowie Danksagungen."
-}
+};
 
 useSeoMeta({
   title: seo.title,
