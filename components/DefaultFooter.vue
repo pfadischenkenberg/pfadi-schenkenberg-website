@@ -13,7 +13,7 @@
               <NuxtLink to="/administratives#kontakte">Kontakt</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/rechtliches">Rechtliches</NuxtLink>
+              <NuxtLink to="/impressum">Impressum</NuxtLink>
             </li>
           </ul>
         </nav>
