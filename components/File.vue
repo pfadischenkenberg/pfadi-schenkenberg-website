@@ -1,7 +1,7 @@
 <template>
-  <NuxtLink :to="props.src" download external class="file">
+  <a :href="props.src" download external class="file">
     {{ fileName }}
-  </NuxtLink>
+  </a>
 </template>
 
 <script setup lang="ts">

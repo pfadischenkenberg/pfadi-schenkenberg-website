@@ -35,9 +35,9 @@
               <File src="/files/Kalender_Pfadi_2024_1.pdf" />
             </div>
             <div class="admin-segment-list-element">
-              <h3>Mitgliedsformulare</h3>
-              <File src="/files/Mitgliedsformular_Wölfli.pdf" />
-              <File src="/files/Mitgliedsformular_Pfadi.pdf" />
+              <h3>Mitgliederformulare</h3>
+              <File src="/files/Mitgliederformular_Wölfe.pdf" />
+              <File src="/files/Mitgliederformular_Pfadi.pdf" />
             </div>
             <div class="admin-segment-list-element admin-rufe">
               <h3>Rufe</h3>
