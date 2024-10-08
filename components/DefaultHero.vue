@@ -27,9 +27,9 @@ const props = defineProps({
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.2rem;
+    gap: min(1.2rem, 2dvw);
 
-    padding-inline: $default-inline-padding;
+    padding-inline: $small-inline-padding;
     width: 100dvw;
     height: 38rem;
 
@@ -41,20 +41,22 @@ const props = defineProps({
     .hero-welcome {
       transform: translate(20%);
       font-family: "Patrick Hand", sans-serif;
-      font-size: 4rem;
-      line-height: 4rem;
+      font-size: min(4rem, 6dvw);
+      line-height: min(4rem, 6dvw);
       margin: 0;
 
       color: $tan-hide-400;
+      text-shadow: $asparagus-950 0 0 10px;
     }
 
     .hero-title {
       font-family: "Istok Web", sans-serif;
       font-weight: bold;
-      font-size: 5rem;
-      line-height: 5rem;
+      font-size: min(5rem, 7.5dvw);
+      line-height: min(5rem, 7.5dvw);
 
       color: $burnt-sienna-400;
+      text-shadow: $asparagus-950 0 0 10px;
     }
   }
 
@@ -65,9 +67,18 @@ const props = defineProps({
     top: -2.4rem;
     background-image: url("assets/img/separator-white.svg");
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: bottom;
     background-size: 101%;
     z-index: 2;
+  }
+}
+
+@media screen and (max-width: $screen-size-medium) {
+  .hero {
+    .hero-text {
+      padding-top: 8rem;
+      height: 47.5dvw
+    }
   }
 }
 </style>
