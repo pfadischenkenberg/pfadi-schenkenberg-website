@@ -38,6 +38,10 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 
   main {
     margin: 2rem $default-inline-padding 8rem;
+    
+    @media only screen and (max-width: $screen-size-medium) {
+      margin-inline: $medium-inline-padding;
+    }
   }
 
   h1 {

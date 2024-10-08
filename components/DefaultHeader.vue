@@ -1,6 +1,6 @@
 <template>
   <header>
-    <SELogoLink/>
+    <SELogoLink />
     <nav>
       <ul :class="{expanded: expanded}">
         <li class="first">
@@ -23,13 +23,13 @@
           </NavDropdownElement>
         </li>
       </ul>
-      <HamburgerButton v-model:expanded="expanded"/>
+      <HamburgerButton v-model:expanded="expanded" />
     </nav>
   </header>
 </template>
 
 <script setup lang="ts">
-import {watch} from "vue";
+import { watch } from "vue";
 
 let expanded = ref(false);
 
@@ -89,9 +89,9 @@ header {
   }
 }
 
-@media screen and (max-width: $screen-size-small) {
+@media screen and (max-width: $screen-size-medium) {
   header {
-    padding: 0.8rem $small-inline-padding;
+    padding-inline: $medium-inline-padding;
 
     nav {
       ul {
@@ -129,6 +129,12 @@ header {
         display: inline-block;
       }
     }
+  }
+}
+
+@media screen and (max-width: $screen-size-small) {
+  header {
+    padding: 0.8rem $small-inline-padding;
   }
 }
 </style>
