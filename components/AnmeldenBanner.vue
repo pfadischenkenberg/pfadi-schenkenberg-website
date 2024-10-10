@@ -25,6 +25,8 @@
 
   background-color: $asparagus-300;
   z-index: 1;
+  
+  text-align: center;
 
   p {
     font-family: "Patrick Hand", sans-serif;
@@ -56,9 +58,21 @@
   transform: rotate(180deg);
   background-image: url("assets/img/separator-green-centered.svg");
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: bottom;
   background-size: 101%;
   z-index: 0;
+}
+
+@media screen and (max-width: $screen-size-small) {
+  .anmelden-banner {
+    gap: 0.9rem;
+    padding-block: 2rem;
+    
+    p {
+      font-size: 1.9rem;
+      line-height: 1.9rem;
+    }
+  }
 }
 
 </style>
