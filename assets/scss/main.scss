@@ -11,6 +11,9 @@ body {
   color: $burnt-sienna-950;
   background-color: $burnt-sienna-50;
   scroll-behavior: smooth;
+  
+  font-size: 1.5rem;
+  line-height: 2.1rem;
 }
 
 .grid-container {
@@ -22,8 +25,8 @@ body {
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 
-  font-size: 1.5rem;
-  line-height: 2.1rem;
+  font-size: inherit;
+  line-height: inherit;
 
   ::selection {
     color: $burnt-sienna-100;
