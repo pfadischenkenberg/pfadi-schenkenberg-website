@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="footer-content">
-      <p>&copy; Pfadi Schenkenberg {{ year }}</p>
+      <p class="footer-copyright">&copy; Pfadi Schenkenberg {{ year }}</p>
       <img src="assets/img/logos/schenkenberg-wappen-braun.svg" alt="Wappen der Pfadi Schenkenberg in Braun">
       <div class="footer-links">
         <nav>
@@ -94,7 +94,7 @@ const year = new Date().getFullYear();
 footer::before {
   content: "";
   width: 100%;
-  height: 2.5rem;
+  height: 3rem;
   position: relative;
   bottom: -0.1rem;
 
@@ -103,7 +103,7 @@ footer::before {
   background-image: url("assets/img/separator-orange.svg");
   background-repeat: no-repeat;
   background-position: top;
-  background-size: 101%;
+  background-size: cover;
   z-index: 1;
 }
 </style>
