@@ -46,9 +46,10 @@ const year = new Date().getFullYear();
   font-size: 1.5rem;
 
   .footer-copyright {
-    font-weight: 500;
     margin: 0;
     font-size: inherit;
+    line-height: 1.2rem;
+    text-align: center;
   }
 
   .footer-logo {
