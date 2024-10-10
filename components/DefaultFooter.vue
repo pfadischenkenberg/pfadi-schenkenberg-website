@@ -56,12 +56,13 @@ const year = new Date().getFullYear();
     background-image: url("assets/img/logos/schenkenberg-wappen-braun.svg");
     background-position: center;
     background-size: contain;
+    background-repeat: no-repeat;
     
     position: absolute;
     left: 50dvw;
     transform: translate(-50%);
     height: 4rem;
-    aspect-ratio: 55/66;
+    aspect-ratio: 55/69;
   }
 
   .footer-links {
