@@ -6,7 +6,7 @@
       </p>
       <h1 class="hero-title">Pfadi Schenkenberg</h1>
     </div>
-    <div v-if="props.wave == true" class="hero-wave"></div>
+    <img v-if="props.wave == true" src="assets/img/separator-white.svg" alt="Separator" class="hero-wave">
   </div>
 </template>
 
@@ -63,14 +63,11 @@ const props = defineProps({
   .hero-wave {
     position: relative;
     width: 100dvw;
-    height: 2.5rem;
-    top: -2.4rem;
-    background-image: url("assets/img/separator-white.svg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 101%;
-    z-index: 2;
+    bottom: 0;
+    translate: 0 -99%;
+    object-fit: fill;
   }
+
 }
 
 @media screen and (max-width: $screen-size-medium) {
