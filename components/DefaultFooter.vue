@@ -105,5 +105,9 @@ footer::before {
   background-position: top;
   background-size: cover;
   z-index: 1;
+  
+  @media screen and (max-width: $screen-size-small) {
+    height: 1.5rem;
+  }
 }
 </style>
