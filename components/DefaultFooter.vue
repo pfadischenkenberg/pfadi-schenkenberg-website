@@ -17,7 +17,8 @@
             </li>
           </ul>
         </nav>
-        <NuxtLink class="footer-link-instagram" to="https://www.instagram.com/pfadi_schenkenberg/" target="_blank" title="Link zum Schenkenberg Instagram Account"/>
+        <NuxtLink class="footer-link-instagram" to="https://www.instagram.com/pfadi_schenkenberg/" target="_blank"
+                  title="Link zum Schenkenberg Instagram Account" />
       </div>
     </div>
   </footer>
@@ -40,8 +41,7 @@ const year = new Date().getFullYear();
   justify-content: space-between;
   align-items: center;
 
-  p {
-    float: left;
+  .footer-copyright {
     font-weight: 500;
     margin: 0;
   }
@@ -54,8 +54,6 @@ const year = new Date().getFullYear();
   }
 
   .footer-links {
-    float: right;
-
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -105,9 +103,54 @@ footer::before {
   background-position: top;
   background-size: cover;
   z-index: 1;
-  
+
   @media screen and (max-width: $screen-size-small) {
     height: 1.5rem;
   }
 }
+
+@media screen and (max-width: $screen-size-small) {
+
+
+  .footer-content {
+    padding-inline: $small-inline-padding;
+    padding-top: 2rem;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+
+    img {
+      position: initial;
+      order: 1;
+      transform: translate(0);
+    }
+
+    .footer-links {
+      order: 2;
+
+      ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 0;
+      }
+
+      .footer-link-instagram {
+        display: none;
+      }
+    }
+
+    .footer-copyright {
+      order: 3;
+    }
+
+  }
+}
+
 </style>
