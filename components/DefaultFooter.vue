@@ -2,7 +2,7 @@
   <footer>
     <div class="footer-content">
       <p class="footer-copyright">&copy; Pfadi Schenkenberg {{ year }}</p>
-      <img src="assets/img/logos/schenkenberg-wappen-braun.svg" alt="Wappen der Pfadi Schenkenberg in Braun">
+      <NuxtLink class="footer-logo" to="/" title="Wappen der Pfadi Schenkenberg als Link zur Startseite" />
       <div class="footer-links">
         <nav>
           <ul>
@@ -51,11 +51,16 @@ const year = new Date().getFullYear();
     font-size: inherit;
   }
 
-  img {
+  .footer-logo {
+    background-image: url("assets/img/logos/schenkenberg-wappen-braun.svg");
+    background-position: center;
+    background-size: contain;
+    
     position: absolute;
     left: 50dvw;
     transform: translate(-50%);
     height: 4rem;
+    aspect-ratio: 55/66;
   }
 
   .footer-links {
@@ -125,13 +130,13 @@ footer::before {
   }
 }
 
-@media screen and (max-width: $screen-size-medium){
+@media screen and (max-width: $screen-size-medium) {
   .footer-content {
     padding-inline: $medium-inline-padding;
   }
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
   .footer-content {
     height: fit-content;
 
@@ -145,11 +150,11 @@ footer::before {
     gap: 0;
 
 
-    img {
+    .footer-logo {
       position: initial;
       order: 1;
       transform: translate(0);
-      
+
       margin-bottom: 1rem;
     }
 
@@ -184,10 +189,10 @@ footer::before {
   .footer-content {
     gap: 2rem;
 
-    img {
+    .footer-logo {
       margin: 0;
     }
-    
+
     .footer-links {
       order: 2;
 
