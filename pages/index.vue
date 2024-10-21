@@ -3,15 +3,23 @@
     <DefaultHero :wave="false">Willkommen bei der</DefaultHero>
     <AnmeldenBanner />
     <main class="grid-container">
-      <div class="text">
-        <h1>Das sind wir</h1>
-        <p>Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, die sich
+      <h1>Das sind wir</h1>
+      <div class="intro grid-container">
+        <p class="intro-text">Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft,
+          Freundschaften, die sich
           wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig. Denn wir
           treffen
           uns jeden Samstagnachmittag, meist rund um Basel und draussen in der Natur: Gemeinsam spielen, eine
           Schnitzeljagd
           machen, lustigen Kreaturen helfen, fein essen, etwas Sinnvolles lernen oder es einfach schön miteinander
           haben.</p>
+
+
+        <PolaroidPhoto src="/img/kinder-spielen.jpg"
+                       alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021">PfiLa 2021
+        </PolaroidPhoto>
+      </div>
+      <div class="text">
         <p>Wir schaffen unvergessliche Momente in drei Altersstufen:<br>
           <em>(dabei sind wir politisch und konfessionell neutral)</em>
           <br><br>
@@ -30,26 +38,24 @@
           <p>Die Altersangaben sind nur<br>
             grobe Richtwerte</p>
         </div>
-      </div>
-      <div class="photo-wrapper">
-        <PolaroidPhoto src="/img/kinder-spielen.jpg"
-                       alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021">PfiLa 2021
-        </PolaroidPhoto>
+
         <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
                        alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024">
-          Abteilungs-Gruppenfoto Aufla 24
+          Abteilungsfoto Aufla 24
         </PolaroidPhoto>
       </div>
+
     </main>
   </div>
 </template>
+
 
 <script setup lang="ts">
 
 const seo = {
   title: "Startseite | Pfadi Schenkenberg",
   description: "Wenn du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, und eine Menge Spass für dein Kind bist, dann bist du bei der Pfadi Schenkenberg in Basel genau richtig!"
-}
+};
 
 useSeoMeta({
   title: seo.title,
@@ -62,8 +68,23 @@ useSeoMeta({
 </script>
 
 <style lang="scss" scoped>
+@import "assets/scss/variables";
+
 main {
   margin-top: 6rem;
+
+  .intro {
+    grid-column: 1/13;
+    
+    .polaroid-photo {
+      grid-column: 8/13;
+    }
+  }
+
+  h1, .intro-text {
+    grid-column: 1/8;
+
+  }
 
   .text {
     grid-column: 1/8;
@@ -91,23 +112,53 @@ main {
         margin-top: 5rem;
         font-size: 2rem;
         font-family: "Patrick Hand", sans-serif;
-
         transform: rotate(10deg);
       }
 
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: $screen-size-medium) {
         display: none;
       }
     }
   }
 
-  .photo-wrapper {
+  /* Default grid layout */
+  .photo-1, .photo-2 {
     grid-column: 8/13;
-
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
   }
 
+  @media screen and (max-width: $screen-size-small) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Adjust order on mobile */
+    h1 {
+      order: 1;
+    }
+
+    .photo-1 {
+      order: 2; /* First photo after title */
+    }
+    .intro-text {
+      order: 3;
+    }
+    .photo-2 {
+      order: 4; /* Second photo after text */
+    }
+    .text {
+      order: 5; /* Text comes after first photo */
+      grid-column: 1/8;
+    }
+
+    .anmelde-link {
+      order: 6; /* Rest of the content */
+    }
+
+    #note-ages {
+      display: none; /* Hide this section on mobile */
+    }
+  }
 }
+
+
 </style>

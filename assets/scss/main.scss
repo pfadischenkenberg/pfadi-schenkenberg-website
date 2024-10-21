@@ -11,9 +11,6 @@ body {
   color: $burnt-sienna-950;
   background-color: $burnt-sienna-50;
   scroll-behavior: smooth;
-  
-  font-size: 1.5rem;
-  line-height: 2.1rem;
 }
 
 .grid-container {
@@ -25,9 +22,19 @@ body {
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 
-  font-size: inherit;
-  line-height: inherit;
+  font-size: 1.5rem;
+  line-height: 2.1rem;
 
+  @media screen and (max-width: $screen-size-medium) {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+
+  @media screen and (max-width: $screen-size-small) {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
+  
   ::selection {
     color: $burnt-sienna-100;
     background: $asparagus-400;
@@ -41,9 +48,12 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 
   main {
     margin: 2rem $default-inline-padding 8rem;
-    
+
     @media only screen and (max-width: $screen-size-medium) {
       margin-inline: $medium-inline-padding;
+    }
+    @media screen and (max-width: $screen-size-small) {
+      margin-inline: $small-inline-padding;
     }
   }
 
@@ -72,8 +82,8 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   }
 
   p {
-    font-size: 1.5rem;
-    line-height: 2.1rem;
+    font-size: inherit;
+    line-height: inherit;
     margin-block: 1rem;
     text-wrap: balance;
 
