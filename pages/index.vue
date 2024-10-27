@@ -2,9 +2,13 @@
   <div>
     <DefaultHero :wave="false">Willkommen bei der</DefaultHero>
     <AnmeldenBanner />
-    <main class="grid-container">
+    <main>
       <h1>Das sind wir</h1>
-      <div class="intro grid-container">
+      <div class="section-1">
+        <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
+                       alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024">
+          Abteilungsfoto Aufla 24
+        </PolaroidPhoto>
         <p class="intro-text">Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft,
           Freundschaften, die sich
           wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig. Denn wir
@@ -13,38 +17,34 @@
           Schnitzeljagd
           machen, lustigen Kreaturen helfen, fein essen, etwas Sinnvolles lernen oder es einfach schön miteinander
           haben.</p>
-
-
+      </div>
+      <div class="section-2">
         <PolaroidPhoto src="/img/kinder-spielen.jpg"
                        alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021">PfiLa 2021
         </PolaroidPhoto>
-      </div>
-      <div class="text">
-        <p>Wir schaffen unvergessliche Momente in drei Altersstufen:<br>
-          <em>(dabei sind wir politisch und konfessionell neutral)</em>
-          <br><br>
-          <b>Die Wölfli:</b> 6 - 11 Jahre<br>
-          <b>Die Pfadis:</b> 11 - 14 Jahre<br>
-          <b>Die Pios:</b> 14 - 16 Jahre
-          <br><br>
-          Wenn du Interesse hast, kannst du jederzeit vorbeikommen, um etwas Pfadiluft zu schnuppern
-          Bei Fragen geben wir gerne Auskunft.<br>
-          Wir freuen uns auf dich!</p>
-        <div class="anmelde-link">
-          <FancyLink to="/administratives#schnuppern">Jetzt vorbeischauen!</FancyLink>
+        <div class="text">
+          <p>Wir schaffen unvergessliche Momente in drei Altersstufen:<br>
+            <em>(dabei sind wir politisch und konfessionell neutral)</em>
+          </p>
+          <ul class="ages">
+            <li><b>Die Wölfli:</b> 6 - 11 Jahre</li>
+            <li><b>Die Pfadis:</b> 11 - 14 Jahre</li>
+            <li><b>Die Pios:</b> 14 - 16 Jahre</li>
+          </ul>
+          <p>
+            Wenn du Interesse hast, kannst du jederzeit vorbeikommen, um etwas Pfadiluft zu schnuppern
+            Bei Fragen geben wir gerne Auskunft.<br>
+            Wir freuen uns auf dich!</p>
+          <div class="anmelde-link">
+            <FancyLink to="/administratives#schnuppern">Jetzt anmelden</FancyLink>
+          </div>
         </div>
-        <div id="note-ages">
-          <img src="assets/img/arrow-note-ages.svg" alt="Gestrichelter Pfeil" draggable="false">
-          <p>Die Altersangaben sind nur<br>
-            grobe Richtwerte</p>
-        </div>
-
-        <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
-                       alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024">
-          Abteilungsfoto Aufla 24
-        </PolaroidPhoto>
       </div>
-
+      <div id="note-ages">
+        <img src="assets/img/arrow-note-ages.svg" alt="Gestrichelter Pfeil" draggable="false">
+        <p>Die Altersangaben sind nur<br>
+          grobe Richtwerte</p>
+      </div>
     </main>
   </div>
 </template>
@@ -71,36 +71,87 @@ useSeoMeta({
 @import "assets/scss/variables";
 
 main {
-  margin-top: 6rem;
+  * {
+    outline: lime 1px !important;
+  }
+  h1 {
+    margin-bottom: 2rem;
 
-  .intro {
-    grid-column: 1/13;
-    
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+  }
+
+  .polaroid-photo {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .ages {
+    text-align: center;
+    margin-block: 2rem;
+  }
+
+  #note-ages {
+    display: none;
+  }
+
+  .anmelde-link {
+    margin-top: 2rem;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 900px) {
     .polaroid-photo {
-      grid-column: 8/13;
+      float: right;
+      width: max(calc(50% - 1rem), 30rem);
+      margin-left: 1rem;
     }
-  }
 
-  h1, .intro-text {
-    grid-column: 1/8;
-
-  }
-
-  .text {
-    grid-column: 1/8;
-
-    .anmelde-link {
+    .section-2 {
       width: 100%;
-      margin-top: 3rem;
+
       display: flex;
-      justify-content: center;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+      .polaroid-photo {
+        width: 100%;
+        flex: 0 0 max(calc(50% - 1rem), 30rem);
+      }
+
+      .text {
+        flex: 1;
+      }
+    }
+
+  }
+
+  @media screen and (min-width: $screen-size-medium) {
+    .polaroid-photo {
+      width: calc(40% - 1rem);
+    }
+
+    .section-2 {
+      .polaroid-photo {
+        width: 100%;
+        flex: 0 0 calc(40% - 1rem);
+      }
+
+      .ages {
+        text-align: left;
+      }
     }
 
     #note-ages {
+      display: inherit;
+
       position: relative;
-      bottom: 17.8rem;
+      bottom: 17rem;
       left: -7.5rem;
-      margin-bottom: -20rem;
+      margin-bottom: -18rem;
       margin-right: -7.5rem;
       z-index: -1;
 
@@ -109,56 +160,15 @@ main {
       }
 
       p {
-        margin-top: 5rem;
+        width: max-content;
+        margin-top: 1rem;
         font-size: 2rem;
         font-family: "Patrick Hand", sans-serif;
+
         transform: rotate(10deg);
       }
-
-      @media screen and (max-width: $screen-size-medium) {
-        display: none;
-      }
-    }
-  }
-
-  /* Default grid layout */
-  .photo-1, .photo-2 {
-    grid-column: 8/13;
-  }
-
-  @media screen and (max-width: $screen-size-small) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    /* Adjust order on mobile */
-    h1 {
-      order: 1;
-    }
-
-    .photo-1 {
-      order: 2; /* First photo after title */
-    }
-    .intro-text {
-      order: 3;
-    }
-    .photo-2 {
-      order: 4; /* Second photo after text */
-    }
-    .text {
-      order: 5; /* Text comes after first photo */
-      grid-column: 1/8;
-    }
-
-    .anmelde-link {
-      order: 6; /* Rest of the content */
-    }
-
-    #note-ages {
-      display: none; /* Hide this section on mobile */
     }
   }
 }
-
 
 </style>

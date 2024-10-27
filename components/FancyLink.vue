@@ -58,14 +58,14 @@ const props = defineProps({
 
 @media screen and (max-width: $screen-size-small){
   .fancy-link {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    font-size: 2rem;
+    line-height: 2rem;
 
     &::after {
-      width: calc(100% - 0.18rem);
-      height: 0.8rem;
-      left: 0.5rem;
-      top: 0.8rem;
+      width: calc(100% - 0.4rem);
+      height: 1.1rem;
+      left: 0.8rem;
+      top: 1.1rem;
     }
 
     &:hover::after {

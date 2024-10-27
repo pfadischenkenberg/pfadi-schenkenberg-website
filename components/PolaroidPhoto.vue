@@ -1,6 +1,6 @@
 <template>
   <figure class="polaroid-photo">
-    <NuxtImg :src="props.src" :alt="props.alt" placeholder />
+    <NuxtImg :src="props.src" :alt="props.alt" :placeholder="[16, 9]"/>
     <figcaption>
       <slot />
     </figcaption>
@@ -46,9 +46,11 @@ const props = defineProps({
   }
 
   @media screen and (max-width: $screen-size-small) {
+    padding: 1.5rem 1.5rem 0.5rem;
     gap: 0.2rem;
     figcaption {
       font-size: 1.5rem;
+      line-height: 1.5rem;
     }
   }
 }
