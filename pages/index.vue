@@ -3,8 +3,8 @@
     <DefaultHero :wave="false">Willkommen bei der</DefaultHero>
     <AnmeldenBanner />
     <main>
-      <h1>Das sind wir</h1>
       <div class="section-1">
+        <h1>Das sind wir</h1>
         <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
                        alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024">
           Abteilungsfoto Aufla 24
@@ -71,14 +71,7 @@ useSeoMeta({
 @import "assets/scss/variables";
 
 main {
-  * {
-    outline: lime 1px !important;
-  }
   h1 {
-    margin-bottom: 2rem;
-
-    font-size: 3.5rem;
-    line-height: 3.5rem;
     text-align: center;
   }
 
@@ -130,6 +123,9 @@ main {
   }
 
   @media screen and (min-width: $screen-size-medium) {
+
+    margin-top: 6rem;
+
     .polaroid-photo {
       width: calc(40% - 1rem);
     }

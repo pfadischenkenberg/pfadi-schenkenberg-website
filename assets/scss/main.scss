@@ -63,6 +63,13 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     line-height: 5rem;
     font-family: "Patrick Hand", sans-serif;
     color: $burnt-sienna-700;
+
+    @media screen and (max-width: $screen-size-small) {
+      margin-bottom: 2rem;
+
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+    }
   }
 
   h2 {
