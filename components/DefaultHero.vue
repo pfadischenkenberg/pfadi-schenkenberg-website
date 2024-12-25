@@ -1,52 +1,81 @@
 <template>
   <div class="hero">
-    <p class="hero-welcome">
-      <slot/>
-    </p>
-    <h1 class="hero-title">Pfadi Schenkenberg</h1>
+    <div class="hero-text">
+      <p class="hero-welcome">
+        <slot />
+      </p>
+      <h1 class="hero-title">Pfadi Schenkenberg</h1>
+    </div>
+    <img v-if="props.wave == true" src="assets/img/separator-white.svg" alt="Separator" class="hero-wave">
   </div>
 </template>
 
 <script setup lang="ts">
-
+const props = defineProps({
+  wave: {
+    default: true
+  }
+});
 </script>
 
 <style lang="scss" scoped>
 @import "assets/scss/variables";
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.2rem;
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: min(1.2rem, 2dvw);
 
-  padding-inline: $default-inline-padding;
-  width: 100dvw;
-  height: 38rem;
+    padding-inline: $small-inline-padding;
+    width: 100dvw;
+    height: 38rem;
 
-  z-index: -1;
-  background-image: url("public/img/hero.jpg");
-  background-position: center;
-  background-size: cover;
+    z-index: -1;
+    background-image: url("public/img/hero.jpg");
+    background-position: center;
+    background-size: cover;
 
-  .hero-welcome {
-    transform: translate(20%);
-    font-family: "Patrick Hand", sans-serif;
-    font-size: 4rem;
-    line-height: 4rem;
-    margin: 0;
+    .hero-welcome {
+      transform: translate(20%);
+      font-family: "Patrick Hand", sans-serif;
+      font-size: min(4rem, 6dvw);
+      line-height: min(4rem, 6dvw);
+      margin: 0;
 
-    color: $tan-hide-400;
+      color: $tan-hide-400;
+      text-shadow: $asparagus-950 0 0 10px;
+    }
+
+    .hero-title {
+      font-family: "Istok Web", sans-serif;
+      font-weight: bold;
+      font-size: min(5rem, 7.5dvw);
+      line-height: min(5rem, 7.5dvw);
+
+      color: $burnt-sienna-400;
+      text-shadow: $asparagus-950 0 0 10px;
+    }
   }
 
-  .hero-title {
-    font-family: "Istok Web", sans-serif;
-    font-weight: bold;
-    font-size: 5rem;
-    line-height: 5rem;
+  .hero-wave {
+    position: relative;
+    width: 100dvw;
+    bottom: 0;
+    translate: 0 -99%;
+    object-fit: fill;
+  }
 
-    color: $burnt-sienna-400;
+}
+
+@media screen and (max-width: $screen-size-medium) {
+  .hero {
+    .hero-text {
+      padding-top: 8rem;
+      height: 47.5dvw
+    }
   }
 }
 </style>

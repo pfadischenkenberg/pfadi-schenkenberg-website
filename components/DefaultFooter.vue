@@ -1,8 +1,8 @@
 <template>
   <footer>
     <div class="footer-content">
-      <p>&copy; Pfadi Schenkenberg {{ year }}</p>
-      <img src="assets/img/logos/schenkenberg-wappen-braun.svg" alt="Wappen der Pfadi Schenkenberg in Braun">
+      <p class="footer-copyright">&copy; Pfadi Schenkenberg {{ year }}</p>
+      <NuxtLink class="footer-logo" to="/" title="Wappen der Pfadi Schenkenberg als Link zur Startseite" />
       <div class="footer-links">
         <nav>
           <ul>
@@ -17,8 +17,11 @@
             </li>
           </ul>
         </nav>
-        <NuxtLink class="footer-link-instagram" to="https://www.instagram.com/pfadi_schenkenberg/" target="_blank"/>
+        <NuxtLink class="footer-link-instagram" to="https://www.instagram.com/pfadi_schenkenberg/" target="_blank"
+                  title="Link zum Schenkenberg Instagram Account" />
       </div>
+      <NuxtLink class="footer-link-instagram-mobile" to="https://www.instagram.com/pfadi_schenkenberg/" target="_blank"
+                title="Link zum Schenkenberg Instagram Account" />
     </div>
   </footer>
 </template>
@@ -34,28 +37,35 @@ const year = new Date().getFullYear();
   padding-inline: $default-inline-padding;
   background-color: $tan-hide-300;
   height: 7rem;
-  padding-bottom: 1rem;
+  padding-bottom: $small-inline-padding;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  p {
-    float: left;
-    font-weight: 500;
+  font-size: 1.5rem;
+
+  .footer-copyright {
     margin: 0;
+    font-size: inherit;
+    line-height: 1.2rem;
+    text-align: center;
   }
 
-  img {
+  .footer-logo {
+    background-image: url("assets/img/logos/schenkenberg-wappen-braun.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
     position: absolute;
     left: 50dvw;
     transform: translate(-50%);
     height: 4rem;
+    aspect-ratio: 55/69;
   }
 
   .footer-links {
-    float: right;
-
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -68,7 +78,7 @@ const year = new Date().getFullYear();
 
       li {
         a {
-          font-size: 1.5rem;
+          font-size: inherit;
           color: $text-dark;
           text-decoration: none;
           font-weight: 500;
@@ -89,12 +99,16 @@ const year = new Date().getFullYear();
       background-image: url("assets/img/logos/instagram-logo.svg");
     }
   }
+
+  .footer-link-instagram-mobile {
+    display: none;
+  }
 }
 
 footer::before {
   content: "";
   width: 100%;
-  height: 2.5rem;
+  height: 3rem;
   position: relative;
   bottom: -0.1rem;
 
@@ -103,7 +117,95 @@ footer::before {
   background-image: url("assets/img/separator-orange.svg");
   background-repeat: no-repeat;
   background-position: top;
-  background-size: 101%;
+  background-size: cover;
   z-index: 1;
+
+  @media screen and (max-width: $screen-size-small) {
+    height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .footer-content {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+}
+
+@media screen and (max-width: $screen-size-medium) {
+  .footer-content {
+    padding-inline: $medium-inline-padding;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footer-content {
+    height: fit-content;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0;
+
+
+    .footer-logo {
+      position: initial;
+      order: 1;
+      transform: translate(0);
+
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      order: 2;
+
+      .footer-link-instagram {
+        display: none;
+      }
+    }
+
+    .footer-copyright {
+      order: 3;
+    }
+
+    .footer-link-instagram-mobile {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      background-image: url("assets/img/logos/instagram-logo.svg");
+      background-size: cover;
+
+      position: absolute;
+      bottom: $small-inline-padding;
+      right: $small-inline-padding;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-size-small) {
+
+  .footer-content {
+    gap: 2rem;
+
+    .footer-logo {
+      margin: 0;
+    }
+
+    .footer-links {
+      order: 2;
+
+      ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 0;
+      }
+    }
+  }
 }
 </style>

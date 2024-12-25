@@ -25,6 +25,7 @@ const props = defineProps({
 
   text-decoration: none;
   color: $text-dark;
+  cursor: pointer;
 
   &:hover {
     color: $text-dark;
@@ -52,6 +53,29 @@ const props = defineProps({
    &:active::after {
     left: 0;
     top: 1rem;
+  }
+}
+
+@media screen and (max-width: $screen-size-small){
+  .fancy-link {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+
+    &::after {
+      width: calc(100% - 0.18rem);
+      height: 0.8rem;
+      left: 0.5rem;
+      top: 0.8rem;
+    }
+
+    &:hover::after {
+      left: 0.24rem;
+      top: 0.7rem;
+    }
+    &:active::after {
+      left: 0;
+      top: 0.6rem;
+    }
   }
 }
 </style>

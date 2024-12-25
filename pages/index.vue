@@ -1,15 +1,15 @@
 <template>
   <div>
-    <DefaultHero>Willkommen bei der</DefaultHero>
-    <AnmeldenBanner/>
+    <DefaultHero :wave="false">Willkommen bei der</DefaultHero>
+    <AnmeldenBanner />
     <main class="grid-container">
       <div class="text">
         <h1>Das sind wir</h1>
         <p>Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, die sich
-          wie
-          die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig. Denn wir treffen
-          uns
-          jeden Samstagnachmittag, meist rund um Basel und draussen in der Natur: Gemeinsam spielen, eine Schnitzeljagd
+          wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig. Denn wir
+          treffen
+          uns jeden Samstagnachmittag, meist rund um Basel und draussen in der Natur: Gemeinsam spielen, eine
+          Schnitzeljagd
           machen, lustigen Kreaturen helfen, fein essen, etwas Sinnvolles lernen oder es einfach schön miteinander
           haben.</p>
         <p>Wir schaffen unvergessliche Momente in drei Altersstufen:<br>
@@ -32,18 +32,39 @@
         </div>
       </div>
       <div class="photo-wrapper">
-        <PolaroidPhoto src="/img/kinder-spielen.jpg">PfiLa 2021</PolaroidPhoto>
-        <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg">Abteilungs-Gruppenfoto Aufla 24</PolaroidPhoto>
+        <PolaroidPhoto src="/img/kinder-spielen.jpg"
+                       alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021">PfiLa 2021
+        </PolaroidPhoto>
+        <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
+                       alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024">
+          Abteilungs-Gruppenfoto Aufla 24
+        </PolaroidPhoto>
       </div>
     </main>
   </div>
 </template>
 
 <script setup lang="ts">
+
+const seo = {
+  title: "Startseite | Pfadi Schenkenberg",
+  description: "Wenn du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, und eine Menge Spass für dein Kind bist, dann bist du bei der Pfadi Schenkenberg in Basel genau richtig!"
+}
+
+useSeoMeta({
+  title: seo.title,
+  ogTitle: seo.title,
+  description: seo.description,
+  ogDescription: seo.description,
+  ogImage: "/img/kinder-spielen.jpg",
+  twitterCard: "summary_large_image"
+});
 </script>
 
 <style lang="scss" scoped>
 main {
+  margin-top: 6rem;
+
   .text {
     grid-column: 1/8;
 

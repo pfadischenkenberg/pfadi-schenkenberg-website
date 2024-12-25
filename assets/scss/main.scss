@@ -2,10 +2,18 @@
 @import "fonts";
 @import "reset";
 
+html {
+  scroll-padding-top: 8rem;
+}
+
 body {
   font-family: Fira Sans, sans-serif;
   color: $burnt-sienna-950;
   background-color: $burnt-sienna-50;
+  scroll-behavior: smooth;
+  
+  font-size: 1.5rem;
+  line-height: 2.1rem;
 }
 
 .grid-container {
@@ -16,6 +24,10 @@ body {
 
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+
+  font-size: inherit;
+  line-height: inherit;
+
   ::selection {
     color: $burnt-sienna-100;
     background: $asparagus-400;
@@ -28,7 +40,11 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   }
 
   main {
-    margin: 6rem $default-inline-padding 8rem;
+    margin: 2rem $default-inline-padding 8rem;
+    
+    @media only screen and (max-width: $screen-size-medium) {
+      margin-inline: $medium-inline-padding;
+    }
   }
 
   h1 {
@@ -39,10 +55,35 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     color: $burnt-sienna-700;
   }
 
+  h2 {
+    margin-bottom: 0.5rem;
+    font-size: 4rem;
+    line-height: 4rem;
+    font-family: "Patrick Hand", sans-serif;
+    color: $tan-hide-400;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 2.3rem;
+    line-height: 2.3rem;
+    color: $asparagus-600;
+
+  }
+
   p {
     font-size: 1.5rem;
     line-height: 2.1rem;
     margin-block: 1rem;
+    text-wrap: balance;
+
+    @supports (text-wrap: pretty) {
+      text-wrap: pretty;
+    }
+  }
+
+  a {
+    color: $burnt-sienna-800;
   }
 
   i, em {
