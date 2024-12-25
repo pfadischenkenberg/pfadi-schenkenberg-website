@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header ref="defaultHeaderRef" :style="styles">
     <SELogoLink />
     <nav>
       <ul :class="{expanded: expanded}">
@@ -30,12 +30,21 @@
 
 <script setup lang="ts">
 import { watch } from "vue";
+import { ref } from 'vue';
+import { useFixedHeader } from 'vue-use-fixed-header';
 
+// For mobile:
 let expanded = ref(false);
 
 watch(() => expanded, () => {
   console.log("expanded: " + expanded);
 });
+
+
+// "Smart" fixed header:
+const defaultHeaderRef = ref(null);
+const { styles } = useFixedHeader(defaultHeaderRef);
+
 </script>
 
 <style lang="scss" scoped>
@@ -54,7 +63,6 @@ header {
   background-color: rgba($tan-hide-100, 0.2);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-
 
   nav {
     ul {
