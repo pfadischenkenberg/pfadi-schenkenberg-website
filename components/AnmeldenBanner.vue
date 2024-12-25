@@ -54,7 +54,7 @@
   position: absolute;
   bottom: -2.4rem;
   width: 100%;
-  height: 2.5rem;
+  height: 3.5rem;
   transform: rotate(180deg);
   background-image: url("assets/img/separator-green-centered.svg");
   background-repeat: no-repeat;
