@@ -111,7 +111,7 @@ const contacts: Array<Contact> = [
 </script>
 
 <style lang="scss" scoped>
-@import "assets/scss/variables";
+@use "assets/scss/variables";
 
 main {
 
@@ -150,7 +150,7 @@ main {
 
           h3 {
             font-size: 1.5rem;
-            color: $burnt-sienna-400;
+            color: variables.$burnt-sienna-400;
             font-weight: 600;
           }
 
@@ -189,7 +189,7 @@ main {
     }
   }
 
-  @media screen and (min-width: $screen-size-medium) {
+  @media screen and (min-width: variables.$screen-size-medium) {
 
     .admin-content {
       .admin-segment {

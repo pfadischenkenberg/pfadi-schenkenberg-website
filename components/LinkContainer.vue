@@ -29,14 +29,14 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-@import "assets/scss/variables";
+@use "assets/scss/variables";
 
 .link-container {
   max-width: 25rem;
 
   h3 {
     font-size: 2rem;
-    color: $burnt-sienna-400;
+    color : variables.$burnt-sienna-400;
     font-weight: 600;
   }
 

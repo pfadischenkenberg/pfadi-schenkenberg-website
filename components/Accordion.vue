@@ -39,7 +39,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@import "assets/scss/variables";
+@use "assets/scss/variables";
 
 .accordion {
   margin-bottom: 1rem;

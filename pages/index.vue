@@ -1,28 +1,35 @@
 <template>
   <div>
     <DefaultHero :wave="false">Willkommen bei der</DefaultHero>
-    <AnmeldenBanner />
+    <AnmeldenBanner/>
     <main>
-      <div class="section-1">
-        <h1>Das sind wir</h1>
-        <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
-                       alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024">
-          Abteilungsfoto Aufla 24
-        </PolaroidPhoto>
-        <p class="intro-text">Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft,
+      <h1>Das sind wir</h1>
+      <section class="start-page-content grid-container">
+        <p class="intro-text">
+          <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
+                         alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024"
+                         class="polaroid-1 polaroid-1--mobile ">
+            Abteilungsfoto Aufla 24
+          </PolaroidPhoto>
+          Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft,
           Freundschaften, die sich
           wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig. Denn wir
           treffen
           uns jeden Samstagnachmittag, meist rund um Basel und draussen in der Natur: Gemeinsam spielen, eine
           Schnitzeljagd
           machen, lustigen Kreaturen helfen, fein essen, etwas Sinnvolles lernen oder es einfach schön miteinander
-          haben.</p>
-      </div>
-      <div class="section-2">
-        <PolaroidPhoto src="/img/kinder-spielen.jpg"
-                       alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021">PfiLa 2021
+          haben.
+        </p>
+        <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
+                       alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024"
+                       class="polaroid-1 polaroid-1--desktop">
+          Abteilungsfoto Aufla 24
         </PolaroidPhoto>
-        <div class="text">
+        <PolaroidPhoto src="/img/kinder-spielen.jpg"
+                       alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021"
+                       class="polaroid-2 polaroid-2--mobile">PfiLa 2021
+        </PolaroidPhoto>
+        <div class="main-text">
           <p>Wir schaffen unvergessliche Momente in drei Altersstufen:<br>
             <em>(dabei sind wir politisch und konfessionell neutral)</em>
           </p>
@@ -38,13 +45,18 @@
           <div class="anmelde-link">
             <FancyLink to="/administratives#schnuppern">Jetzt anmelden</FancyLink>
           </div>
+          <div id="note-ages">
+            <img src="assets/img/arrow-note-ages.svg" alt="Gestrichelter Pfeil" draggable="false">
+            <p>Die Altersangaben sind nur<br>
+              grobe Richtwerte</p>
+          </div>
         </div>
-      </div>
-      <div id="note-ages">
-        <img src="assets/img/arrow-note-ages.svg" alt="Gestrichelter Pfeil" draggable="false">
-        <p>Die Altersangaben sind nur<br>
-          grobe Richtwerte</p>
-      </div>
+
+        <PolaroidPhoto src="/img/kinder-spielen.jpg"
+                       alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021"
+                       class="polaroid-2 polaroid-2--desktop">PfiLa 2021
+        </PolaroidPhoto>
+      </section>
     </main>
   </div>
 </template>
@@ -68,7 +80,7 @@ useSeoMeta({
 </script>
 
 <style lang="scss" scoped>
-@import "assets/scss/variables";
+@use "assets/scss/variables";
 
 main {
   h1 {
@@ -76,53 +88,70 @@ main {
   }
 
   .polaroid-photo {
+    grid-column: 1/13;
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
 
-  .ages {
-    text-align: center;
-    margin-block: 2rem;
-  }
-
-  #note-ages {
+  .polaroid-1--desktop, .polaroid-2--desktop {
     display: none;
   }
 
-  .anmelde-link {
-    margin-top: 2rem;
-
-    display: flex;
-    justify-content: center;
+  .intro-text {
+    grid-column: 1/13;
   }
 
-  @media screen and (min-width: 900px) {
-    .polaroid-photo {
-      float: right;
-      width: max(calc(50% - 1rem), 30rem);
-      margin-left: 1rem;
+  .main-text {
+    grid-column: 1/13;
+
+
+    .ages {
+      text-align: center;
+      margin-block: 2rem;
     }
 
-    .section-2 {
-      width: 100%;
+    #note-ages {
+      display: none;
+    }
+
+    .anmelde-link {
+      margin-top: 2rem;
 
       display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-
-      .polaroid-photo {
-        width: 100%;
-        flex: 0 0 max(calc(50% - 1rem), 30rem);
-      }
-
-      .text {
-        flex: 1;
-      }
+      justify-content: center;
     }
-
   }
 
-  @media screen and (min-width: $screen-size-medium) {
+  @media screen and (min-width: variables.$screen-size-between) {
+    .start-page-content {
+
+      .polaroid-photo {
+        width: max(calc(50% - 1rem), 30rem);
+        margin-left: 1rem;
+        float: right;
+      }
+
+      .polaroid-2--mobile {
+        display: none;
+      }
+
+      .polaroid-2--desktop {
+        display: block;
+        grid-column: 7/13;
+      }
+      //.polaroid-photo {
+      //  width: 100%;
+      //  flex: 0 0 max(calc(50% - 1rem), 30rem);
+      //}
+
+      .main-text {
+        flex: 1;
+      }
+
+    }
+  }
+
+  @media screen and (min-width: variables.$screen-size-medium) {
 
     margin-top: 6rem;
 

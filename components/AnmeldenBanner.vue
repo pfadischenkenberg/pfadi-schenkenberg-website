@@ -10,7 +10,7 @@
 </script>
 
 <style lang="scss" scoped>
-@import "assets/scss/variables";
+@use "assets/scss/variables";
 
 .anmelden-banner {
   display: flex;
@@ -23,7 +23,7 @@
   padding-block: 2rem;
   width: 100dvw;
 
-  background-color: $asparagus-300;
+  background-color: variables.$asparagus-300;
   z-index: 1;
   
   text-align: center;
@@ -63,7 +63,7 @@
   z-index: 0;
 }
 
-@media screen and (max-width: $screen-size-small) {
+@media screen and (max-width: variables.$screen-size-small) {
   .anmelden-banner {
     gap: 0.9rem;
     padding-block: 2rem;
