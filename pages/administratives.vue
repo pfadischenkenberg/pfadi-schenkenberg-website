@@ -66,13 +66,13 @@ const seo = {
   title: "Administratives | Pfadi Schenkenberg",
   description: "Willst du bei der Pfadi Schenkenberg in Basel vorbeischauen oder suchst du Dokumente und deine Ansprechpersonen? Hier findest du alles Administrative."
 
-}
+};
 
 useSeoMeta({
   title: seo.title,
   ogTitle: seo.title,
   description: seo.description,
-  ogDescription: seo.description,ogImage: "/img/gruppenfoto-abteilung.jpg",
+  ogDescription: seo.description, ogImage: "/img/gruppenfoto-abteilung.jpg",
   twitterCard: "summary_large_image"
 });
 
@@ -135,7 +135,7 @@ main {
       }
 
       .admin-segment-text {
-        grid-column: 1/8;
+        grid-column: 1/13;
       }
 
       .admin-segment-list {
@@ -143,19 +143,18 @@ main {
         margin-top: 2rem;
         display: flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 3rem;
 
         .admin-segment-list-element {
           position: relative;
 
           h3 {
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: $burnt-sienna-400;
             font-weight: 600;
           }
 
           p {
-            font-weight: 600;
             margin: 0.2rem 0 0;
           }
 
@@ -163,29 +162,12 @@ main {
             margin: 0.5rem 0 0.5rem;
           }
 
+          a {
+            font-size: 1.2rem;
+          }
+
           #note-rufe {
-            position: relative;
-            bottom: 5rem;
-            right: -20rem;
-            z-index: -1;
-
-            img {
-              height: 12rem;
-            }
-
-            p {
-              position: relative;
-              right: 18rem;
-              font-size: 2rem;
-              font-family: "Patrick Hand", sans-serif;
-              font-weight: 400;
-
-              transform: rotate(-5.5deg);
-            }
-
-            @media screen and (max-width: 1420px) {
-              display: none;
-            }
+            display: none;
           }
         }
       }
@@ -200,9 +182,59 @@ main {
 
       p {
         font-family: "Patrick Hand", sans-serif;
-        font-size: 3.2rem;
-        line-height: 3.2rem;
-        margin: 0;
+        font-size: 2rem;
+        line-height: 2rem;
+        margin: 0 0 0.5rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-size-medium) {
+
+    .admin-content {
+      .admin-segment {
+        .admin-segment-text {
+          grid-column: 1/8;
+        }
+
+        .admin-segment-list {
+
+          gap: 2rem;
+
+          .admin-segment-list-element {
+            h3 {
+              font-size: 2rem;
+            }
+
+            #note-rufe {
+              display: block;
+              position: relative;
+              bottom: 5rem;
+              right: -20rem;
+              z-index: -1;
+
+              img {
+                height: 12rem;
+              }
+
+              p {
+                position: relative;
+                right: 18rem;
+                font-size: 2rem;
+                font-family: "Patrick Hand", sans-serif;
+                font-weight: 400;
+
+                transform: rotate(-5.5deg);
+              }
+            }
+
+            .something-missing {
+              font-size: 3.2rem;
+              line-height: 3.2rem;
+              margin: 0;
+            }
+          }
+        }
       }
     }
   }
