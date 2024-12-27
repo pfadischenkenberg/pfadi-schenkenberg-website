@@ -40,9 +40,12 @@ const props = defineProps({
   }
 
   figcaption {
+    margin-block: 0.5rem;
+
     font-family: "Patrick Hand", sans-serif;
     font-size: 2rem;
-    margin-block: 0.5rem;
+    line-height: 2.5rem;
+    text-align: center;
   }
 
   @media screen and (max-width: $screen-size-small) {
@@ -50,7 +53,7 @@ const props = defineProps({
     gap: 0.2rem;
     figcaption {
       font-size: 1.5rem;
-      line-height: 1.5rem;
+      line-height: 2rem;
     }
   }
 }

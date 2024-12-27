@@ -13,13 +13,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 1.5rem;
-}
-
-
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 
   font-size: 1.5rem;
@@ -34,7 +27,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     font-size: 1.5rem;
     line-height: 2.1rem;
   }
-  
+
   ::selection {
     color: $burnt-sienna-100;
     background: $asparagus-400;
@@ -65,8 +58,6 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     color: $burnt-sienna-700;
 
     @media screen and (max-width: $screen-size-small) {
-      margin-bottom: 2rem;
-
       font-size: 3.5rem;
       line-height: 3.5rem;
     }
@@ -78,6 +69,11 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     line-height: 4rem;
     font-family: "Patrick Hand", sans-serif;
     color: $tan-hide-400;
+
+    @media screen and (max-width: $screen-size-small) {
+      font-size: 2.3rem;
+      line-height: 2.3rem;
+    }
   }
 
   h3 {
@@ -86,6 +82,10 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     line-height: 2.3rem;
     color: $asparagus-600;
 
+    @media screen and (max-width: $screen-size-small) {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
   }
 
   p {
@@ -110,5 +110,37 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   b, strong {
     font-weight: 600;
     color: $asparagus-600;
+  }
+}
+
+/* Classes */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1.5rem;
+}
+
+.button--text {
+  display: inline;
+  padding: 0;
+  border: none;
+
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  font-weight: 500;
+
+  background: transparent;
+  color: $asparagus-600;
+
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $asparagus-700;
   }
 }

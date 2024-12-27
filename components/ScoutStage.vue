@@ -5,7 +5,20 @@
       <h3>{{ stage.targetGroup }}</h3>
     </div>
     <div class="scout-stage-content grid-container">
-      <div class="scout-stage-text" v-html="contentHtml">
+      <div class="scout-stage-text scout-stage-text--full">
+        <p v-html="stage.text.intro"></p>
+        <p v-html="stage.text.main"></p>
+      </div>
+      <div class="scout-stage-text scout-stage-text--expandable">
+        <p>
+          <span v-html="stage.text.intro"></span> &nbsp;
+          <button class="button--text expand-button" v-if="!expanded" v-on:click="toggleExpanded()">... mehr</button>
+        </p>
+        <p v-if="expanded">
+          <span v-html="stage.text.main"></span> &nbsp;
+          <button class="button--text" v-on:click="toggleExpanded()"> weniger anzeigen</button>
+        </p>
+
       </div>
       <div class="scout-stage-side">
         <PolaroidPhoto :src="stage.image.src" :alt="stage.image.alt">
@@ -14,8 +27,8 @@
         <div class="scout-stage-data">
           <div class="scout-stage-leaders">
             <h4>{{ stage.leaders.label }}</h4>
-              <p v-for="leader in stage.leaders.list">{{ `${leader.name} v/o ${leader.vulgo}` }}</p>
-              <a :href="`mailto:${stage.email}`">{{ stage.email }}</a>
+            <p v-for="leader in stage.leaders.list">{{ `${leader.name} v/o ${leader.vulgo}` }}</p>
+            <a :href="`mailto:${stage.email}`">{{ stage.email }}</a>
           </div>
 
           <div v-if="stage.calendar.existing" class="scout-stage-calendar">
@@ -60,13 +73,21 @@ interface ScoutStageProps {
 const props = defineProps<{ stage: ScoutStageProps }>();
 
 const stage = props.stage;
-const contentHtml = `<p>${stage.text.intro}</p><p>${stage.text.main}</p>`;
+
+const expanded = ref(false);
+
+function toggleExpanded() {
+  expanded.value = !expanded.value;
+}
+
+
 </script>
 
 <style lang="scss" scoped>
 @import "assets/scss/variables";
 
 .scout-stage {
+
   grid-column: 1/13;
 
   .scout-stage-title {
@@ -77,18 +98,23 @@ const contentHtml = `<p>${stage.text.intro}</p><p>${stage.text.main}</p>`;
     grid-column: 1/13;
 
     .scout-stage-text {
-      grid-column: 1/8;
+      grid-column: 1/13;
+    }
+
+    .scout-stage-text--full {
+      display: none;
     }
 
     .scout-stage-side {
-      grid-column: 8/13;
+      grid-column: 1/13;
       display: flex;
       flex-direction: column;
       gap: 3rem;
 
       .scout-stage-data {
         display: flex;
-        gap: 1.5rem;
+        flex-direction: column;
+        gap: 3rem;
 
         h4 {
           line-height: 1.5rem;
@@ -123,5 +149,32 @@ const contentHtml = `<p>${stage.text.intro}</p><p>${stage.text.main}</p>`;
       }
     }
   }
+
+  @media screen and (min-width: $screen-size-medium) {
+    .scout-stage-content {
+
+      .scout-stage-text {
+        grid-column: 1/8;
+      }
+
+      .scout-stage-text--full {
+        display: block;
+      }
+
+      .scout-stage-text--expandable {
+        display: none;
+      }
+
+      .scout-stage-side {
+        grid-column: 8/13;
+
+        .scout-stage-data {
+          flex-direction: row;
+          gap: 1.5rem;
+        }
+      }
+    }
+  }
+
 }
 </style>
