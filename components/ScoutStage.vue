@@ -122,7 +122,6 @@ function toggleExpanded() {
           color: $burnt-sienna-400;
         }
 
-
         p, a {
           font-size: 1.2rem;
           line-height: 1.2rem;
@@ -136,9 +135,7 @@ function toggleExpanded() {
         div {
           display: flex;
           flex-direction: column;
-
           gap: 1rem;
-
         }
 
         .scout-stage-leaders {
@@ -150,11 +147,11 @@ function toggleExpanded() {
     }
   }
 
-  @media screen and (min-width: $screen-size-medium) {
+  @media screen and (min-width: $screen-size-between) {
     .scout-stage-content {
 
       .scout-stage-text {
-        grid-column: 1/8;
+        grid-column: 1/7;
       }
 
       .scout-stage-text--full {
@@ -163,6 +160,20 @@ function toggleExpanded() {
 
       .scout-stage-text--expandable {
         display: none;
+      }
+
+      .scout-stage-side {
+        grid-column: 7/13;
+
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-size-medium) {
+    .scout-stage-content {
+
+      .scout-stage-text {
+        grid-column: 1/8;
       }
 
       .scout-stage-side {
