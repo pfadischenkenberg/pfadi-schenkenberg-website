@@ -68,6 +68,10 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     font-size: 4rem;
     line-height: 4rem;
     font-family: "Patrick Hand", sans-serif;
+
+    word-wrap: break-word;
+    hyphens: auto;
+
     color: variables.$tan-hide-400;
 
     @media screen and (max-width: variables.$screen-size-small) {
