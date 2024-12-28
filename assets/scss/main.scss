@@ -1,6 +1,6 @@
-@import "variables";
-@import "fonts";
-@import "reset";
+@use "variables";
+@use "fonts";
+@use "reset";
 
 html {
   scroll-padding-top: 8rem;
@@ -8,8 +8,8 @@ html {
 
 body {
   font-family: Fira Sans, sans-serif;
-  color: $burnt-sienna-950;
-  background-color: $burnt-sienna-50;
+  color: variables.$burnt-sienna-950;
+  background-color: variables.$burnt-sienna-50;
   scroll-behavior: smooth;
 }
 
@@ -18,35 +18,35 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   font-size: 1.5rem;
   line-height: 2.1rem;
 
-  @media screen and (max-width: $screen-size-medium) {
+  @media screen and (max-width: variables.$screen-size-medium) {
     font-size: 1.8rem;
     line-height: 2.5rem;
   }
 
-  @media screen and (max-width: $screen-size-small) {
+  @media screen and (max-width: variables.$screen-size-small) {
     font-size: 1.5rem;
     line-height: 2.1rem;
   }
 
   ::selection {
-    color: $burnt-sienna-100;
-    background: $asparagus-400;
+    color: variables.$burnt-sienna-100;
+    background: variables.$asparagus-400;
 
   }
 
   ::-moz-selection {
-    color: $burnt-sienna-100;
-    background: $asparagus-400;
+    color: variables.$burnt-sienna-100;
+    background: variables.$asparagus-400;
   }
 
   main {
-    margin: 2rem $default-inline-padding 8rem;
+    margin: 2rem variables.$default-inline-padding 8rem;
 
-    @media only screen and (max-width: $screen-size-medium) {
-      margin-inline: $medium-inline-padding;
+    @media only screen and (max-width: variables.$screen-size-medium) {
+      margin-inline: variables.$medium-inline-padding;
     }
-    @media screen and (max-width: $screen-size-small) {
-      margin-inline: $small-inline-padding;
+    @media screen and (max-width: variables.$screen-size-small) {
+      margin-inline: variables.$small-inline-padding;
     }
   }
 
@@ -55,9 +55,9 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     font-size: 5rem;
     line-height: 5rem;
     font-family: "Patrick Hand", sans-serif;
-    color: $burnt-sienna-700;
+    color: variables.$burnt-sienna-700;
 
-    @media screen and (max-width: $screen-size-small) {
+    @media screen and (max-width: variables.$screen-size-small) {
       font-size: 3.5rem;
       line-height: 3.5rem;
     }
@@ -68,9 +68,9 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     font-size: 4rem;
     line-height: 4rem;
     font-family: "Patrick Hand", sans-serif;
-    color: $tan-hide-400;
+    color: variables.$tan-hide-400;
 
-    @media screen and (max-width: $screen-size-small) {
+    @media screen and (max-width: variables.$screen-size-small) {
       font-size: 2.3rem;
       line-height: 2.3rem;
     }
@@ -80,9 +80,9 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     font-weight: 500;
     font-size: 2.3rem;
     line-height: 2.3rem;
-    color: $asparagus-600;
+    color: variables.$asparagus-600;
 
-    @media screen and (max-width: $screen-size-small) {
+    @media screen and (max-width: variables.$screen-size-small) {
       font-size: 1.5rem;
       line-height: 1.5rem;
     }
@@ -99,7 +99,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   }
 
   a {
-    color: $burnt-sienna-800;
+    color: variables.$burnt-sienna-800;
   }
 
   i, em {
@@ -109,7 +109,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 
   b, strong {
     font-weight: 600;
-    color: $asparagus-600;
+    color: variables.$asparagus-600;
   }
 }
 
@@ -132,7 +132,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   font-weight: 500;
 
   background: transparent;
-  color: $asparagus-600;
+  color: variables.$asparagus-600;
 
   cursor: pointer;
 
@@ -141,6 +141,6 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   }
 
   &:active {
-    color: $asparagus-700;
+    color: variables.$asparagus-700;
   }
 }

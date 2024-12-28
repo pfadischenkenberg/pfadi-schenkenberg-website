@@ -31,13 +31,13 @@ const year = new Date().getFullYear();
 </script>
 
 <style lang="scss" scoped>
-@import "assets/scss/variables";
+@use "assets/scss/variables";
 
 .footer-content {
-  padding-inline: $default-inline-padding;
-  background-color: $tan-hide-300;
+  padding-inline: variables.$default-inline-padding;
+  background-color: variables.$tan-hide-300;
   height: 7rem;
-  padding-bottom: $small-inline-padding;
+  padding-bottom: variables.$small-inline-padding;
 
   display: flex;
   justify-content: space-between;
@@ -79,7 +79,7 @@ const year = new Date().getFullYear();
       li {
         a {
           font-size: inherit;
-          color: $text-dark;
+          color: variables.$text-dark;
           text-decoration: none;
           font-weight: 500;
 
@@ -120,7 +120,7 @@ footer::before {
   background-size: cover;
   z-index: 1;
 
-  @media screen and (max-width: $screen-size-small) {
+  @media screen and (max-width: variables.$screen-size-small) {
     height: 1.5rem;
   }
 }
@@ -132,9 +132,9 @@ footer::before {
   }
 }
 
-@media screen and (max-width: $screen-size-medium) {
+@media screen and (max-width: variables.$screen-size-medium) {
   .footer-content {
-    padding-inline: $medium-inline-padding;
+    padding-inline: variables.$medium-inline-padding;
   }
 }
 
@@ -180,13 +180,13 @@ footer::before {
       background-size: cover;
 
       position: absolute;
-      bottom: $small-inline-padding;
-      right: $small-inline-padding;
+      bottom: variables.$small-inline-padding;
+      right: variables.$small-inline-padding;
     }
   }
 }
 
-@media screen and (max-width: $screen-size-small) {
+@media screen and (max-width: variables.$screen-size-small) {
 
   .footer-content {
     gap: 2rem;

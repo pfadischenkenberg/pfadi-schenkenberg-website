@@ -13,7 +13,7 @@ const props = defineProps({
 });
 </script>
 <style lang="scss" scoped>
-@import "assets/scss/variables";
+@use "assets/scss/variables";
 
 .fancy-link {
   display: inline-block;
@@ -24,11 +24,11 @@ const props = defineProps({
   line-height: 2.5rem;
 
   text-decoration: none;
-  color: $text-dark;
+  color: variables.$text-dark;
   cursor: pointer;
 
   &:hover {
-    color: $text-dark;
+    color : variables.$text-dark;
   }
 
   &::after {
@@ -41,7 +41,7 @@ const props = defineProps({
     top: 1.4rem;
     z-index: -1;
 
-    background-color: $tan-hide-400;
+    background-color : variables.$tan-hide-400;
     transition: top 0.15s ease, left 0.15s ease;
 
   }
@@ -56,7 +56,7 @@ const props = defineProps({
   }
 }
 
-@media screen and (max-width: $screen-size-small){
+@media screen and (max-width : variables.$screen-size-small){
   .fancy-link {
     font-size: 2rem;
     line-height: 2rem;

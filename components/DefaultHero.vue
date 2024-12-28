@@ -19,7 +19,7 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-@import "assets/scss/variables";
+@use "assets/scss/variables";
 
 .hero {
   .hero-text {
@@ -29,7 +29,7 @@ const props = defineProps({
     justify-content: center;
     gap: min(1.2rem, 2dvw);
 
-    padding-inline: $small-inline-padding;
+    padding-inline: variables.$small-inline-padding;
     width: 100dvw;
     height: 38rem;
 
@@ -45,8 +45,8 @@ const props = defineProps({
       line-height: min(4rem, 6dvw);
       margin: 0;
 
-      color: $tan-hide-400;
-      text-shadow: $asparagus-950 0 0 10px;
+      color: variables.$tan-hide-400;
+      text-shadow: variables.$asparagus-950 0 0 10px;
     }
 
     .hero-title {
@@ -55,8 +55,8 @@ const props = defineProps({
       font-size: min(5rem, 7.5dvw);
       line-height: min(5rem, 7.5dvw);
 
-      color: $burnt-sienna-400;
-      text-shadow: $asparagus-950 0 0 10px;
+      color: variables.$burnt-sienna-400;
+      text-shadow: variables.$asparagus-950 0 0 10px;
     }
   }
 
@@ -70,7 +70,7 @@ const props = defineProps({
 
 }
 
-@media screen and (max-width: $screen-size-medium) {
+@media screen and (max-width: variables.$screen-size-medium) {
   .hero {
     .hero-text {
       padding-top: 8rem;
