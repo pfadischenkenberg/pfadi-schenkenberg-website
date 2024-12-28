@@ -152,7 +152,7 @@ main {
     .intro-text {
       grid-column: 1/7;
     }
-    
+
     .main-text {
       grid-column: 1/7;
 

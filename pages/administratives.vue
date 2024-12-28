@@ -56,7 +56,6 @@
           <FancyLink to="mailto:admin@pfadischenkenberg.ch">Schreib uns eine Mail</FancyLink>
         </div>
       </div>
-
     </main>
   </div>
 </template>
@@ -181,10 +180,22 @@ main {
       align-items: center;
 
       p {
+        margin: 0 0 0.5rem;
+
         font-family: "Patrick Hand", sans-serif;
         font-size: 2rem;
         line-height: 2rem;
-        margin: 0 0 0.5rem;
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (min-width: variables.$screen-size-between) {
+    .admin-content {
+      .something-missing > p {
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+        margin: 0;
       }
     }
   }
@@ -228,14 +239,10 @@ main {
               }
             }
 
-            .something-missing {
-              font-size: 3.2rem;
-              line-height: 3.2rem;
-              margin: 0;
-            }
           }
         }
       }
+
     }
   }
 }
