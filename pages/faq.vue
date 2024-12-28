@@ -5,13 +5,17 @@
       <h1>Fragen, die auftauchen könnten</h1>
       <Accordion title="Was ist Pfadi?">
         <p>Die Pfadibewegung ist aktuell die grösste Jugendorganisation und steht für Offenheit, Freundschaft,
-          Engagement, Zusammenhalt und Toleranz. Die Pfadi Schenkenberg gehört zu dem Bezirk Zytröseli, welcher aus den
+          Engagement, Zusammenhalt und Toleranz.<br>
+          Die Pfadi Schenkenberg gehört zu dem Bezirk Zytröseli, welcher aus den
           5 Pfadi Abteilungen Ramstein, Falkenstein, Schalberg, Bischofstein und Schenkenberg besteht. Der Bezirk gehört
-          zum Kantonalverband "Pfadi Region Basel" welcher Wiederum zur Pfadibewegung Schweiz gehört. Die Pfadi ist eine
+          zum Kantonalverband "Pfadi Region Basel" welcher Wiederum zur Pfadibewegung Schweiz gehört.<br>
+          Die Pfadi ist eine
           Freizeitbeschäftigung, bei der das Erleben von Abenteuer in der Natur im Vordergrund steht. Sie bietet die
           Möglichkeit, voneinander zu lernen und sich gegenseitig zu akzeptieren, und sorgt ebenfalls für Verständnis
-          aller Mitmenschen. Das ausgebildete Leitungsteam will mit dem vielseitigen Programm alle Kinder und
+          aller Mitmenschen.<br>
+          Das ehrenamtliche Leitungsteam will mit dem vielseitigen Programm alle Kinder und
           Jugendliche ansprechen.</p>
+        <p><b>Mehr darüber:</b> <a href="https://pfadi.swiss" target="_blank">Pfadibewegung Schweiz</a></p>
       </Accordion>
       <Accordion title="Wann muss der Jahresbeitrag bezahlt werden?">
         <p> Eine Rechnung für den Jahresbeitrag wird jeweils im Zeitraum nach den Sommerferien für das angebrochene Jahr
@@ -19,6 +23,7 @@
           kurzem angemeldet war.</p>
       </Accordion>
       <Accordion title="Welche Ausrüstung braucht man für die Pfadi?">
+        <p>Grundsätzlich ist alles, was man für die Pfadi braucht, dem Wetter und</p>
         <p>
           Es gibt ein paar Dinge, die im besten Fall an jedem Anlass dabei sind.<br />
           <b>ZZ</b> - Zündhölzli und Zeitung, um Feuer zu machen<br />
@@ -34,7 +39,7 @@
           ausserdem vielseitig eingesetzt werden.<br />
         </p>
         <p>
-          Weiteres, das vor allem in den Lagern wichtig ist, ist Folgendes:<br />
+          Weiteres, das vor allem in den Lagern nützlich ist, ist Folgendes:<br />
           <b>Pfadihemd</b> - Auf dem Pfadihemd sammelt man Drücke und Abzeichen aus den Lagern.<br />
           <b>Pfadipulli</b> - Wir haben auch einen eigenen Pfadipulli. Diesen kann man ausschliesslich im
           <NuxtLink to="https://pfadi-region-basel.ch/projekte/pfadilaedeli/" target="_blank">Pfadilädeli</NuxtLink>
@@ -62,6 +67,8 @@
 </script>
 
 <style lang="scss" scoped>
+@use "assets/scss/variables";
+
 main {
   h1 {
     grid-column: 1/13;
@@ -69,10 +76,16 @@ main {
   }
 
   .accordion {
-    grid-column: 2/12;
+    grid-column: 1/13;
 
     p {
       max-width: 80rem;
+    }
+  }
+
+  @media screen and (min-width: variables.$screen-size-medium) {
+    .accordion {
+      grid-column: 2/12;
     }
   }
 }
