@@ -6,7 +6,7 @@
       </p>
       <h1 class="hero-title">Pfadi Schenkenberg</h1>
     </div>
-    <img v-if="props.wave == true" src="assets/img/separator-white.svg" alt="Separator" class="hero-wave">
+    <div :class="{'hero-wave': props.wave}"></div>
   </div>
 </template>
 
@@ -22,6 +22,12 @@ const props = defineProps({
 @use "assets/scss/variables";
 
 .hero {
+
+  z-index: -1;
+  background-image: url("public/img/hero.jpg");
+  background-position: center;
+  background-size: cover;
+
   .hero-text {
     display: flex;
     flex-direction: column;
@@ -30,13 +36,10 @@ const props = defineProps({
     gap: min(1.2rem, 2dvw);
 
     padding-inline: variables.$small-inline-padding;
-    width: 100dvw;
-    height: 38rem;
 
-    z-index: -1;
-    background-image: url("public/img/hero.jpg");
-    background-position: center;
-    background-size: cover;
+    padding-top: 8rem;
+    width: 100dvw;
+    height: 47.5dvw;
 
     .hero-welcome {
       transform: translate(20%);
@@ -61,20 +64,35 @@ const props = defineProps({
   }
 
   .hero-wave {
-    position: relative;
-    width: 100dvw;
-    bottom: 0;
-    translate: 0 -99%;
-    object-fit: fill;
+    width: 100%;
+    height: 1.5rem;
+    background-image: url("assets/img/separator-white.svg");
+    background-position-x: 10%;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
 }
 
-@media screen and (max-width: variables.$screen-size-medium) {
+@media screen and (min-width: variables.$screen-size-small) {
+  .hero {
+    .hero-wave {
+
+      background-position-x: center;
+    }
+  }
+}
+
+@media screen and (min-width: variables.$screen-size-medium) {
   .hero {
     .hero-text {
-      padding-top: 8rem;
-      height: 47.5dvw
+      padding-top: 0;
+      height: 38rem;
+    }
+
+    .hero-wave {
+      height: 3.5rem;
     }
   }
 }
