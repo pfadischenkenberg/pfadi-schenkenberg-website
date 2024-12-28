@@ -1,16 +1,18 @@
 <template>
   <div>
     <DefaultHero :wave="false">Willkommen bei der</DefaultHero>
-    <AnmeldenBanner/>
+    <AnmeldenBanner />
     <main>
       <h1>Das sind wir</h1>
       <section class="start-page-content grid-container">
         <p class="intro-text">
-          <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
-                         alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024"
-                         class="polaroid-1 polaroid-1--mobile ">
-            Abteilungsfoto Aufla 24
-          </PolaroidPhoto>
+          <ClientOnly>
+            <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
+                           alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024"
+                           class="polaroid-1 polaroid-1--mobile ">
+              Abteilungsfoto Aufla 24
+            </PolaroidPhoto>
+          </ClientOnly>
           Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft,
           Freundschaften, die sich
           wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig. Denn wir
@@ -20,15 +22,19 @@
           machen, lustigen Kreaturen helfen, fein essen, etwas Sinnvolles lernen oder es einfach schön miteinander
           haben.
         </p>
-        <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
-                       alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024"
-                       class="polaroid-1 polaroid-1--desktop">
-          Abteilungsfoto Aufla 24
-        </PolaroidPhoto>
-        <PolaroidPhoto src="/img/kinder-spielen.jpg"
-                       alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021"
-                       class="polaroid-2 polaroid-2--mobile">PfiLa 2021
-        </PolaroidPhoto>
+        <ClientOnly>
+          <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
+                         alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024"
+                         class="polaroid-1 polaroid-1--desktop">
+            Abteilungsfoto Aufla 200
+          </PolaroidPhoto>
+        </ClientOnly>
+        <ClientOnly>
+          <PolaroidPhoto src="/img/kinder-spielen.jpg"
+                         alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021"
+                         class="polaroid-2 polaroid-2--mobile">PfiLa 2021
+          </PolaroidPhoto>
+        </ClientOnly>
         <div class="main-text">
           <p>Wir schaffen unvergessliche Momente in drei Altersstufen:<br>
             <em>(dabei sind wir politisch und konfessionell neutral)</em>
@@ -39,7 +45,7 @@
             <li><b>Die Pios:</b> 14 - 16 Jahre</li>
           </ul>
           <p>
-            Wenn du Interesse hast, kannst du jederzeit vorbeikommen, um etwas Pfadiluft zu schnuppern
+            Wenn du Interesse hast, kannst du jederzeit vorbeikommen, um etwas Pfadiluft zu schnuppern.
             Bei Fragen geben wir gerne Auskunft.<br>
             Wir freuen uns auf dich!</p>
           <div class="anmelde-link">
@@ -51,11 +57,12 @@
               grobe Richtwerte</p>
           </div>
         </div>
-
-        <PolaroidPhoto src="/img/kinder-spielen.jpg"
-                       alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021"
-                       class="polaroid-2 polaroid-2--desktop">PfiLa 2021
-        </PolaroidPhoto>
+        <ClientOnly>
+          <PolaroidPhoto src="/img/kinder-spielen.jpg"
+                         alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021"
+                         class="polaroid-2 polaroid-2--desktop">PfiLa 2021
+          </PolaroidPhoto>
+        </ClientOnly>
       </section>
     </main>
   </div>
@@ -125,29 +132,16 @@ main {
   @media screen and (min-width: variables.$screen-size-between) {
     .start-page-content {
 
-      .polaroid-photo {
+      .polaroid-1--mobile {
         width: max(calc(50% - 1rem), 30rem);
         margin-left: 1rem;
         float: right;
       }
 
       .polaroid-2--mobile {
-        display: none;
+        margin-inline: 0;
+        grid-column: 3/11;
       }
-
-      .polaroid-2--desktop {
-        display: block;
-        grid-column: 7/13;
-      }
-      //.polaroid-photo {
-      //  width: 100%;
-      //  flex: 0 0 max(calc(50% - 1rem), 30rem);
-      //}
-
-      .main-text {
-        flex: 1;
-      }
-
     }
   }
 
@@ -155,44 +149,50 @@ main {
 
     margin-top: 6rem;
 
-    .polaroid-photo {
-      width: calc(40% - 1rem);
+    .intro-text {
+      grid-column: 1/7;
     }
-
-    .section-2 {
-      .polaroid-photo {
-        width: 100%;
-        flex: 0 0 calc(40% - 1rem);
-      }
+    
+    .main-text {
+      grid-column: 1/7;
 
       .ages {
         text-align: left;
       }
+
+      #note-ages {
+        display: inherit;
+
+        position: relative;
+        bottom: 17rem;
+        left: -7.5rem;
+        margin-bottom: -18rem;
+        margin-right: -7.5rem;
+        z-index: -1;
+
+        img {
+          height: 15rem;
+        }
+
+        p {
+          width: max-content;
+          margin-top: 1rem;
+          font-size: 2rem;
+          font-family: "Patrick Hand", sans-serif;
+
+          transform: rotate(10deg);
+        }
+      }
     }
 
-    #note-ages {
-      display: inherit;
-
-      position: relative;
-      bottom: 17rem;
-      left: -7.5rem;
-      margin-bottom: -18rem;
-      margin-right: -7.5rem;
-      z-index: -1;
-
-      img {
-        height: 15rem;
-      }
-
-      p {
-        width: max-content;
-        margin-top: 1rem;
-        font-size: 2rem;
-        font-family: "Patrick Hand", sans-serif;
-
-        transform: rotate(10deg);
-      }
+    .polaroid-1--mobile, .polaroid-2--mobile {
+      display: none;
     }
+    .polaroid-2--desktop, .polaroid-1--desktop {
+      display: block;
+      grid-column: 7/13;
+    }
+
   }
 }
 
