@@ -26,6 +26,9 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   @media screen and (max-width: variables.$screen-size-small) {
     font-size: 1.5rem;
     line-height: 2.1rem;
+
+    text-wrap: wrap;
+    hyphens: auto;
   }
 
   ::selection {

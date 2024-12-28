@@ -67,6 +67,8 @@
 </script>
 
 <style lang="scss" scoped>
+@use "assets/scss/variables";
+
 main {
   h1 {
     grid-column: 1/13;
@@ -74,10 +76,16 @@ main {
   }
 
   .accordion {
-    grid-column: 2/12;
+    grid-column: 1/13;
 
     p {
       max-width: 80rem;
+    }
+  }
+
+  @media screen and (min-width: variables.$screen-size-medium) {
+    .accordion {
+      grid-column: 2/12;
     }
   }
 }

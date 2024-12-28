@@ -2,7 +2,7 @@
   <div class="accordion">
     <button class="accordion-title" @click="toggleAccordion" :title="title">
       <h2>{{ title }}</h2>
-      <img :class="{ open: isOpen }" src="assets/img/arrow-extend.svg" alt="Pfeil">
+      <div :class="[{ open: isOpen}, 'arrow']" />
     </button>
     <div ref="content" :style="{ maxHeight: contentHeight }" class="content">
       <slot v-if="isOpen" />
@@ -74,9 +74,14 @@ function adjustContentHeight() {
       display: inline-block;
     }
 
-    img {
+    .arrow {
+      border-right: variables.$burnt-sienna-300 solid 0.2rem;
+      border-bottom: variables.$burnt-sienna-300 solid 0.2rem;
+      min-width: 0.7rem;
+     min-height: 0.7rem;
+      rotate: 45deg;
       transition: transform 0.2s ease-in-out;
-      margin: 0 0 .4rem 1rem;
+      margin: 0 0.4rem 0.4rem 0.7rem;
 
       &.open {
         transform: rotate(180deg);
@@ -85,8 +90,20 @@ function adjustContentHeight() {
   }
 
   .content {
+    /* For the opening animation*/
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
+  }
+
+  @media screen and (min-width: variables.$screen-size-small) {
+    .accordion-title {
+      .arrow {
+        border-width: 0.3rem;
+        min-width: 1rem;
+        min-height: 1rem;
+        margin: 0 0.4rem 0.4rem 1rem;
+      }
+    }
   }
 }
 </style>
