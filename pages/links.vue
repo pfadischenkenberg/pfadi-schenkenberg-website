@@ -60,8 +60,13 @@ main {
 
     display: flex;
     flex-wrap: wrap;
+    gap: 3rem;
+  }
+}
+
+@media screen and (min-width: variables.$screen-size-medium){
+  .links-wrapper {
     gap: 2rem;
   }
-
 }
 </style>
