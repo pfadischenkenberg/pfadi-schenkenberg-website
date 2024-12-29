@@ -1,8 +1,9 @@
 <template>
-  <div
+  <button
       class="nav-dropdown"
       v-on:mouseover="openDropdown()"
       v-on:mouseleave="closeDropdown()"
+      v-on:click="openDropdown()"
   >
     <a v-if="!!props.href" :href="props.href">
       {{ props.text }}
@@ -15,7 +16,7 @@
         <slot/>
       </ul>
     </div>
-  </div>
+  </button>
 </template>
 
 <script setup lang="ts">
@@ -44,6 +45,10 @@ function closeDropdown() {
 
   position: relative;
   cursor: pointer;
+
+  background-color: transparent;
+  border: none;
+  font: inherit;
 
   & > *:is(a, span) {
     text-decoration: none;
