@@ -13,14 +13,13 @@
               Abteilungsfoto Aufla 24
             </PolaroidPhoto>
           </ClientOnly>
-          Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft,
-          Freundschaften, die sich
-          wie die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig. Denn wir
-          treffen
+          Wenn auch du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, die sich wie
+          die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig. Denn wir treffen
           uns jeden Samstagnachmittag, meist rund um Basel und draussen in der Natur: Gemeinsam spielen, eine
-          Schnitzeljagd
-          machen, lustigen Kreaturen helfen, fein essen, etwas Sinnvolles lernen oder es einfach schön miteinander
-          haben.
+          Schnitzeljagd machen, lustigen Kreaturen helfen, fein essen, etwas Sinnvolles lernen oder es einfach schön
+          miteinander haben.<br />
+          Nebst den Samstagsaktivitäten finden jedes Jahr ein Auffahrts-/Pfingstlager in der ganzen Abteilung, ein
+          zweiwöchiges Sommerlager in der Pfadistufe und ein einwöchiges Herbstlager in der Wölflistufe statt.
         </p>
         <ClientOnly>
           <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
@@ -88,6 +87,7 @@ useSeoMeta({
 
 <style lang="scss" scoped>
 @use "assets/scss/includes" as var;
+
 main {
   h1 {
     text-align: center;

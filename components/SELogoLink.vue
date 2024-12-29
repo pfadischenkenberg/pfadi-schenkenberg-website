@@ -35,18 +35,6 @@
       line-height: 1.6rem;
     margin: 0;
     }
-
-    @media screen and (max-width: var.$screen-size-small) {
-      gap: 0.5rem;
-
-      img {
-        height: 2.5rem;
-      }
-      p {
-        font-size: 1rem;
-        line-height: 1rem;
-      }
-    }
   }
 
 }

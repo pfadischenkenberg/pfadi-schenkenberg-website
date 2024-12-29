@@ -25,6 +25,7 @@
           <p class="admin-segment-text">Um dich oder dein Kind zum Schnuppern anzumelden, schreibe der zuständigen
             Leitperson eine E-Mail oder komme an einem offiziellen Schnupperanlass vorbei. Dieser findet für gewöhnlich
             im März statt.</p>
+          <p class="admin-segment-text">Wenn man 2–3 mal zum Schnuppern vorbeigekommen ist und weiterhin kommen möchte, kann man das Anmeldeformular der Stufenleitung per Mail schicken oder es ausgedruckt an einen Anlass mitbringen.</p>
         </div>
         <div class="admin-segment">
           <h2>Dokumente</h2>
@@ -36,6 +37,7 @@
             </div>
             <div class="admin-segment-list-element">
               <h3>Mitgliederformulare</h3>
+              <File src="/files/Begrüssungsbrief.pdf"></File>
               <File src="/files/Mitgliederformular_Wölfe.pdf" />
               <File src="/files/Mitgliederformular_Pfadi.pdf" />
             </div>

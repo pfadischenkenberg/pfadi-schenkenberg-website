@@ -137,7 +137,7 @@ header {
         visibility: visible;
         opacity: 1;
         padding-bottom: 1rem;
-        margin-top: 1rem;
+        margin-top: 2rem;
       }
 
       .hamburger {

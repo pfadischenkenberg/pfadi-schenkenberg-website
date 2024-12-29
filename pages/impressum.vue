@@ -13,13 +13,17 @@
       <section class="grid-container">
         <h2>Design und Programmierung</h2>
 
-        <p>Das Design und die Entwicklung entstanden durch <NuxtLink to="https://github.com/timlandolt">Tim Landolt v/o Balu</NuxtLink> und in enger Zusammenarbeit
-          mit den Mitleiterinnen:</p>
+        <p>Das Design und die Entwicklung entstanden durch
+          <NuxtLink to="https://github.com/timlandolt">Tim Landolt v/o Balu</NuxtLink>
+          und in enger Zusammenarbeit
+          mit den Mitleiterinnen:
+        </p>
         <ul>
           <li>Jara Senn v/o Mononoke</li>
           <li>Solenne Saltel v/o Paloma</li>
           <li>Zora Landolt v/o Guarda</li>
         </ul>
+        <p>Auch der Rest des Leitungsteams hat wichtige Ideen, Texte, und Anmerkungen beigetragen <3.</p>
       </section>
 
       <section class="grid-container">
