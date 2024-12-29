@@ -52,7 +52,7 @@
   }
 
   &::after {
-    rotate: 180deg;
+    transform: rotate(180deg);
     bottom: -1.5rem;
   }
 

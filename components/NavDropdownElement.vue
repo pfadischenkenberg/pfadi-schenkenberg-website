@@ -1,9 +1,11 @@
 <template>
-  <button
+  <div
     class="nav-dropdown"
+    tabindex="0"
     v-on:mouseover="openDropdown()"
     v-on:mouseleave="closeDropdown()"
     v-on:click="openDropdown()"
+    v-on:focus="openDropdown()"
   >
     <a v-if="!!props.href" :href="props.href">
       {{ props.text }}
@@ -16,7 +18,7 @@
         <slot />
       </ul>
     </div>
-  </button>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -61,17 +63,20 @@ function closeDropdown() {
   .dropdown-wrapper {
     display: none;
     position: absolute;
-    top: calc(100% + 1rem);
+    top: 100%;
     left: 0;
     width: 100%;
 
+
+    @media screen and (max-width: var.$screen-size-small) {
+      min-width: 50%;
+    }
+
     .dropdown {
       white-space: nowrap;
-      width: 100%;
-      margin-inline: 0;
 
       list-style-type: none;
-      background-color: rgba(var.$tan-hide-50, 0.8);
+      background-color: rgba(var.$tan-hide-50, 0.2);
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
 

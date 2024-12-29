@@ -50,6 +50,7 @@ function adjustContentHeight() {
 
 <style lang="scss" scoped>
 @use "assets/scss/includes" as var;
+
 .accordion {
   margin-bottom: 2rem;
 
@@ -77,8 +78,8 @@ function adjustContentHeight() {
       border-right: var.$burnt-sienna-300 solid 0.2rem;
       border-bottom: var.$burnt-sienna-300 solid 0.2rem;
       min-width: 0.7rem;
-     min-height: 0.7rem;
-      rotate: 45deg;
+      min-height: 0.7rem;
+      transform: rotate(45deg);
       transition: transform 0.2s ease-in-out;
       margin: 0 0.4rem 0.4rem 0.7rem;
 
