@@ -87,8 +87,7 @@ useSeoMeta({
 </script>
 
 <style lang="scss" scoped>
-@use "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 main {
   h1 {
     text-align: center;
@@ -129,7 +128,7 @@ main {
     }
   }
 
-  @media screen and (min-width: variables.$screen-size-between) {
+  @media screen and (min-width: var.$screen-size-between) {
     .start-page-content {
 
       .polaroid-1--mobile {
@@ -145,7 +144,7 @@ main {
     }
   }
 
-  @media screen and (min-width: variables.$screen-size-medium) {
+  @media screen and (min-width: var.$screen-size-medium) {
 
     margin-top: 6rem;
 

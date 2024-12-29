@@ -31,13 +31,13 @@ const year = new Date().getFullYear();
 </script>
 
 <style lang="scss" scoped>
-@use "assets/scss/variables";
+@use "assets/scss/includes" as var;
 
 .footer-content {
-  padding-inline: variables.$default-inline-padding;
-  background-color: variables.$tan-hide-300;
+  padding-inline: var.$default-inline-padding;
+  background-color: var.$tan-hide-300;
   height: 7rem;
-  padding-bottom: variables.$small-inline-padding;
+  padding-bottom: var.$small-inline-padding;
 
   display: flex;
   justify-content: space-between;
@@ -55,9 +55,9 @@ const year = new Date().getFullYear();
   .footer-logo {
     background-image: url("assets/img/logos/schenkenberg-wappen-braun.svg");
     background-position: center;
-    background-size: contain;
+    @include var.cb-background-size(contain);
     background-repeat: no-repeat;
-    
+
     position: absolute;
     left: 50dvw;
     transform: translate(-50%);
@@ -79,7 +79,7 @@ const year = new Date().getFullYear();
       li {
         a {
           font-size: inherit;
-          color: variables.$text-dark;
+          color: var.$text-dark;
           text-decoration: none;
           font-weight: 500;
 
@@ -117,10 +117,10 @@ footer::before {
   background-image: url("assets/img/separator-orange.svg");
   background-repeat: no-repeat;
   background-position: top;
-  background-size: cover;
+  @include var.cb-background-size(cover);
   z-index: 1;
 
-  @media screen and (max-width: variables.$screen-size-small) {
+  @media screen and (max-width: var.$screen-size-small) {
     height: 1.5rem;
   }
 }
@@ -132,9 +132,9 @@ footer::before {
   }
 }
 
-@media screen and (max-width: variables.$screen-size-medium) {
+@media screen and (max-width: var.$screen-size-medium) {
   .footer-content {
-    padding-inline: variables.$medium-inline-padding;
+    padding-inline: var.$medium-inline-padding;
   }
 }
 
@@ -177,16 +177,16 @@ footer::before {
       width: 2rem;
       height: 2rem;
       background-image: url("assets/img/logos/instagram-logo.svg");
-      background-size: cover;
+      @include var.cb-background-size(cover);
 
       position: absolute;
-      bottom: variables.$small-inline-padding;
-      right: variables.$small-inline-padding;
+      bottom: var.$small-inline-padding;
+      right: var.$small-inline-padding;
     }
   }
 }
 
-@media screen and (max-width: variables.$screen-size-small) {
+@media screen and (max-width: var.$screen-size-small) {
 
   .footer-content {
     gap: 2rem;

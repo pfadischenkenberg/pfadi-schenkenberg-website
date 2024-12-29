@@ -49,8 +49,7 @@ function adjustContentHeight() {
 </script>
 
 <style lang="scss" scoped>
-@use "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 .accordion {
   margin-bottom: 2rem;
 
@@ -75,8 +74,8 @@ function adjustContentHeight() {
     }
 
     .arrow {
-      border-right: variables.$burnt-sienna-300 solid 0.2rem;
-      border-bottom: variables.$burnt-sienna-300 solid 0.2rem;
+      border-right: var.$burnt-sienna-300 solid 0.2rem;
+      border-bottom: var.$burnt-sienna-300 solid 0.2rem;
       min-width: 0.7rem;
      min-height: 0.7rem;
       rotate: 45deg;
@@ -95,7 +94,7 @@ function adjustContentHeight() {
     transition: max-height 0.2s ease-in-out;
   }
 
-  @media screen and (min-width: variables.$screen-size-small) {
+  @media screen and (min-width: var.$screen-size-small) {
     .accordion-title {
       .arrow {
         border-width: 0.3rem;

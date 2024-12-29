@@ -17,6 +17,7 @@ const fileName = props.src.split(/[/;\\]+/).pop();
 </script>
 
 <style lang="scss" scoped>
+@use "assets/scss/includes" as var;
 a {
   display: flex;
   align-items: center;
@@ -28,7 +29,7 @@ a::before {
   margin-right: 0.5rem;
   display: inline-block;
   background-image: url("assets/img/file-icon.svg");
-  background-size: contain;
+    @include var.cb-background-size(contain);
   background-repeat: no-repeat;
   background-position: center;
 }

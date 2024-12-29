@@ -13,8 +13,7 @@
 </script>
 
 <style lang="scss" scoped>
-@use "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 .se-logo-link {
 
   grid-column: 1/3;
@@ -32,12 +31,12 @@
     p {
       font-size: 1.6rem;
       font-weight: bold;
-      color: variables.$text-dark;
+      color: var.$text-dark;
       line-height: 1.6rem;
     margin: 0;
     }
 
-    @media screen and (max-width: variables.$screen-size-small) {
+    @media screen and (max-width: var.$screen-size-small) {
       gap: 0.5rem;
 
       img {

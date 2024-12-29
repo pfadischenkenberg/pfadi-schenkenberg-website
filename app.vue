@@ -9,6 +9,5 @@
 
 <style lang="scss" scoped>
 @use "assets/scss/main";
-@use "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 </style>

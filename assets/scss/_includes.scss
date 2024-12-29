@@ -1,3 +1,15 @@
+/* Mixins */
+
+/* cb = cross browser */
+@mixin cb-background-size($bg-size) {
+  background-size: $bg-size;
+  -webkit-background-size: $bg-size;
+  -moz-background-size: $bg-size;
+  -o-background-size: $bg-size;
+}
+
+/* Variables */
+
 $burnt-sienna-50: #fef4ee;
 $burnt-sienna-100: #fce5d8;
 $burnt-sienna-200: #f9c7af;
@@ -9,6 +21,7 @@ $burnt-sienna-700: #b62418;
 $burnt-sienna-800: #911f1b;
 $burnt-sienna-900: #751c19;
 $burnt-sienna-950: #3f0b0b;
+
 $tan-hide-50: #fef6ee;
 $tan-hide-100: #feebd6;
 $tan-hide-200: #fbd3ad;
@@ -20,6 +33,7 @@ $tan-hide-700: #bc3a12;
 $tan-hide-800: #962f16;
 $tan-hide-900: #792a15;
 $tan-hide-950: #411209;
+
 $asparagus-50: #f4f9ec;
 $asparagus-100: #e7f1d6;
 $asparagus-200: #d0e4b2;
@@ -41,3 +55,4 @@ $small-inline-padding: 2rem;
 $screen-size-small: 600px;
 $screen-size-between: 900px;
 $screen-size-medium: 1200px;
+

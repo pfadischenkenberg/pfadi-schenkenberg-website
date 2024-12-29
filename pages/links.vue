@@ -47,8 +47,7 @@ useSeoMeta({
 </script>
 
 <style lang="scss" scoped>
-@use "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 main {
   h1 {
     grid-column: 1/13;
@@ -64,7 +63,7 @@ main {
   }
 }
 
-@media screen and (min-width: variables.$screen-size-medium){
+@media screen and (min-width: var.$screen-size-medium){
   .links-wrapper {
     gap: 2rem;
   }

@@ -48,19 +48,18 @@ const { styles } = useFixedHeader(defaultHeaderRef);
 </script>
 
 <style lang="scss" scoped>
-@use "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 header {
   position: fixed;
   z-index: 9999;
-  padding: 1rem variables.$default-inline-padding;
+  padding: 1rem var.$default-inline-padding;
   width: 100dvw;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  background-color: rgba(variables.$tan-hide-100, 0.2);
+  background-color: rgba(var.$tan-hide-100, 0.2);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 
@@ -82,7 +81,7 @@ header {
 
         a {
           text-decoration: none;
-          color: variables.$text-dark;
+          color: var.$text-dark;
 
           &:hover {
             text-decoration: underline;
@@ -97,9 +96,9 @@ header {
   }
 }
 
-@media screen and (max-width: variables.$screen-size-medium) {
+@media screen and (max-width: var.$screen-size-medium) {
   header {
-    padding-inline: variables.$medium-inline-padding;
+    padding-inline: var.$medium-inline-padding;
 
     nav {
       ul {
@@ -107,14 +106,14 @@ header {
         position: absolute;
         top: 3.5rem;
         right: 0;
-        padding: 1rem variables.$small-inline-padding;
+        padding: 1rem var.$small-inline-padding;
         border-radius: 5px;
 
         display: flex;
         flex-direction: column;
         gap: 1rem;
 
-        background-color: rgba(variables.$tan-hide-100, 0.5);
+        background-color: rgba(var.$tan-hide-100, 0.5);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
         opacity: 0;
@@ -140,9 +139,9 @@ header {
   }
 }
 
-@media screen and (max-width: variables.$screen-size-small) {
+@media screen and (max-width: var.$screen-size-small) {
   header {
-    padding: 0.8rem variables.$small-inline-padding;
+    padding: 0.8rem var.$small-inline-padding;
   }
 }
 </style>

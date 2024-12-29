@@ -110,8 +110,7 @@ const contacts: Array<Contact> = [
 </script>
 
 <style lang="scss" scoped>
-@use "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 main {
 
   h1 {
@@ -149,7 +148,7 @@ main {
 
           h3 {
             font-size: 1.5rem;
-            color: variables.$burnt-sienna-400;
+            color: var.$burnt-sienna-400;
             font-weight: 600;
           }
 
@@ -190,7 +189,7 @@ main {
     }
   }
 
-  @media screen and (min-width: variables.$screen-size-between) {
+  @media screen and (min-width: var.$screen-size-between) {
     .admin-content {
       .something-missing > p {
         font-size: 3.2rem;
@@ -200,7 +199,7 @@ main {
     }
   }
 
-  @media screen and (min-width: variables.$screen-size-medium) {
+  @media screen and (min-width: var.$screen-size-medium) {
 
     .admin-content {
       .admin-segment {

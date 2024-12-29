@@ -32,8 +32,7 @@ function toggleMenu() {
 </script>
 
 <style lang="scss" scoped>
-@use "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 
 .hamburger {
   $spacing: 0.6rem;
@@ -52,7 +51,7 @@ function toggleMenu() {
     position: absolute;
     height : $line-width;
     width: 100%;
-    background : variables.$text-dark;
+    background : var.$text-dark;
     border-radius: calc($line-width / 2);
     opacity: 1;
     left: 0;

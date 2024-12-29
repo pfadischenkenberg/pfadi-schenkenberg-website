@@ -84,8 +84,7 @@ function toggleExpanded() {
 </script>
 
 <style lang="scss" scoped>
-@use "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 .scout-stage {
 
   grid-column: 1/13;
@@ -119,7 +118,7 @@ function toggleExpanded() {
         h4 {
           line-height: 1.5rem;
           font-weight: bold;
-          color : variables.$burnt-sienna-400;
+          color : var.$burnt-sienna-400;
         }
 
         p, a {
@@ -147,7 +146,7 @@ function toggleExpanded() {
     }
   }
 
-  @media screen and (min-width : variables.$screen-size-between) {
+  @media screen and (min-width : var.$screen-size-between) {
     .scout-stage-content {
 
       .scout-stage-text {
@@ -169,7 +168,7 @@ function toggleExpanded() {
     }
   }
 
-  @media screen and (min-width : variables.$screen-size-medium) {
+  @media screen and (min-width : var.$screen-size-medium) {
     .scout-stage-content {
 
       .scout-stage-text {

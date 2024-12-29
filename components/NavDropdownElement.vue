@@ -39,8 +39,7 @@ function closeDropdown() {
 </script>
 
 <style lang="scss" scoped>
-@use "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 .nav-dropdown {
 
   position: relative;
@@ -48,7 +47,7 @@ function closeDropdown() {
 
   & > *:is(a, span) {
     text-decoration: none;
-    color : variables.$text-dark;
+    color : var.$text-dark;
 
     &:hover {
       text-decoration: underline;
@@ -65,7 +64,7 @@ function closeDropdown() {
     min-width: 100%;
 
 
-    @media screen and (max-width : variables.$screen-size-small) {
+    @media screen and (max-width : var.$screen-size-small) {
       min-width: 50%;
     }
 
@@ -75,7 +74,7 @@ function closeDropdown() {
 
       list-style-type: none;
       border-radius: 4px;
-      background-color: rgba(variables.$tan-hide-100, 0.5);
+      background-color: rgba(var.$tan-hide-100, 0.5);
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
 
