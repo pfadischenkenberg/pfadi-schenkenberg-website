@@ -1,9 +1,9 @@
 <template>
   <button
-      class="nav-dropdown"
-      v-on:mouseover="openDropdown()"
-      v-on:mouseleave="closeDropdown()"
-      v-on:click="openDropdown()"
+    class="nav-dropdown"
+    v-on:mouseover="openDropdown()"
+    v-on:mouseleave="closeDropdown()"
+    v-on:click="openDropdown()"
   >
     <a v-if="!!props.href" :href="props.href">
       {{ props.text }}
@@ -13,7 +13,7 @@
   </span>
     <div class="dropdown-wrapper" :class="{expanded: expanded}">
       <ul class="dropdown" :class="{expanded: expanded}">
-        <slot/>
+        <slot />
       </ul>
     </div>
   </button>
@@ -41,7 +41,10 @@ function closeDropdown() {
 
 <style lang="scss" scoped>
 @use "assets/scss/includes" as var;
+
 .nav-dropdown {
+
+  width: 100%;
 
   position: relative;
   cursor: pointer;
@@ -52,18 +55,18 @@ function closeDropdown() {
 
   & > *:is(a, span) {
     text-decoration: none;
-    color : var.$text-dark;
+    color: var.$text-dark;
   }
 
   .dropdown-wrapper {
     display: none;
     position: absolute;
     top: 100%;
-    right: 0;
-    min-width: 100%;
+    left: 0;
+    width: 100%;
 
 
-    @media screen and (max-width : var.$screen-size-small) {
+    @media screen and (max-width: var.$screen-size-small) {
       min-width: 50%;
     }
 
@@ -77,7 +80,8 @@ function closeDropdown() {
 
       & > * > * {
         color: var.$burnt-sienna-700;
-        line-height: 4rem;
+        line-height: 3rem;
+        text-align: center;
       }
     }
   }
