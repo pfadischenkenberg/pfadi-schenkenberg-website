@@ -17,7 +17,7 @@
           die zweite Familie anfühlen und eine Menge Spass bist, dann bist du bei uns genau richtig. Denn wir treffen
           uns jeden Samstagnachmittag, meist rund um Basel und draussen in der Natur: Gemeinsam spielen, eine
           Schnitzeljagd machen, lustigen Kreaturen helfen, fein essen, etwas Sinnvolles lernen oder es einfach schön
-          miteinander haben.<br />
+          miteinander haben.<br>
           Nebst den Samstagsaktivitäten finden jedes Jahr ein Auffahrts-/Pfingstlager in der ganzen Abteilung, ein
           zweiwöchiges Sommerlager in der Pfadistufe und ein einwöchiges Herbstlager in der Wölflistufe statt.
         </p>

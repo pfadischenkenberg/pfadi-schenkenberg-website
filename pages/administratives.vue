@@ -37,7 +37,7 @@
             </div>
             <div class="admin-segment-list-element">
               <h3>Mitgliederformulare</h3>
-              <File src="/files/Begrüssungsbrief.pdf"></File>
+              <File src="/files/Begruessungsbrief.pdf"></File>
               <File src="/files/Mitgliederformular_Wölfe.pdf" />
               <File src="/files/Mitgliederformular_Pfadi.pdf" />
             </div>
@@ -47,7 +47,7 @@
 
               <div id="note-rufe">
                 <img src="assets/img/arrow-note-rufe.svg" alt="Gestrichelter Pfeil" draggable="false">
-                <p>Der Ruf wird immer beim<br />
+                <p>Der Ruf wird immer beim<br>
                   An- und Abwatscheln gerufen.</p>
               </div>
             </div>

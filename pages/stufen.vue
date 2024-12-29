@@ -51,7 +51,7 @@ const stages = [
     text: {
       intro: "Bist du zwischen 6 und 11 Jahre alt und willst die Welt der Wölfli sowie viele verschiedene Abenteuer erleben? Dann bist du bei uns in der Wölfli-Stufe der Pfadi Schenkenberg genau Richtig!",
       main: `Bei uns geht es darum, Spiele zu spielen, etwas Neues zu lernen, Spass zu haben und zusammen spannende Abenteuer zu erleben. Dabei versuchen wir in den Auffahrts- und Herbstlager oder an den Samstagnachmittagen verschiedenen Gestalten zu helfen. Wobei wir einander nie im Stich lassen!
-An den Samstagen treffen wir uns immer an verschiedenen Tramhaltestellen rund um Basel. Von dort aus gehen wir jeweils zusammen in den Wald.<br />
+An den Samstagen treffen wir uns immer an verschiedenen Tramhaltestellen rund um Basel. Von dort aus gehen wir jeweils zusammen in den Wald.<br>
 Zusätzlich bieten wir oft einen Bring-und-hol-Dienst an, bei dem wir mit den Kindern zusammen vom Aeschenplatz aus in den Wald fahren.<br/><br/>
 Wir geben immer alles, um die beste Zeit zusammen zu verbringen und würden uns sehr freuen, neue Gesichter begrüssen zu dürfen.<br/><br/>
 Wenn du Lust hast, schnuppern zu kommen, kannst du einfach an einem Samstagnachmittag vorbeischauen!<br/><br/>
