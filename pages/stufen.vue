@@ -50,8 +50,9 @@ const stages = [
     },
     text: {
       intro: "Bist du zwischen 6 und 11 Jahre alt und willst die Welt der Wölfli sowie viele verschiedene Abenteuer erleben? Dann bist du bei uns in der Wölfli-Stufe der Pfadi Schenkenberg genau Richtig!",
-      main: `Bei uns geht es darum, Spiele zu spielen, etwas Neues zu lernen, Spass zu haben und zusammen spannende Abenteuer zu erleben. Dabei versuchen wir in dem Pfingstlager, Herbstlager oder an den Samstagnachmittagen verschiedenen Gestalten zu helfen. Wobei wir einander nie im Stich lassen!
-Am Samstag treffen wir uns entweder an den Orten direkt (hier geht es zum Quartalplan). Wir bieten oft auch einen Bring-und-hol-Dienst an, bei dem wir uns am Aeschenplatz treffen und von dort aus in den Wald um Basel gehen.<br/><br/>
+      main: `Bei uns geht es darum, Spiele zu spielen, etwas Neues zu lernen, Spass zu haben und zusammen spannende Abenteuer zu erleben. Dabei versuchen wir in den Auffahrts- und Herbstlager oder an den Samstagnachmittagen verschiedenen Gestalten zu helfen. Wobei wir einander nie im Stich lassen!
+An den Samstagen treffen wir uns immer an verschiedenen Tramhaltestellen rund um Basel. Von dort aus gehen wir jeweils zusammen in den Wald.<br />
+Zusätzlich bieten wir oft einen Bring-und-hol-Dienst an, bei dem wir mit den Kindern zusammen vom Aeschenplatz aus in den Wald fahren.<br/><br/>
 Wir geben immer alles, um die beste Zeit zusammen zu verbringen und würden uns sehr freuen, neue Gesichter begrüssen zu dürfen.<br/><br/>
 Wenn du Lust hast, schnuppern zu kommen, kannst du einfach an einem Samstagnachmittag vorbeischauen!<br/><br/>
 Wir freuen uns auf dich!`
@@ -109,7 +110,7 @@ Komm gerne einfach vorbei, wir freuen uns auf dich!
     },
     text: {
       intro: "Die Pios sind die ältesten Teilnehmenden und es ist die letzte Stufe vor dem Leiten. Und darauf sollte sie auch vorbereiten. Die Pios lernen, Aktivitäten zu planen, Wanderungen durchzuführen und weitere Skills, die für das Leiten wichtig sind. Dabei darf der Spass aber natürlich nicht zu kurz kommen.",
-      main: `Die Aktivitäten, die ca. alle zwei Wochen stattfinden, werden von den Pios selbst geplant. Diese sind zum Beispiel Spieleabende, Besuche in der Kletterhalle oder auch Bowling. In der Pio-Stufe finden auch gelegentlich Weekends, wie z. B. Wanderweekends mit der Hängematte, statt.<br/>
+      main: `Die Aktivitäten, die ca. alle zwei Wochen stattfinden, werden teilweise von den Pios selbst geplant. Diese sind zum Beispiel Spieleabende, Besuche in der Kletterhalle oder auch Bowling. In der Pio-Stufe finden auch gelegentlich Weekends, wie z. B. Wanderweekends mit der Hängematte, statt.<br/>
 Auch die SoLas sind für die Pios etwas Spezielles. In der Vergangenheit machten die Pios eine mehrtägige Velotour von Basel an den Lagerplatz des Pfadi SoLas und ein Auslands-SoLa in Schweden.<br/>
 Wenn die Pios kein eigenes Programm haben, können sie immer auch an den regulären Anlässen der Pfadi-Stufe teilnehmen.`
     }

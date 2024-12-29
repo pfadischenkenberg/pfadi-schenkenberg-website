@@ -32,8 +32,7 @@ function toggleMenu() {
 </script>
 
 <style lang="scss" scoped>
-@import "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 
 .hamburger {
   $spacing: 0.6rem;
@@ -50,9 +49,9 @@ function toggleMenu() {
   span {
     display: block;
     position: absolute;
-    height: $line-width;
+    height : $line-width;
     width: 100%;
-    background: $text-dark;
+    background : var.$text-dark;
     border-radius: calc($line-width / 2);
     opacity: 1;
     left: 0;
@@ -65,7 +64,7 @@ function toggleMenu() {
 
     &:nth-child(2),
     &:nth-child(3) {
-      top: $spacing;
+      top : $spacing;
     }
 
     &:nth-child(4) {
@@ -75,7 +74,7 @@ function toggleMenu() {
 
   &.open {
     span:nth-child(1) {
-      top: $spacing;
+      top : $spacing;
       width: 0%;
       left: 50%;
     }
@@ -89,7 +88,7 @@ function toggleMenu() {
     }
 
     span:nth-child(4) {
-      top: $spacing;
+      top : $spacing;
       width: 0%;
       left: 50%;
     }

@@ -48,44 +48,49 @@ const { styles } = useFixedHeader(defaultHeaderRef);
 </script>
 
 <style lang="scss" scoped>
-@import "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 header {
   position: fixed;
   z-index: 9999;
-  padding: 1rem $default-inline-padding;
-  width: 100dvw;
+  padding-inline: var.$default-inline-padding;
+  width: 100%;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  background-color: rgba($tan-hide-100, 0.2);
+  background-color: rgba(var.$tan-hide-100, 0.2);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 
+  .se-logo-link {
+    margin-block: 1rem;
+  }
+
   nav {
+    line-height: 0;
     ul {
       display: flex;
-      gap: 2rem;
 
       li {
-
         font-size: 1.5rem;
         line-height: 1.5rem;
         font-weight: 600;
         white-space: nowrap;
 
-        &:first-child {
-          margin-left: auto;
+        &:hover {
+          background-color: rgba(var.$tan-hide-100, 0.2);
         }
 
-        a {
+        a, .nav-dropdown {
+          display: block;
+          padding-inline: 1rem;
+          line-height: 6rem;
           text-decoration: none;
-          color: $text-dark;
+          color: var.$text-dark;
 
           &:hover {
-            text-decoration: underline;
+            background-color: rgba(var.$tan-hide-50, 0.2);
           }
         }
       }
@@ -97,40 +102,42 @@ header {
   }
 }
 
-@media screen and (max-width: $screen-size-medium) {
+@media screen and (max-width: var.$screen-size-medium) {
   header {
-    padding-inline: $medium-inline-padding;
+    padding-inline: var.$medium-inline-padding;
 
     nav {
       ul {
         visibility: hidden;
         position: absolute;
         top: 3.5rem;
-        right: 0;
-        padding: 1rem $small-inline-padding;
-        border-radius: 5px;
+        left: 0;
+        width: 100%;
 
         display: flex;
         flex-direction: column;
         gap: 1rem;
 
-        background-color: rgba($tan-hide-100, 0.5);
+        background-color: rgba(var.$tan-hide-100, 0.5);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
         opacity: 0;
 
         transition: visibility 0s, opacity 0.25s ease-in-out;
 
-
-        & > * {
-          width: 100%;
-          text-align: right;
+        li {
+          a, .nav-dropdown {
+            line-height: 3rem;
+            text-align: center;
+          }
         }
       }
 
       .expanded {
         visibility: visible;
         opacity: 1;
+        padding-bottom: 1rem;
+        margin-top: 2rem;
       }
 
       .hamburger {
@@ -140,9 +147,9 @@ header {
   }
 }
 
-@media screen and (max-width: $screen-size-small) {
+@media screen and (max-width: var.$screen-size-small) {
   header {
-    padding: 0.8rem $small-inline-padding;
+    padding-inline: var.$small-inline-padding;
   }
 }
 </style>

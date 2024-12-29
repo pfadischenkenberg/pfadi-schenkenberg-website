@@ -1,11 +1,11 @@
 <template>
   <div class="accordion">
-    <button class="accordion-title" @click="togglePanel">
+    <button class="accordion-title" @click="toggleAccordion" :title="title">
       <h2>{{ title }}</h2>
-      <img :class="{ open: isOpen }" src="assets/img/arrow-extend.svg" alt="Pfeil">
+      <div :class="[{ open: isOpen}, 'arrow']" />
     </button>
     <div ref="content" :style="{ maxHeight: contentHeight }" class="content">
-      <slot />
+      <slot v-if="isOpen" />
     </div>
   </div>
 </template>
@@ -15,34 +15,43 @@ const props = defineProps({
   title: {
     type: String,
     required: true
+  },
+  isOpen: {
+    type: Boolean,
+    required: false,
+    default: false
   }
 });
 
-const isOpen = ref(false);
-const contentHeight = ref("0px");
+const isOpen = ref(props.isOpen);
+const contentHeight = ref("0px"); // css max-height of content
 const content = ref(null);
 
-const togglePanel = () => {
+
+onMounted(adjustContentHeight);
+
+function toggleAccordion() {
   isOpen.value = !isOpen.value;
   adjustContentHeight();
-};
+}
 
-const adjustContentHeight = () => {
+// Sets the max-height attribute of the content to the respective height
+function adjustContentHeight() {
   nextTick(() => {
-    contentHeight.value = isOpen.value ? `${content.value.scrollHeight}px` : "0px";
+    if (isOpen.value) {
+      contentHeight.value = `${content.value.scrollHeight}px`;
+    } else {
+      contentHeight.value = "0px";
+    }
   });
-};
+}
 
-onMounted(() => {
-  contentHeight.value = isOpen.value ? `${content.value.scrollHeight}px` : "0px";
-});
 </script>
 
 <style lang="scss" scoped>
-@import "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 .accordion {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 
   overflow: hidden;
 
@@ -53,19 +62,25 @@ onMounted(() => {
     margin-bottom: 0.5rem;
 
     display: flex;
-    justify-content: center;
+    align-items: center;
+
+    text-align: left;
 
     background-color: transparent;
     cursor: pointer;
-    outline: none;
 
     h2 {
       display: inline-block;
     }
 
-    img {
+    .arrow {
+      border-right: var.$burnt-sienna-300 solid 0.2rem;
+      border-bottom: var.$burnt-sienna-300 solid 0.2rem;
+      min-width: 0.7rem;
+     min-height: 0.7rem;
+      rotate: 45deg;
       transition: transform 0.2s ease-in-out;
-      margin: 0 0 .4rem 1rem;
+      margin: 0 0.4rem 0.4rem 0.7rem;
 
       &.open {
         transform: rotate(180deg);
@@ -74,8 +89,20 @@ onMounted(() => {
   }
 
   .content {
+    /* For the opening animation*/
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
+  }
+
+  @media screen and (min-width: var.$screen-size-small) {
+    .accordion-title {
+      .arrow {
+        border-width: 0.3rem;
+        min-width: 1rem;
+        min-height: 1rem;
+        margin: 0 0.4rem 0.4rem 1rem;
+      }
+    }
   }
 }
 </style>

@@ -10,69 +10,77 @@
 </script>
 
 <style lang="scss" scoped>
-@import "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 .anmelden-banner {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 0.9rem;
 
   position: relative;
-  padding-block: 2rem;
-  width: 100dvw;
+  padding-block: 1rem;
+  width: 100%;
 
-  background-color: $asparagus-300;
+  background-color: var.$asparagus-300;
   z-index: 1;
-  
+
   text-align: center;
 
   p {
     font-family: "Patrick Hand", sans-serif;
-    font-size: 3.2rem;
-    line-height: 3.2rem;
+    font-size: 1.9rem;
+    line-height: 1.9rem;
     margin: 0;
   }
-}
 
-.anmelden-banner::before {
-  content: "";
-  position: absolute;
-  top: -2.4rem;
-  width: 100%;
-  height: 2.5rem;
-  background-image: url("assets/img/separator-green.svg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 101%;
-  z-index: 0;
-}
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5rem;
+    background-image: url("assets/img/separator-green.svg");
+    background-repeat: repeat-x;
+    @include var.cb-background-size(cover);
+    background-position-x: 10%;
+    background-position-y: top;
+    z-index: 0;
+  }
 
-.anmelden-banner::after {
-  content: "";
-  position: absolute;
-  bottom: -2.4rem;
-  width: 100%;
-  height: 3.5rem;
-  transform: rotate(180deg);
-  background-image: url("assets/img/separator-green-centered.svg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 101%;
-  z-index: 0;
-}
+  &::before {
+    top: -1.5rem;
+  }
 
-@media screen and (max-width: $screen-size-small) {
-  .anmelden-banner {
-    gap: 0.9rem;
-    padding-block: 2rem;
-    
+  &::after {
+    rotate: 180deg;
+    bottom: -1.5rem;
+  }
+
+  @media screen and (min-width: var.$screen-size-small) {
+    gap: 1.5rem;
+
     p {
-      font-size: 1.9rem;
-      line-height: 1.9rem;
+      font-size: 3.2rem;
+      line-height: 3.2rem;
+    }
+
+    &::before, &::after {
+      background-position-x: center;
+    }
+  }
+
+  @media screen and (min-width: var.$screen-size-medium) {
+    &::before {
+      height: 2.5rem;
+      top: -2.5rem;
+    }
+
+    &::after {
+      height: 2.5rem;
+      bottom: -2.5rem;
     }
   }
 }
+
 
 </style>

@@ -25,6 +25,7 @@
           <p class="admin-segment-text">Um dich oder dein Kind zum Schnuppern anzumelden, schreibe der zuständigen
             Leitperson eine E-Mail oder komme an einem offiziellen Schnupperanlass vorbei. Dieser findet für gewöhnlich
             im März statt.</p>
+          <p class="admin-segment-text">Wenn man 2–3 mal zum Schnuppern vorbeigekommen ist und weiterhin kommen möchte, kann man das Anmeldeformular der Stufenleitung per Mail schicken oder es ausgedruckt an einen Anlass mitbringen.</p>
         </div>
         <div class="admin-segment">
           <h2>Dokumente</h2>
@@ -36,6 +37,7 @@
             </div>
             <div class="admin-segment-list-element">
               <h3>Mitgliederformulare</h3>
+              <File src="/files/Begrüssungsbrief.pdf"></File>
               <File src="/files/Mitgliederformular_Wölfe.pdf" />
               <File src="/files/Mitgliederformular_Pfadi.pdf" />
             </div>
@@ -56,7 +58,6 @@
           <FancyLink to="mailto:admin@pfadischenkenberg.ch">Schreib uns eine Mail</FancyLink>
         </div>
       </div>
-
     </main>
   </div>
 </template>
@@ -66,13 +67,13 @@ const seo = {
   title: "Administratives | Pfadi Schenkenberg",
   description: "Willst du bei der Pfadi Schenkenberg in Basel vorbeischauen oder suchst du Dokumente und deine Ansprechpersonen? Hier findest du alles Administrative."
 
-}
+};
 
 useSeoMeta({
   title: seo.title,
   ogTitle: seo.title,
   description: seo.description,
-  ogDescription: seo.description,ogImage: "/img/gruppenfoto-abteilung.jpg",
+  ogDescription: seo.description, ogImage: "/img/gruppenfoto-abteilung.jpg",
   twitterCard: "summary_large_image"
 });
 
@@ -111,8 +112,7 @@ const contacts: Array<Contact> = [
 </script>
 
 <style lang="scss" scoped>
-@import "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 main {
 
   h1 {
@@ -135,7 +135,7 @@ main {
       }
 
       .admin-segment-text {
-        grid-column: 1/8;
+        grid-column: 1/13;
       }
 
       .admin-segment-list {
@@ -143,19 +143,18 @@ main {
         margin-top: 2rem;
         display: flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 3rem;
 
         .admin-segment-list-element {
           position: relative;
 
           h3 {
-            font-size: 2rem;
-            color: $burnt-sienna-400;
+            font-size: 1.5rem;
+            color: var.$burnt-sienna-400;
             font-weight: 600;
           }
 
           p {
-            font-weight: 600;
             margin: 0.2rem 0 0;
           }
 
@@ -163,29 +162,12 @@ main {
             margin: 0.5rem 0 0.5rem;
           }
 
+          a {
+            font-size: 1.2rem;
+          }
+
           #note-rufe {
-            position: relative;
-            bottom: 5rem;
-            right: -20rem;
-            z-index: -1;
-
-            img {
-              height: 12rem;
-            }
-
-            p {
-              position: relative;
-              right: 18rem;
-              font-size: 2rem;
-              font-family: "Patrick Hand", sans-serif;
-              font-weight: 400;
-
-              transform: rotate(-5.5deg);
-            }
-
-            @media screen and (max-width: 1420px) {
-              display: none;
-            }
+            display: none;
           }
         }
       }
@@ -199,11 +181,69 @@ main {
       align-items: center;
 
       p {
+        margin: 0 0 0.5rem;
+
         font-family: "Patrick Hand", sans-serif;
+        font-size: 2rem;
+        line-height: 2rem;
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (min-width: var.$screen-size-between) {
+    .admin-content {
+      .something-missing > p {
         font-size: 3.2rem;
         line-height: 3.2rem;
         margin: 0;
       }
+    }
+  }
+
+  @media screen and (min-width: var.$screen-size-medium) {
+
+    .admin-content {
+      .admin-segment {
+        .admin-segment-text {
+          grid-column: 1/8;
+        }
+
+        .admin-segment-list {
+
+          gap: 2rem;
+
+          .admin-segment-list-element {
+            h3 {
+              font-size: 2rem;
+            }
+
+            #note-rufe {
+              display: block;
+              position: relative;
+              bottom: 5rem;
+              right: -20rem;
+              z-index: -1;
+
+              img {
+                height: 12rem;
+              }
+
+              p {
+                position: relative;
+                right: 18rem;
+                font-size: 2rem;
+                font-family: "Patrick Hand", sans-serif;
+                font-weight: 400;
+
+                transform: rotate(-5.5deg);
+              }
+            }
+
+          }
+        }
+      }
+
     }
   }
 }

@@ -16,6 +16,10 @@
                        text="Alles, was man über den Kantonalverband wissen muss"
                        href="https://www.pfadi-region-basel.ch"
                        link-text="pfadi-region-basel.ch" />
+        <LinkContainer title="Pfadibewegung Schweiz"
+                       text="Der Dachverband der Schweizer Pfadiabteilungen"
+                       href="https://pfadi.swiss"
+                       link-text="pfadi.swiss" />
         <LinkContainer title="XCout"
                        text="Die Radiosendung der Pfadi Region Basel"
                        href="https://pfadi-region-basel.ch/projekte/xcout/"
@@ -47,7 +51,7 @@ useSeoMeta({
 </script>
 
 <style lang="scss" scoped>
-@import "assets/scss/variables";
+@use "assets/scss/includes" as var;
 
 main {
   h1 {
@@ -60,8 +64,13 @@ main {
 
     display: flex;
     flex-wrap: wrap;
+    gap: 3rem;
+  }
+}
+
+@media screen and (min-width: var.$screen-size-medium) {
+  .links-wrapper {
     gap: 2rem;
   }
-
 }
 </style>

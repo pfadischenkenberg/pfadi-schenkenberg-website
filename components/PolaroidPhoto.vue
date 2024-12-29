@@ -21,8 +21,7 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-@import "assets/scss/variables";
-
+@use "assets/scss/includes" as var;
 .polaroid-photo {
   padding: 2rem 2rem 1rem;
   height: max-content;
@@ -33,24 +32,27 @@ const props = defineProps({
   align-items: center;
   gap: 0.5rem;
 
-  background-color: $burnt-sienna-100;
+  background-color: var.$burnt-sienna-100;
 
   img {
     width: 100%;
   }
 
   figcaption {
+    margin-block: 0.5rem;
+
     font-family: "Patrick Hand", sans-serif;
     font-size: 2rem;
-    margin-block: 0.5rem;
+    line-height: 2.5rem;
+    text-align: center;
   }
 
-  @media screen and (max-width: $screen-size-small) {
+  @media screen and (max-width: var.$screen-size-small) {
     padding: 1.5rem 1.5rem 0.5rem;
     gap: 0.2rem;
     figcaption {
       font-size: 1.5rem;
-      line-height: 1.5rem;
+      line-height: 2rem;
     }
   }
 }

@@ -1,6 +1,6 @@
-@import "variables";
-@import "fonts";
-@import "reset";
+@use "includes" as var;
+@use "fonts";
+@use "reset";
 
 html {
   scroll-padding-top: 8rem;
@@ -8,52 +8,48 @@ html {
 
 body {
   font-family: Fira Sans, sans-serif;
-  color: $burnt-sienna-950;
-  background-color: $burnt-sienna-50;
+  color: var.$burnt-sienna-950;
+  background-color: var.$burnt-sienna-50;
   scroll-behavior: smooth;
 }
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 1.5rem;
-}
-
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 
   font-size: 1.5rem;
   line-height: 2.1rem;
 
-  @media screen and (max-width: $screen-size-medium) {
+  @media screen and (max-width: var.$screen-size-medium) {
     font-size: 1.8rem;
     line-height: 2.5rem;
   }
 
-  @media screen and (max-width: $screen-size-small) {
+  @media screen and (max-width: var.$screen-size-small) {
     font-size: 1.5rem;
     line-height: 2.1rem;
+
+    text-wrap: wrap;
+    hyphens: auto;
   }
-  
+
   ::selection {
-    color: $burnt-sienna-100;
-    background: $asparagus-400;
+    color: var.$burnt-sienna-100;
+    background: var.$asparagus-400;
 
   }
 
   ::-moz-selection {
-    color: $burnt-sienna-100;
-    background: $asparagus-400;
+    color: var.$burnt-sienna-100;
+    background: var.$asparagus-400;
   }
 
   main {
-    margin: 2rem $default-inline-padding 8rem;
+    margin: 2rem var.$default-inline-padding 8rem;
 
-    @media only screen and (max-width: $screen-size-medium) {
-      margin-inline: $medium-inline-padding;
+    @media only screen and (max-width: var.$screen-size-medium) {
+      margin-inline: var.$medium-inline-padding;
     }
-    @media screen and (max-width: $screen-size-small) {
-      margin-inline: $small-inline-padding;
+    @media screen and (max-width: var.$screen-size-small) {
+      margin-inline: var.$small-inline-padding;
     }
   }
 
@@ -62,11 +58,9 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     font-size: 5rem;
     line-height: 5rem;
     font-family: "Patrick Hand", sans-serif;
-    color: $burnt-sienna-700;
+    color: var.$burnt-sienna-700;
 
-    @media screen and (max-width: $screen-size-small) {
-      margin-bottom: 2rem;
-
+    @media screen and (max-width: var.$screen-size-small) {
       font-size: 3.5rem;
       line-height: 3.5rem;
     }
@@ -77,15 +71,28 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     font-size: 4rem;
     line-height: 4rem;
     font-family: "Patrick Hand", sans-serif;
-    color: $tan-hide-400;
+
+    word-wrap: break-word;
+    hyphens: auto;
+
+    color: var.$tan-hide-400;
+
+    @media screen and (max-width: var.$screen-size-small) {
+      font-size: 2.3rem;
+      line-height: 2.3rem;
+    }
   }
 
   h3 {
     font-weight: 500;
     font-size: 2.3rem;
     line-height: 2.3rem;
-    color: $asparagus-600;
+    color: var.$asparagus-600;
 
+    @media screen and (max-width: var.$screen-size-small) {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
   }
 
   p {
@@ -99,7 +106,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   }
 
   a {
-    color: $burnt-sienna-800;
+    color: var.$burnt-sienna-800;
   }
 
   i, em {
@@ -109,6 +116,38 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 
   b, strong {
     font-weight: 600;
-    color: $asparagus-600;
+    color: var.$asparagus-600;
+  }
+}
+
+/* Classes */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1.5rem;
+}
+
+.button--text {
+  display: inline;
+  padding: 0;
+  border: none;
+
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  font-weight: 500;
+
+  background: transparent;
+  color: var.$asparagus-600;
+
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: var.$asparagus-700;
   }
 }
