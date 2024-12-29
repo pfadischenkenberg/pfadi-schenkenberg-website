@@ -72,6 +72,7 @@ main {
 
 
     h2, p, ul {
+      margin-left: 2rem;
       grid-column: 1/9;
       list-style: initial;
     }
