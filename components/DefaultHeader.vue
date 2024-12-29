@@ -53,7 +53,7 @@ header {
   position: fixed;
   z-index: 9999;
   padding: 1rem var.$default-inline-padding;
-  width: 100dvw;
+  width: 100%;
 
   display: flex;
   align-items: center;

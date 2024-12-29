@@ -20,7 +20,7 @@
 
   position: relative;
   padding-block: 1rem;
-  width: 100dvw;
+  width: 100%;
 
   background-color: var.$asparagus-300;
   z-index: 1;

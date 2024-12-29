@@ -33,19 +33,19 @@ const props = defineProps({
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: min(1.2rem, 2dvw);
+    gap: min(1.2rem, 2vw);
 
     padding-inline: var.$small-inline-padding;
 
     padding-top: 8rem;
-    width: 100dvw;
-    height: 47.5dvw;
+    width: 100%;
+    height: 47.5vw;
 
     .hero-welcome {
       transform: translate(20%);
       font-family: "Patrick Hand", sans-serif;
-      font-size: min(4rem, 6dvw);
-      line-height: min(4rem, 6dvw);
+      font-size: min(4rem, 6vw);
+      line-height: min(4rem, 6vw);
       margin: 0;
 
       color: var.$tan-hide-400;
@@ -55,8 +55,8 @@ const props = defineProps({
     .hero-title {
       font-family: "Istok Web", sans-serif;
       font-weight: bold;
-      font-size: min(5rem, 7.5dvw);
-      line-height: min(5rem, 7.5dvw);
+      font-size: min(5rem, 7.5vw);
+      line-height: min(5rem, 7.5vw);
 
       color: var.$burnt-sienna-400;
       text-shadow: var.$asparagus-950 0 0 10px;

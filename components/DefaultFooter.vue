@@ -59,7 +59,7 @@ const year = new Date().getFullYear();
     background-repeat: no-repeat;
 
     position: absolute;
-    left: 50dvw;
+    left: 50%;
     transform: translate(-50%);
     height: 4rem;
     aspect-ratio: 55/69;
