@@ -48,10 +48,6 @@ function closeDropdown() {
   & > *:is(a, span) {
     text-decoration: none;
     color : var.$text-dark;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   .dropdown-wrapper {
@@ -59,8 +55,6 @@ function closeDropdown() {
     position: absolute;
     top: 100%;
     right: 0;
-
-    padding-top: 0.5rem;
     min-width: 100%;
 
 
@@ -69,17 +63,16 @@ function closeDropdown() {
     }
 
     .dropdown {
-      padding: 0.5rem 0.8rem;
       white-space: nowrap;
 
       list-style-type: none;
-      border-radius: 4px;
-      background-color: rgba(var.$tan-hide-100, 0.5);
+      background-color: rgba(var.$tan-hide-50, 0.2);
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
 
-      & > * {
-        margin-block: 0.2rem;
+      & > * > * {
+        color: var.$burnt-sienna-700;
+        line-height: 4rem;
       }
     }
   }

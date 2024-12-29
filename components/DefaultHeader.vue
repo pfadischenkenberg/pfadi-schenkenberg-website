@@ -52,7 +52,7 @@ const { styles } = useFixedHeader(defaultHeaderRef);
 header {
   position: fixed;
   z-index: 9999;
-  padding: 1rem var.$default-inline-padding;
+  padding-inline: var.$default-inline-padding;
   width: 100%;
 
   display: flex;
@@ -63,13 +63,15 @@ header {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 
+  .se-logo-link {
+    margin-block: 1rem;
+  }
+
   nav {
     ul {
       display: flex;
-      gap: 2rem;
 
       li {
-
         font-size: 1.5rem;
         line-height: 1.5rem;
         font-weight: 600;
@@ -79,12 +81,19 @@ header {
           margin-left: auto;
         }
 
-        a {
+        &:hover {
+          background-color: rgba(var.$tan-hide-100, 0.2);
+        }
+
+        a, .nav-dropdown {
+          display: block;
+          padding-inline: 1rem;
+          line-height: 6rem;
           text-decoration: none;
           color: var.$text-dark;
 
           &:hover {
-            text-decoration: underline;
+            background-color: rgba(var.$tan-hide-50, 0.2);
           }
         }
       }
