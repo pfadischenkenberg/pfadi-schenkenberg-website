@@ -108,6 +108,7 @@ header {
 
     nav {
       ul {
+        margin-inline: 0;
         visibility: hidden;
         position: absolute;
         top: 3.5rem;
@@ -138,6 +139,7 @@ header {
         opacity: 1;
         padding-bottom: 1rem;
         margin-top: 2rem;
+        background-color: rgba(var.$tan-hide-50, 0.8);
       }
 
       .hamburger {

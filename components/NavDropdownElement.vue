@@ -61,20 +61,17 @@ function closeDropdown() {
   .dropdown-wrapper {
     display: none;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 1rem);
     left: 0;
     width: 100%;
 
-
-    @media screen and (max-width: var.$screen-size-small) {
-      min-width: 50%;
-    }
-
     .dropdown {
       white-space: nowrap;
+      width: 100%;
+      margin-inline: 0;
 
       list-style-type: none;
-      background-color: rgba(var.$tan-hide-50, 0.2);
+      background-color: rgba(var.$tan-hide-50, 0.8);
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
 
