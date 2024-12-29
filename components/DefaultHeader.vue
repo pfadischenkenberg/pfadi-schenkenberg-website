@@ -52,7 +52,7 @@ const { styles } = useFixedHeader(defaultHeaderRef);
 header {
   position: fixed;
   z-index: 9999;
-  padding: 1rem var.$default-inline-padding;
+  padding-inline: var.$default-inline-padding;
   width: 100%;
 
   display: flex;
@@ -63,28 +63,34 @@ header {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 
+  .se-logo-link {
+    margin-block: 1rem;
+  }
+
   nav {
+    line-height: 0;
     ul {
       display: flex;
-      gap: 2rem;
 
       li {
-
         font-size: 1.5rem;
         line-height: 1.5rem;
         font-weight: 600;
         white-space: nowrap;
 
-        &:first-child {
-          margin-left: auto;
+        &:hover {
+          background-color: rgba(var.$tan-hide-100, 0.2);
         }
 
-        a {
+        a, .nav-dropdown {
+          display: block;
+          padding-inline: 1rem;
+          line-height: 6rem;
           text-decoration: none;
           color: var.$text-dark;
 
           &:hover {
-            text-decoration: underline;
+            background-color: rgba(var.$tan-hide-50, 0.2);
           }
         }
       }
@@ -105,9 +111,8 @@ header {
         visibility: hidden;
         position: absolute;
         top: 3.5rem;
-        right: 0;
-        padding: 1rem var.$small-inline-padding;
-        border-radius: 5px;
+        left: 0;
+        width: 100%;
 
         display: flex;
         flex-direction: column;
@@ -120,16 +125,19 @@ header {
 
         transition: visibility 0s, opacity 0.25s ease-in-out;
 
-
-        & > * {
-          width: 100%;
-          text-align: right;
+        li {
+          a, .nav-dropdown {
+            line-height: 3rem;
+            text-align: center;
+          }
         }
       }
 
       .expanded {
         visibility: visible;
         opacity: 1;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
       }
 
       .hamburger {
@@ -141,7 +149,7 @@ header {
 
 @media screen and (max-width: var.$screen-size-small) {
   header {
-    padding: 0.8rem var.$small-inline-padding;
+    padding-inline: var.$small-inline-padding;
   }
 }
 </style>
