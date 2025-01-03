@@ -84,7 +84,7 @@ function adjustContentHeight() {
       margin: 0 0.4rem 0.4rem 0.7rem;
 
       &.open {
-        transform: rotate(180deg);
+        transform: rotate(225deg);
       }
     }
   }

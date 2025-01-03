@@ -25,7 +25,7 @@
           <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
                          alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024"
                          class="polaroid-1 polaroid-1--desktop">
-            Abteilungsfoto Aufla 200
+            Abteilungsfoto Aufla 2024
           </PolaroidPhoto>
         </ClientOnly>
         <ClientOnly>
