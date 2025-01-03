@@ -35,23 +35,26 @@ const stages = [
     image: {
       src: "/img/leitungsteam-woelfli.jpg",
       alt: "Leitungsteam der Wölflistufe der Pfadi Schenkenberg im AufLa 2024",
-      description: "Wölflileitungsteam im AufLa 2024"
+      description: "Wölflileitungsteam im AufLa 2024 (veraltet)"
     },
     leaders: {
       label: "Stufenleitung",
       list: [{
-        name: "Jara Senn",
-        vulgo: "Mononoke"
+        name: "Isabel Nwose",
+        vulgo: "Kassiopeia"
+      }, {
+        name: "Enea Lazzari",
+        vulgo: "Twig"
       }]
     },
     calendar: {
       existing: true,
-      src: "/kalender/test-kalender.pdf"
+      src: "/files/kalender/Kalender_Woelfli_2025_1.pdf"
     },
     text: {
       intro: "Bist du zwischen 6 und 11 Jahre alt und willst die Welt der Wölfli sowie viele verschiedene Abenteuer erleben? Dann bist du bei uns in der Wölfli-Stufe der Pfadi Schenkenberg genau Richtig!",
       main: `Bei uns geht es darum, Spiele zu spielen, etwas Neues zu lernen, Spass zu haben und zusammen spannende Abenteuer zu erleben. Dabei versuchen wir in den Auffahrts- und Herbstlager oder an den Samstagnachmittagen verschiedenen Gestalten zu helfen. Wobei wir einander nie im Stich lassen!
-An den Samstagen treffen wir uns immer an verschiedenen Tramhaltestellen rund um Basel. Von dort aus gehen wir jeweils zusammen in den Wald.<br />
+An den Samstagen treffen wir uns immer an verschiedenen Tramhaltestellen rund um Basel. Von dort aus gehen wir jeweils zusammen in den Wald.<br>
 Zusätzlich bieten wir oft einen Bring-und-hol-Dienst an, bei dem wir mit den Kindern zusammen vom Aeschenplatz aus in den Wald fahren.<br/><br/>
 Wir geben immer alles, um die beste Zeit zusammen zu verbringen und würden uns sehr freuen, neue Gesichter begrüssen zu dürfen.<br/><br/>
 Wenn du Lust hast, schnuppern zu kommen, kannst du einfach an einem Samstagnachmittag vorbeischauen!<br/><br/>
@@ -65,21 +68,18 @@ Wir freuen uns auf dich!`
     image: {
       src: "/img/leitungsteam-pfadi.jpg",
       alt: "Leitungsteam der Pfadistufe der Pfadi Schenkenberg im AufLa 2024",
-      description: "Pfadileitungsteam im AufLa 2024"
+      description: "Pfadileitungsteam im AufLa 2024 (veraltet)"
     },
     leaders: {
       label: "Stufenleitung",
       list: [{
-        name: "Dan Malzacher",
-        vulgo: "Faramir"
-      }, {
         name: "Zora Landolt",
         vulgo: "Guarda"
       }]
     },
     calendar: {
       existing: true,
-      src: "/kalender/test-kalender.pdf"
+      src: "/files/kalender/Kalender_Woelfli_2025_1.pdf"
     },
     text: {
       intro: "Du bist zwischen 11 und 14 Jahren alt? Dann ist die Pfadistufe die richtige Stufe für dich. Gemeinsam verbringen wir Samstagnachmittage mit sportlichen Spielen, kreativen Aufgaben und natürlich viel Spass!",
@@ -96,13 +96,13 @@ Komm gerne einfach vorbei, wir freuen uns auf dich!
     image: {
       src: "/img/leitungsteam-pio.jpg",
       alt: "Leitungsteam der Piostufe der Pfadi Schenkenberg um AufLa 2024",
-      description: "Pioleitungsteam im AufLa 2024"
+      description: "Pioleitungsteam im AufLa 2024 (sehr veraltet)"
     },
     leaders: {
       label: "Stufenleitung",
       list: [{
-        name: "Raphael Purtschert",
-        vulgo: "Spuko"
+        name: "Dan Malzacher",
+        vulgo: "Faramir"
       }]
     },
     calendar: {

@@ -25,29 +25,31 @@
           <p class="admin-segment-text">Um dich oder dein Kind zum Schnuppern anzumelden, schreibe der zuständigen
             Leitperson eine E-Mail oder komme an einem offiziellen Schnupperanlass vorbei. Dieser findet für gewöhnlich
             im März statt.</p>
-          <p class="admin-segment-text">Wenn man 2–3 mal zum Schnuppern vorbeigekommen ist und weiterhin kommen möchte, kann man das Anmeldeformular der Stufenleitung per Mail schicken oder es ausgedruckt an einen Anlass mitbringen.</p>
+          <p class="admin-segment-text">Wenn man 2–3 mal zum Schnuppern vorbeigekommen ist und weiterhin kommen möchte,
+            kann man das Anmeldeformular der Stufenleitung per Mail schicken oder es ausgedruckt an einen Anlass
+            mitbringen.</p>
         </div>
         <div class="admin-segment">
           <h2>Dokumente</h2>
           <div class="admin-segment-list">
             <div class="admin-segment-list-element">
               <h3>Quartalspläne</h3>
-              <File src="/files/Kalender_Wölfli_2024_1.pdf" />
-              <File src="/files/Kalender_Pfadi_2024_1.pdf" />
+              <File src="/files/kalender/Kalender_Woelfli_2025_1.pdf"/>
+              <File src="/files/kalender/Kalender_Pfadi_2025_1.pdf"/>
             </div>
             <div class="admin-segment-list-element">
               <h3>Mitgliederformulare</h3>
-              <File src="/files/Begrüssungsbrief.pdf"></File>
-              <File src="/files/Mitgliederformular_Wölfe.pdf" />
-              <File src="/files/Mitgliederformular_Pfadi.pdf" />
+              <File src="/files/Begruessungsbrief.pdf"/>
+              <File src="/files/Mitgliederformular_Wölfe.pdf"/>
+              <File src="/files/Mitgliederformular_Pfadi.pdf"/>
             </div>
             <div class="admin-segment-list-element admin-rufe">
               <h3>Rufe</h3>
-              <File src="/files/Rufe_Schenkenberg.pdf" />
+              <File src="/files/Rufe_Schenkenberg.pdf"/>
 
               <div id="note-rufe">
                 <img src="assets/img/arrow-note-rufe.svg" alt="Gestrichelter Pfeil" draggable="false">
-                <p>Der Ruf wird immer beim<br />
+                <p>Der Ruf wird immer beim<br>
                   An- und Abwatscheln gerufen.</p>
               </div>
             </div>
@@ -81,38 +83,48 @@ type Contact = {
   leaderTitle: string,
   email: string,
   leaders:
-    {
-      name: string,
-      vulgo: string
-    }[]
+      {
+        name: string,
+        vulgo: string
+      }[]
 }
 
 const contacts: Array<Contact> = [
   {
     leaderTitle: "Stufenleitung Wölfli",
     email: "woelfli@pfadischenkenberg.ch",
-    leaders: [{ name: "Jara Senn", vulgo: "Mononoke" }]
+    leaders: [{
+      name: "Isabel Nwose",
+      vulgo: "Kassiopeia"
+    }, {
+      name: "Enea Lazzari",
+      vulgo: "Twig"
+    }]
   }, {
     leaderTitle: "Stufenleitung Pfadi",
     email: "pfadi@pfadischenkenberg.ch",
-    leaders: [{ name: "Dan Malzacher", vulgo: "Faramir" }, { name: "Zora Landolt", vulgo: "Guarda" }]
+    leaders: [{name: "Zora Landolt", vulgo: "Guarda"}]
   }, {
     leaderTitle: "Stufenleitung Pio",
     email: "pio@pfadischenkenberg.ch",
-    leaders: [{ name: "Raphael Purtschert", vulgo: "Spuko" }]
+    leaders: [{
+      name: "Dan Malzacher",
+      vulgo: "Faramir"
+    }]
   }, {
     leaderTitle: "APV-Verantwortlich",
     email: "apv@pfadischenkenberg.ch",
-    leaders: [{ name: "Tim Purtschert", vulgo: "Chirpa" }]
+    leaders: [{name: "Tim Purtschert", vulgo: "Chirpa"}]
   }, {
     leaderTitle: "Abteilungsleitung",
     email: "abteilung@pfadischenkenberg.ch",
-    leaders: [{ name: "Joshua Dunkel", vulgo: "Hauro" }, { name: "Marielle Ullrich", vulgo: "Zelda" }]
+    leaders: [{name: "Joshua Dunkel", vulgo: "Hauro"}, {name: "Jara Senn", vulgo: "Mononoke"}]
   }];
 </script>
 
 <style lang="scss" scoped>
 @use "assets/scss/includes" as var;
+
 main {
 
   h1 {

@@ -1,7 +1,7 @@
 <template>
   <div class="error">
     <h1>{{ error.statusCode }}</h1>
-    <p>Leider ist ein Fehler vorgefallen: <br /><code>"{{ error.message }}"</code></p>
+    <p>Leider ist ein Fehler vorgefallen: <br><code>"{{ error.message }}"</code></p>
 
     <FancyLink to="" @click="handleError">Zur Startseite</FancyLink>
   </div>

@@ -9,7 +9,7 @@
           Samstagnachmittag oder an einem ganzen Wochenende. Pfadis knüpfen Freundschaften fürs Leben und lernen
           voneinander soziale Kompetenzen und früh Verantwortung zu übernehmen. Das Leitungsteam will mit vielseitigem,
           altersgerechtem und bedürfnisorientiertem Programm alle Kinder und Jugendliche ansprechen und diese in ihrer
-          ganzheitlichen Entwicklung fördern.<br />
+          ganzheitlichen Entwicklung fördern.<br>
           Die Pfadi steht für Offenheit, Freundschaft, Engagement, Zusammenhalt und Toleranz. Deshalb sind hier alle
           willkommen, unabhängig von sozialem oder kulturellem Hintergrund, Religion, Geschlechtsidentität, sexueller
           Orientierung oder körperlichen und geistigen Fähigkeiten.
@@ -19,7 +19,7 @@
       <Accordion title="Was kostet mich die Pfadi?">
         <p>Die jährlichen Kosten für alle Samstags-Aktivitäten betragen 80 Franken. Eine Rechnung für den Jahresbeitrag
           wird jeweils im Zeitraum nach den Sommerferien für das angebrochene Jahr versendet. Dieser muss bezahlt
-          werden, wenn man zu diesem Zeitpunkt angemeldet ist oder bis vor kurzem angemeldet war.<br />
+          werden, wenn man zu diesem Zeitpunkt angemeldet ist oder bis vor kurzem angemeldet war.<br>
           Die Beiträge für die Lager können immer etwas variieren. Pfingst- / Auffahrtslager kosten in der Regel um die
           50 Franken und Sommer- und Herbstlager um die 250 Franken.
         </p>
@@ -31,31 +31,31 @@
       <Accordion title="Welche Ausrüstung braucht man für die Pfadi?">
         <p>Grundsätzlich ist alles, was man für die Pfadi braucht, dem Wetter und</p>
         <p>
-          Es gibt ein paar Dinge, die im besten Fall an jedem Anlass dabei sind.<br />
-          <b>ZZ</b> - Zündhölzli und Zeitung, um Feuer zu machen<br />
+          Es gibt ein paar Dinge, die im besten Fall an jedem Anlass dabei sind.<br>
+          <b>ZZ</b> - Zündhölzli und Zeitung, um Feuer zu machen<br>
           <b>Gueti Jagt / Technix</b> - Diese praktischen Büchlein sind nützlich zum Spuren entziffern, Karte lesen,
           Knotenmachen und vieles Weiteres, das man in der Pfadi gebrauchen kann. Erhältlich sind diese im
           <NuxtLink to="https://pfadi-region-basel.ch/projekte/pfadilaedeli/" target="_blank">Pfadilädeli</NuxtLink>
           und auf
           <NuxtLink to="https://www.hajk.ch/de/" target="_blank">hajk.ch</NuxtLink>
-          . (Gueti Jagt nur für Wölfli)<br />
+          . (Gueti Jagt nur für Wölfli)<br>
           <b>Sackmesser</b> - Egal, ob zum Schnitzen oder Schnur schneiden, ein Sackmesser kann in so manchen
-          Situationen nützlich sein.<br />
+          Situationen nützlich sein.<br>
           <b>Pfadikrawatte</b> - Unsere ikonische orange Pfadikrawatte ist unser Wiedererkennungswert. Sie kann
-          ausserdem vielseitig eingesetzt werden.<br />
+          ausserdem vielseitig eingesetzt werden.<br>
         </p>
         <p>
-          Weiteres, das vor allem in den Lagern nützlich ist, ist Folgendes:<br />
-          <b>Pfadihemd</b> - Auf dem Pfadihemd sammelt man Drücke und Abzeichen aus den Lagern.<br />
+          Weiteres, das vor allem in den Lagern nützlich ist, ist Folgendes:<br>
+          <b>Pfadihemd</b> - Auf dem Pfadihemd sammelt man Drücke und Abzeichen aus den Lagern.<br>
           <b>Pfadipulli</b> - Wir haben auch einen eigenen Pfadipulli. Diesen kann man ausschliesslich im
           <NuxtLink to="https://pfadi-region-basel.ch/projekte/pfadilaedeli/" target="_blank">Pfadilädeli</NuxtLink>
-          kaufen.<br />
+          kaufen.<br>
           <b>Schlafsack</b> - In den Lagern ist ein Schlafsack natürlich unausweichlich. Welcher der richtige ist,
           erfährst du
           <NuxtLink to="https://walking-wild.net/de/wandern-camping-outdoor/campingausrüstung-schlafsack-ratgeber"
                     target="_blank">hier
           </NuxtLink>
-          .<br />
+          .<br>
           <b>«Mätteli»</b> - Die Schlafmatte braucht man im AufLa / PfiLa und im SoLa. Auf was du beim Kauf eines
           «Mätteli» achten musst, kannst du
           <NuxtLink to="https://www.doorout.com/blog/ratgeber-camping-matten-welche-wann-wo-warum/" target="_blank">
@@ -67,11 +67,11 @@
       <Accordion title="Wer leitet die Pfadi?">
         <p>Die Pfadi ist nach dem Motto «Junge leiten Junge» organisiert. Ab 16 Jahren betreuen Jugendliche in einem
           Leitungsteam eine Gruppe und organisieren Pfadiaktivitäten. Alle Teilnehmenden können ab entsprechendem Alter
-          Leitperson werden.<br />
+          Leitperson werden.<br>
           Ältere Leiter*innen sind für die Leitungsteams und die Organisation der Abteilung verantwortlich. Sie alle
-          setzen sich ehrenamtlich für die Pfadi ein.<br />
+          setzen sich ehrenamtlich für die Pfadi ein.<br>
           Die meisten Leitpersonen besuchen von Jugend+Sport angeboten Ausbildungskurse und lernen dort von erfahrenen
-          Kursleitenden alle nötigen Leitkompetenzen.<br />
+          Kursleitenden alle nötigen Leitkompetenzen.<br>
           Ausserdem wird das Leitungsteam von einem Betreuungsnetzwerk aus erfahrenen Pfadileitenden sowie einem
           ausgebildeten Coach unterstützt und beraten.
         </p>
@@ -90,7 +90,7 @@
         <p>
           Wir haben eine private Foto-Cloud, auf der alle Fotos von Aktivitäten und Lagern gesammelt werden.
           Den Link dazu wird regelmässig mit allen Mitgliedern geteilt und kann bei der Abteilungsleitung angefragt
-          werden.<br />
+          werden.<br>
           Ausserdem haben wir einen Instagram Account, auf dem ausgewählte Fotos geteilt werden.
         </p>
 
@@ -110,7 +110,19 @@
 </template>
 
 <script setup lang="ts">
+const seo = {
+  title: "FAQs | Pfadi Schenkenberg",
+  description: "\"Was kostet mich die Pfadi?\", \"Wer leitet die Pfadi?\" und \"Welche Ausrüstung brauche ich für die Pfadi?\" - All diese und noch weitere Fragen werde hir geklärt."
 
+};
+
+useSeoMeta({
+  title: seo.title,
+  ogTitle: seo.title,
+  description: seo.description,
+  ogDescription: seo.description, ogImage: "/img/gruppenfoto-abteilung.jpg",
+  twitterCard: "summary_large_image"
+});
 </script>
 
 <style lang="scss" scoped>

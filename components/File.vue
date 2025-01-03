@@ -1,5 +1,5 @@
 <template>
-  <a :href="props.src" download external class="file">
+  <a :href="props.src" download class="file">
     {{ fileName }}
   </a>
 </template>
