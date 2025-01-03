@@ -40,7 +40,7 @@
             <div class="admin-segment-list-element">
               <h3>Mitgliederformulare</h3>
               <File src="/files/Begruessungsbrief.pdf"/>
-              <File src="/files/Mitgliederformular_Wölfe.pdf"/>
+              <File src="/files/Mitgliederformular_Woelfe.pdf"/>
               <File src="/files/Mitgliederformular_Pfadi.pdf"/>
             </div>
             <div class="admin-segment-list-element admin-rufe">
