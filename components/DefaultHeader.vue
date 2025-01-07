@@ -13,7 +13,7 @@
           <NuxtLink to="/administratives">Administratives</NuxtLink>
         </li>
         <li>
-          <NavDropdownElement text="Tips & Tricks">
+          <NavDropdownElement text="Tipps & Tricks">
             <li>
               <NuxtLink to="/links">Links</NuxtLink>
             </li>
