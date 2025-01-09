@@ -79,7 +79,7 @@ Wir freuen uns auf dich!`
     },
     calendar: {
       existing: true,
-      src: "/files/kalender/Kalender_Woelfli_2025_1.pdf"
+      src: "/files/kalender/Kalender_Pfadi_2025_1.pdf"
     },
     text: {
       intro: "Du bist zwischen 11 und 14 Jahren alt? Dann ist die Pfadistufe die richtige Stufe für dich. Gemeinsam verbringen wir Samstagnachmittage mit sportlichen Spielen, kreativen Aufgaben und natürlich viel Spass!",
