@@ -34,8 +34,8 @@
           <div class="admin-segment-list">
             <div class="admin-segment-list-element">
               <h3>Quartalspläne</h3>
-              <File src="/files/kalender/Kalender_Woelfli_2025_1.pdf"/>
-              <File src="/files/kalender/Kalender_Pfadi_2025_1.pdf"/>
+              <File src="/files/kalender/Kalender_Wölfli_2025_2.pdf"/>
+              <File src="/files/kalender/Kalender_Pfadi_2025_2.pdf"/>
             </div>
             <div class="admin-segment-list-element">
               <h3>Mitgliederformulare</h3>
