@@ -115,7 +115,7 @@ Auch die SoLas sind für die Pios etwas Spezielles. In der Vergangenheit machten
 Wenn die Pios kein eigenes Programm haben, können sie immer auch an den regulären Anlässen der Pfadi-Stufe teilnehmen.`
     }
   },
-  {
+  /*{
     title: "Der APV",
     targetGroup: "Altpfadfinder*innenverein",
     email: "apv@pfadischenkenberg.ch",
@@ -140,7 +140,7 @@ Wenn die Pios kein eigenes Programm haben, können sie immer auch an den regulä
 Der APV ist auch eine wichtige finanzielle Stütze für den Verein und kann das aktive Leitungsteam bei Herausforderungen unterstützen. Mit dem APV eröffnet sich ein grosses Netzwerk an erfahrenen und motivierten Schenkenbergler:innen, die sich gerne bei Problemen anbieten.<br/><br/>
 Zurzeit steht der APV in einer Überarbeitungsphase und soll wieder aktiver belebt werden. Vor allem Lücken in der Kontaktdatensammlung sollen gefüllt werden. Bei Fragen oder fehlenden Kontakten, könnt ihr euch gerne bei Chirpa melden.`
     }
-  }
+  }*/
 ];
 </script>
 
