@@ -111,11 +111,11 @@ const contacts: Array<Contact> = [
       name: "Dan Malzacher",
       vulgo: "Faramir"
     }]
-  }, {
+  }, {/*
     leaderTitle: "APV-Verantwortlich",
     email: "apv@pfadischenkenberg.ch",
     leaders: [{name: "Tim Purtschert", vulgo: "Chirpa"}]
-  }, {
+  }, {*/
     leaderTitle: "Abteilungsleitung",
     email: "abteilung@pfadischenkenberg.ch",
     leaders: [{name: "Joshua Dunkel", vulgo: "Hauro"}, {name: "Jara Senn", vulgo: "Mononoke"}]
