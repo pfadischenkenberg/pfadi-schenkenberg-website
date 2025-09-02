@@ -49,7 +49,7 @@ const stages = [
     },
     calendar: {
       existing: true,
-      src: "/files/kalender/Kalender_Wölfli_2025_2.pdf"
+      src: "/files/kalender/Kalender_Wölfli_2025_3.pdf"
     },
     text: {
       intro: "Bist du zwischen 6 und 11 Jahre alt und willst die Welt der Wölfli sowie viele verschiedene Abenteuer erleben? Dann bist du bei uns in der Wölfli-Stufe der Pfadi Schenkenberg genau Richtig!",
