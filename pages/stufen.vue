@@ -95,8 +95,8 @@ Komm gerne einfach vorbei, wir freuen uns auf dich!
     email: "pio@pfadischenkenberg.ch",
     image: {
       src: "/img/leitungsteam-pio.jpg",
-      alt: "Leitungsteam der Piostufe der Pfadi Schenkenberg um AufLa 2024",
-      description: "Pioleitungsteam im AufLa 2024 (sehr veraltet)"
+      alt: "Leitungsteam der Piostufe der Pfadi Schenkenberg",
+      description: "Pioleitungsteam (bis Sommer 2025)"
     },
     leaders: {
       label: "Stufenleitung",
