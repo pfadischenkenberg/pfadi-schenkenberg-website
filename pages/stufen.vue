@@ -34,8 +34,8 @@ const stages = [
     email: "woelfli@pfadischenkenberg.ch",
     image: {
       src: "/img/leitungsteam-woelfli.jpg",
-      alt: "Leitungsteam der Wölflistufe der Pfadi Schenkenberg im AufLa 2024",
-      description: "Wölflileitungsteam im AufLa 2024 (veraltet)"
+      alt: "Leitungsteam der Wölflistufe der Pfadi Schenkenberg 2026 im Planungsweekend 2025",
+      description: "Wölflileitungsteam 2026"
     },
     leaders: {
       label: "Stufenleitung",
@@ -67,14 +67,14 @@ Wir freuen uns auf dich!`
     email: "pfadi@pfadischenkenberg.ch",
     image: {
       src: "/img/leitungsteam-pfadi.jpg",
-      alt: "Leitungsteam der Pfadistufe der Pfadi Schenkenberg im AufLa 2024",
-      description: "Pfadileitungsteam im AufLa 2024 (veraltet)"
+      alt: "Leitungsteam der Pfadistufe der Pfadi Schenkenberg 2026 im Planungsweekend 2025",
+      description: "Pfadileitungsteam 2026"
     },
     leaders: {
       label: "Stufenleitung",
       list: [{
-        name: "Zora Landolt",
-        vulgo: "Guarda"
+        name: "Emma Werthemann",
+        vulgo: "Malaika"
       }]
     },
     calendar: {
@@ -95,14 +95,14 @@ Komm gerne einfach vorbei, wir freuen uns auf dich!
     email: "pio@pfadischenkenberg.ch",
     image: {
       src: "/img/leitungsteam-pio.jpg",
-      alt: "Leitungsteam der Piostufe der Pfadi Schenkenberg",
-      description: "Pioleitungsteam (bis Sommer 2025)"
+      alt: "Leitungsteam der Piostufe der Pfadi Schenkenberg 2026 im Planungsweekend 2025",
+      description: "Pioleitungsteam 2026"
     },
     leaders: {
       label: "Stufenleitung",
       list: [{
-        name: "Dan Malzacher",
-        vulgo: "Faramir"
+        name: "Zora Landolt",
+        vulgo: "Guarda"
       }]
     },
     calendar: {
