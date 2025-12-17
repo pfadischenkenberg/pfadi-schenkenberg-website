@@ -103,13 +103,13 @@ const contacts: Array<Contact> = [
   }, {
     leaderTitle: "Stufenleitung Pfadi",
     email: "pfadi@pfadischenkenberg.ch",
-    leaders: [{name: "Zora Landolt", vulgo: "Guarda"}]
+    leaders: [{name: "Emma Werthemann", vulgo: "Malaika"}]
   }, {
     leaderTitle: "Stufenleitung Pio",
     email: "pio@pfadischenkenberg.ch",
     leaders: [{
-      name: "Dan Malzacher",
-      vulgo: "Faramir"
+      name: "Zora Landolt",
+      vulgo: "Guarda"
     }]
   }, {/*
     leaderTitle: "APV-Verantwortlich",
