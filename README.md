@@ -2,7 +2,7 @@
 
 Das repo zur Website der Pfadi Schenkenberg
 
-[pfadischenkenberg.ch](pfadischenkenberg.ch)
+[pfadischenkenberg.ch](https://pfadischenkenberg.ch)
 
 ## Setup
 
