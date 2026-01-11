@@ -44,11 +44,6 @@ watch(() => route.path, () => {
   expanded.value = false;
 });
 
-watch(() => expanded.value, () => {
-  console.log("expanded: " + expanded.value);
-});
-
-
 // "Smart" fixed header:
 const defaultHeaderRef = ref(null);
 const { styles } = useFixedHeader(defaultHeaderRef);
