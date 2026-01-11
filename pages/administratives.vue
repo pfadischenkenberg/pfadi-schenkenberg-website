@@ -57,7 +57,7 @@
         </div>
         <div class="admin-segment something-missing">
           <p>Etwas fehlt oder ist falsch?</p>
-          <FancyLink to="mailto:admin@pfadischenkenberg.ch">Schreib uns eine Mail</FancyLink>
+          <FancyLink to="mailto:it@pfadischenkenberg.ch">Schreib uns eine Mail</FancyLink>
         </div>
       </div>
     </main>
