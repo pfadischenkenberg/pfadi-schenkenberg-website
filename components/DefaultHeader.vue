@@ -45,8 +45,8 @@ watch(() => route.path, () => {
   expanded.value = false;
 });
 
-watch(() => expanded, () => {
-  console.log("expanded: " + expanded);
+watch(() => expanded.value, () => {
+  console.log("expanded: " + expanded.value);
 });
 
 
