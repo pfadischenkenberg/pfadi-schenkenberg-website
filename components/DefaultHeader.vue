@@ -31,7 +31,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import { useFixedHeader } from 'vue-use-fixed-header';
-import { useRoute } from 'vue-router';
 
 // For mobile:
 let expanded = ref(false);
