@@ -7,24 +7,24 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  title: {
-    type: String,
-    required: true
-  },
-  text: {
-    type: String,
-    required: true
-  },
-  href: {
-    type: String,
-    required: true
-  },
-  linkText: {
-    type: String,
-    required: true
-  }
-});
+  const props = defineProps({
+    title: {
+      type: String,
+      required: true,
+    },
+    text: {
+      type: String,
+      required: true,
+    },
+    href: {
+      type: String,
+      required: true,
+    },
+    linkText: {
+      type: String,
+      required: true,
+    },
+  });
 
 </script>
 

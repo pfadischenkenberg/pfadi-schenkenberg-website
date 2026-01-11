@@ -5,12 +5,12 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  to: {
-    type: String,
-    required: true
-  }
-});
+  const props = defineProps({
+    to: {
+      type: String,
+      required: true,
+    },
+  });
 </script>
 <style lang="scss" scoped>
 @use "assets/scss/includes" as var;

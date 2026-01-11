@@ -17,17 +17,19 @@
             </li>
           </ul>
         </nav>
-        <NuxtLink class="footer-link-instagram" to="https://www.instagram.com/pfadi_schenkenberg/" target="_blank"
-                  title="Link zum Schenkenberg Instagram Account" />
+        <NuxtLink
+          class="footer-link-instagram" to="https://www.instagram.com/pfadi_schenkenberg/" target="_blank"
+          title="Link zum Schenkenberg Instagram Account" />
       </div>
-      <NuxtLink class="footer-link-instagram-mobile" to="https://www.instagram.com/pfadi_schenkenberg/" target="_blank"
-                title="Link zum Schenkenberg Instagram Account" />
+      <NuxtLink
+        class="footer-link-instagram-mobile" to="https://www.instagram.com/pfadi_schenkenberg/" target="_blank"
+        title="Link zum Schenkenberg Instagram Account" />
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
-const year = new Date().getFullYear();
+  const year = new Date().getFullYear();
 </script>
 
 <style lang="scss" scoped>

@@ -7,9 +7,10 @@
       <section class="start-page-content grid-container">
         <p class="intro-text">
           <ClientOnly>
-            <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
-                           alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024"
-                           class="polaroid-1 polaroid-1--mobile ">
+            <PolaroidPhoto
+              src="/img/gruppenfoto-abteilung.jpg"
+              alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024"
+              class="polaroid-1 polaroid-1--mobile ">
               Abteilungsfoto Aufla 24
             </PolaroidPhoto>
           </ClientOnly>
@@ -22,16 +23,18 @@
           zweiwöchiges Sommerlager in der Pfadistufe und ein einwöchiges Herbstlager in der Wölflistufe statt.
         </p>
         <ClientOnly>
-          <PolaroidPhoto src="/img/gruppenfoto-abteilung.jpg"
-                         alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024"
-                         class="polaroid-1 polaroid-1--desktop">
+          <PolaroidPhoto
+            src="/img/gruppenfoto-abteilung.jpg"
+            alt="Gruppenfoto der Pfadi Schenkenberg mit der Abteilungsfahne und der Bezirksfahne im Auffahrtslager 2024"
+            class="polaroid-1 polaroid-1--desktop">
             Abteilungsfoto Aufla 2024
           </PolaroidPhoto>
         </ClientOnly>
         <ClientOnly>
-          <PolaroidPhoto src="/img/kinder-spielen.jpg"
-                         alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021"
-                         class="polaroid-2 polaroid-2--mobile">PfiLa 2021
+          <PolaroidPhoto
+            src="/img/kinder-spielen.jpg"
+            alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021"
+            class="polaroid-2 polaroid-2--mobile">PfiLa 2021
           </PolaroidPhoto>
         </ClientOnly>
         <div class="main-text">
@@ -57,9 +60,10 @@
           </div>
         </div>
         <ClientOnly>
-          <PolaroidPhoto src="/img/kinder-spielen.jpg"
-                         alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021"
-                         class="polaroid-2 polaroid-2--desktop">PfiLa 2021
+          <PolaroidPhoto
+            src="/img/kinder-spielen.jpg"
+            alt="Kinder der Pfadi Schenkenberg spielen draussen ein Spiel im Pfingstlager 2021"
+            class="polaroid-2 polaroid-2--desktop">PfiLa 2021
           </PolaroidPhoto>
         </ClientOnly>
       </section>
@@ -70,19 +74,19 @@
 
 <script setup lang="ts">
 
-const seo = {
-  title: "Startseite | Pfadi Schenkenberg",
-  description: "Wenn du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, und eine Menge Spass für dein Kind bist, dann bist du bei der Pfadi Schenkenberg in Basel genau richtig!"
-};
+  const seo = {
+    title: "Startseite | Pfadi Schenkenberg",
+    description: "Wenn du auf der Suche nach funkelnden Augen, Abenteuer an der frischen Luft, Freundschaften, und eine Menge Spass für dein Kind bist, dann bist du bei der Pfadi Schenkenberg in Basel genau richtig!",
+  };
 
-useSeoMeta({
-  title: seo.title,
-  ogTitle: seo.title,
-  description: seo.description,
-  ogDescription: seo.description,
-  ogImage: "/img/kinder-spielen.jpg",
-  twitterCard: "summary_large_image"
-});
+  useSeoMeta({
+    title: seo.title,
+    ogTitle: seo.title,
+    description: seo.description,
+    ogDescription: seo.description,
+    ogImage: "/img/kinder-spielen.jpg",
+    twitterCard: "summary_large_image",
+  });
 </script>
 
 <style lang="scss" scoped>

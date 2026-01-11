@@ -29,21 +29,16 @@
 </template>
 
 <script setup lang="ts">
-import { watch } from "vue";
-import { ref } from 'vue';
-import { useFixedHeader } from 'vue-use-fixed-header';
+  import { ref } from "vue";
+  import { useFixedHeader } from "vue-use-fixed-header";
 
-// For mobile:
-let expanded = ref(false);
-
-watch(() => expanded, () => {
-  console.log("expanded: " + expanded);
-});
+  // For mobile:
+  const expanded = ref(false);
 
 
-// "Smart" fixed header:
-const defaultHeaderRef = ref(null);
-const { styles } = useFixedHeader(defaultHeaderRef);
+  // "Smart" fixed header:
+  const defaultHeaderRef = ref(null);
+  const { styles } = useFixedHeader(defaultHeaderRef);
 
 </script>
 

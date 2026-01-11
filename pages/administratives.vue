@@ -11,16 +11,16 @@
             Für allgemeine Fragen und Anliegen, die nicht spezifisch eine bestimmte Stufe betreffen, steht die
             Abteilungsleitung zur Verfügung.</p>
           <div class="admin-segment-list">
-            <div v-for="contact in contacts" class="admin-segment-list-element">
+            <div v-for="contact in contacts" :key="contact.leaderTitle" class="admin-segment-list-element">
               <h3>{{ contact.leaderTitle }}</h3>
-              <p v-for="leader in contact.leaders">
+              <p v-for="leader in contact.leaders" :key="leader.name">
                 {{ `${leader.name} v/o ${leader.vulgo}` }}
               </p>
               <a :href="`mailto:${contact.email}`">{{ contact.email }}</a>
             </div>
           </div>
         </div>
-        <div class="admin-segment grid-container" id="schnuppern">
+        <div id="schnuppern" class="admin-segment grid-container">
           <h2>Schnuppern</h2>
           <p class="admin-segment-text">Um dich oder dein Kind zum Schnuppern anzumelden, schreibe der zuständigen
             Leitperson eine E-Mail oder komme an einem offiziellen Schnupperanlass vorbei. Dieser findet für gewöhnlich
@@ -65,61 +65,61 @@
 </template>
 
 <script setup lang="ts">
-const seo = {
-  title: "Administratives | Pfadi Schenkenberg",
-  description: "Willst du bei der Pfadi Schenkenberg in Basel vorbeischauen oder suchst du Dokumente und deine Ansprechpersonen? Hier findest du alles Administrative."
+  const seo = {
+    title: "Administratives | Pfadi Schenkenberg",
+    description: "Willst du bei der Pfadi Schenkenberg in Basel vorbeischauen oder suchst du Dokumente und deine Ansprechpersonen? Hier findest du alles Administrative.",
 
-};
+  };
 
-useSeoMeta({
-  title: seo.title,
-  ogTitle: seo.title,
-  description: seo.description,
-  ogDescription: seo.description, ogImage: "/img/gruppenfoto-abteilung.jpg",
-  twitterCard: "summary_large_image"
-});
+  useSeoMeta({
+    title: seo.title,
+    ogTitle: seo.title,
+    description: seo.description,
+    ogDescription: seo.description, ogImage: "/img/gruppenfoto-abteilung.jpg",
+    twitterCard: "summary_large_image",
+  });
 
-type Contact = {
-  leaderTitle: string,
-  email: string,
-  leaders:
+  type Contact = {
+    leaderTitle: string,
+    email: string,
+    leaders:
       {
         name: string,
         vulgo: string
       }[]
-}
+  }
 
-const contacts: Array<Contact> = [
-  {
-    leaderTitle: "Stufenleitung Wölfli",
-    email: "woelfli@pfadischenkenberg.ch",
-    leaders: [{
-      name: "Isabel Nwose",
-      vulgo: "Kassiopeia"
+  const contacts: Array<Contact> = [
+    {
+      leaderTitle: "Stufenleitung Wölfli",
+      email: "woelfli@pfadischenkenberg.ch",
+      leaders: [{
+        name: "Isabel Nwose",
+        vulgo: "Kassiopeia",
+      }, {
+        name: "Enea Lazzari",
+        vulgo: "Twig",
+      }],
     }, {
-      name: "Enea Lazzari",
-      vulgo: "Twig"
-    }]
-  }, {
-    leaderTitle: "Stufenleitung Pfadi",
-    email: "pfadi@pfadischenkenberg.ch",
-    leaders: [{name: "Emma Werthemann", vulgo: "Malaika"}]
-  }, {
-    leaderTitle: "Stufenleitung Pio",
-    email: "pio@pfadischenkenberg.ch",
-    leaders: [{
-      name: "Zora Landolt",
-      vulgo: "Guarda"
-    }]
-  }, {/*
+      leaderTitle: "Stufenleitung Pfadi",
+      email: "pfadi@pfadischenkenberg.ch",
+      leaders: [{name: "Emma Werthemann", vulgo: "Malaika"}],
+    }, {
+      leaderTitle: "Stufenleitung Pio",
+      email: "pio@pfadischenkenberg.ch",
+      leaders: [{
+        name: "Zora Landolt",
+        vulgo: "Guarda",
+      }],
+    }, {/*
     leaderTitle: "APV-Verantwortlich",
     email: "apv@pfadischenkenberg.ch",
     leaders: [{name: "Tim Purtschert", vulgo: "Chirpa"}]
   }, {*/
-    leaderTitle: "Abteilungsleitung",
-    email: "abteilung@pfadischenkenberg.ch",
-    leaders: [{name: "Joshua Dunkel", vulgo: "Hauro"}, {name: "Jara Senn", vulgo: "Mononoke"}]
-  }];
+      leaderTitle: "Abteilungsleitung",
+      email: "abteilung@pfadischenkenberg.ch",
+      leaders: [{name: "Joshua Dunkel", vulgo: "Hauro"}, {name: "Jara Senn", vulgo: "Mononoke"}],
+    }];
 </script>
 
 <style lang="scss" scoped>

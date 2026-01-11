@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable vue/no-v-html -->
   <div class="scout-stage grid-container">
     <div class="scout-stage-title">
       <h2>{{ stage.title }}</h2>
@@ -6,17 +7,17 @@
     </div>
     <div class="scout-stage-content grid-container">
       <div class="scout-stage-text scout-stage-text--full">
-        <p v-html="stage.text.intro"></p>
-        <p v-html="stage.text.main"></p>
+        <p v-html="stage.text.intro"/>
+        <p v-html="stage.text.main"/>
       </div>
       <div class="scout-stage-text scout-stage-text--expandable">
         <p>
-          <span v-html="stage.text.intro"></span> &nbsp;
-          <button class="button--text expand-button" v-if="!expanded" v-on:click="toggleExpanded()">... mehr</button>
+          <span v-html="stage.text.intro"/> &nbsp;
+          <button v-if="!expanded" class="button--text expand-button" @click="toggleExpanded()">... mehr</button>
         </p>
         <p v-if="expanded">
-          <span v-html="stage.text.main"></span> &nbsp;
-          <button class="button--text" v-on:click="toggleExpanded()"> weniger anzeigen</button>
+          <span v-html="stage.text.main"/> &nbsp;
+          <button class="button--text" @click="toggleExpanded()"> weniger anzeigen</button>
         </p>
 
       </div>
@@ -27,7 +28,9 @@
         <div class="scout-stage-data">
           <div class="scout-stage-leaders">
             <h4>{{ stage.leaders.label }}</h4>
-            <p v-for="leader in stage.leaders.list">{{ `${leader.name} v/o ${leader.vulgo}` }}</p>
+            <p v-for="leader in stage.leaders.list" :key="leader.name">
+              {{ `${leader.name} v/o ${leader.vulgo}` }}
+            </p>
             <a :href="`mailto:${stage.email}`">{{ stage.email }}</a>
           </div>
 
@@ -43,42 +46,42 @@
 
 <script lang="ts" setup>
 
-interface ScoutStageProps {
-  title: string,
-  targetGroup: string,
-  email: string,
-  image: {
-    src: string,
-    alt: string,
-    description: string
-  },
-  leaders: {
-    label: string,
-    list: [{
-      name: string,
-      vulgo: string,
-    }]
-  },
-  calendar: {
-    existing: boolean,
-    src: string
-  },
-  text: {
-    intro: string
-    main: string
+  interface ScoutStageProps {
+    title: string,
+    targetGroup: string,
+    email: string,
+    image: {
+      src: string,
+      alt: string,
+      description: string
+    },
+    leaders: {
+      label: string,
+      list: [{
+        name: string,
+        vulgo: string,
+      }]
+    },
+    calendar: {
+      existing: boolean,
+      src: string
+    },
+    text: {
+      intro: string
+      main: string
+    }
+
   }
 
-}
+  const props = defineProps<{ stage: ScoutStageProps }>();
 
-const props = defineProps<{ stage: ScoutStageProps }>();
+  const stage = props.stage;
 
-const stage = props.stage;
+  const expanded = ref(false);
 
-const expanded = ref(false);
-
-function toggleExpanded() {
-  expanded.value = !expanded.value;
-}
+  function toggleExpanded() {
+    expanded.value = !expanded.value;
+  }
 
 
 </script>

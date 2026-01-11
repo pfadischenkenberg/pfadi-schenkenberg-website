@@ -6,16 +6,17 @@
       </p>
       <h1 class="hero-title">Pfadi Schenkenberg</h1>
     </div>
-    <div :class="{'hero-wave': props.wave}"></div>
+    <div :class="{'hero-wave': props.wave}"/>
   </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  wave: {
-    default: true
-  }
-});
+  const props = defineProps({
+    wave: {
+      type: Boolean,
+      default: true,
+    },
+  });
 </script>
 
 <style lang="scss" scoped>

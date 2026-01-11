@@ -1,6 +1,6 @@
 <template>
   <div class="accordion">
-    <button class="accordion-title" @click="toggleAccordion" :title="title">
+    <button class="accordion-title" :title="title" @click="toggleAccordion">
       <h2>{{ title }}</h2>
       <div :class="[{ open: isOpen}, 'arrow']" />
     </button>
@@ -11,40 +11,40 @@
 </template>
 
 <script setup>
-const props = defineProps({
-  title: {
-    type: String,
-    required: true
-  },
-  isOpen: {
-    type: Boolean,
-    required: false,
-    default: false
-  }
-});
-
-const isOpen = ref(props.isOpen);
-const contentHeight = ref("0px"); // css max-height of content
-const content = ref(null);
-
-
-onMounted(adjustContentHeight);
-
-function toggleAccordion() {
-  isOpen.value = !isOpen.value;
-  adjustContentHeight();
-}
-
-// Sets the max-height attribute of the content to the respective height
-function adjustContentHeight() {
-  nextTick(() => {
-    if (isOpen.value) {
-      contentHeight.value = `${content.value.scrollHeight}px`;
-    } else {
-      contentHeight.value = "0px";
-    }
+  const props = defineProps({
+    title: {
+      type: String,
+      required: true,
+    },
+    isOpen: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   });
-}
+
+  const isOpen = ref(props.isOpen);
+  const contentHeight = ref("0px"); // css max-height of content
+  const content = ref(null);
+
+
+  onMounted(adjustContentHeight);
+
+  function toggleAccordion() {
+    isOpen.value = !isOpen.value;
+    adjustContentHeight();
+  }
+
+  // Sets the max-height attribute of the content to the respective height
+  function adjustContentHeight() {
+    nextTick(() => {
+      if (isOpen.value) {
+        contentHeight.value = `${content.value.scrollHeight}px`;
+      } else {
+        contentHeight.value = "0px";
+      }
+    });
+  }
 
 </script>
 

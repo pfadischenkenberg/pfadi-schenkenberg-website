@@ -2,17 +2,17 @@
   <div
     class="nav-dropdown"
     tabindex="0"
-    v-on:mouseover="openDropdown()"
-    v-on:mouseleave="closeDropdown()"
-    v-on:click="openDropdown()"
-    v-on:focus="openDropdown()"
+    @mouseover="openDropdown()"
+    @mouseleave="closeDropdown()"
+    @click="openDropdown()"
+    @focus="openDropdown()"
   >
     <a v-if="!!props.href" :href="props.href">
       {{ props.text }}
     </a>
     <span v-else>
-    {{ props.text }}
-  </span>
+      {{ props.text }}
+    </span>
     <div class="dropdown-wrapper" :class="{expanded: expanded}">
       <ul class="dropdown" :class="{expanded: expanded}">
         <slot />
@@ -22,23 +22,27 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  href: String,
-  text: {
-    type: String,
-    required: true
+  const props = defineProps({
+    href: {
+      type: String,
+      required: false,
+      default: "",
+    },
+    text: {
+      type: String,
+      required: true,
+    },
+  });
+
+  const expanded = ref(false);
+
+  function openDropdown() {
+    expanded.value = true;
   }
-});
 
-let expanded = ref(false);
-
-function openDropdown() {
-  expanded.value = true;
-}
-
-function closeDropdown() {
-  expanded.value = false;
-}
+  function closeDropdown() {
+    expanded.value = false;
+  }
 </script>
 
 <style lang="scss" scoped>

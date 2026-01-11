@@ -1,34 +1,34 @@
 <template>
   <div class="hamburger" :class="{ open: isOpen }" @click="toggleMenu">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+    <span/>
+    <span/>
+    <span/>
+    <span/>
   </div>
 </template>
 
 <script setup lang="ts">
-import {ref, watch} from 'vue';
+  import {ref, watch} from "vue";
 
-const props = defineProps({
-  expanded: {
-    type: Boolean,
-    required: true
+  const props = defineProps({
+    expanded: {
+      type: Boolean,
+      required: true,
+    },
+  });
+
+  const emit = defineEmits(["update:expanded"]);
+
+  const isOpen = ref(props.expanded);
+
+  watch(() => props.expanded, (newExpanded) => {
+    isOpen.value = newExpanded;
+  });
+
+  function toggleMenu() {
+    isOpen.value = !isOpen.value;
+    emit("update:expanded", isOpen.value);
   }
-});
-
-const emit = defineEmits(['update:expanded']);
-
-const isOpen = ref(props.expanded);
-
-watch(() => props.expanded, (newExpanded) => {
-  isOpen.value = newExpanded;
-});
-
-function toggleMenu() {
-  isOpen.value = !isOpen.value;
-  emit('update:expanded', isOpen.value);
-}
 </script>
 
 <style lang="scss" scoped>

@@ -8,16 +8,17 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  src: {
-    type: String,
-    required: true
-  },
-  alt: {
-    type: String,
-    required: false
-  }
-});
+  const props = defineProps({
+    src: {
+      type: String,
+      required: true,
+    },
+    alt: {
+      type: String,
+      required: false,
+      default: "",
+    },
+  });
 </script>
 
 <style lang="scss" scoped>

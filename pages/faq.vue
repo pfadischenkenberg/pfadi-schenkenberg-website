@@ -52,8 +52,9 @@
           kaufen.<br>
           <b>Schlafsack</b> - In den Lagern ist ein Schlafsack natürlich unausweichlich. Welcher der richtige ist,
           erfährst du
-          <NuxtLink to="https://walking-wild.net/de/wandern-camping-outdoor/campingausrüstung-schlafsack-ratgeber"
-                    target="_blank">hier
+          <NuxtLink
+            to="https://walking-wild.net/de/wandern-camping-outdoor/campingausrüstung-schlafsack-ratgeber"
+            target="_blank">hier
           </NuxtLink>
           .<br>
           <b>«Mätteli»</b> - Die Schlafmatte braucht man im AufLa / PfiLa und im SoLa. Auf was du beim Kauf eines
@@ -110,19 +111,19 @@
 </template>
 
 <script setup lang="ts">
-const seo = {
-  title: "FAQs | Pfadi Schenkenberg",
-  description: "\"Was kostet mich die Pfadi?\", \"Wer leitet die Pfadi?\" und \"Welche Ausrüstung brauche ich für die Pfadi?\" - All diese und noch weitere Fragen werde hir geklärt."
+  const seo = {
+    title: "FAQs | Pfadi Schenkenberg",
+    description: "\"Was kostet mich die Pfadi?\", \"Wer leitet die Pfadi?\" und \"Welche Ausrüstung brauche ich für die Pfadi?\" - All diese und noch weitere Fragen werde hir geklärt.",
 
-};
+  };
 
-useSeoMeta({
-  title: seo.title,
-  ogTitle: seo.title,
-  description: seo.description,
-  ogDescription: seo.description, ogImage: "/img/gruppenfoto-abteilung.jpg",
-  twitterCard: "summary_large_image"
-});
+  useSeoMeta({
+    title: seo.title,
+    ogTitle: seo.title,
+    description: seo.description,
+    ogDescription: seo.description, ogImage: "/img/gruppenfoto-abteilung.jpg",
+    twitterCard: "summary_large_image",
+  });
 </script>
 
 <style lang="scss" scoped>

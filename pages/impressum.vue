@@ -23,7 +23,7 @@
           <li>Solenne Saltel v/o Paloma</li>
           <li>Zora Landolt v/o Guarda</li>
         </ul>
-        <p>Auch der Rest des Leitungsteams hat wichtige Ideen, Texte, und Anmerkungen beigetragen <3.</p>
+        <p>Auch der Rest des Leitungsteams hat wichtige Ideen, Texte, und Anmerkungen beigetragen ❤️.</p>
       </section>
 
       <section class="grid-container">
@@ -41,19 +41,19 @@
 </template>
 
 <script setup lang="ts">
-const seo = {
-  title: "Impressum | Pfadi Schenkenberg",
-  description: "Auf dieser Seite findest du rechtliche Informationen zur Website sowie Danksagungen."
-};
+  const seo = {
+    title: "Impressum | Pfadi Schenkenberg",
+    description: "Auf dieser Seite findest du rechtliche Informationen zur Website sowie Danksagungen.",
+  };
 
-useSeoMeta({
-  title: seo.title,
-  ogTitle: seo.title,
-  description: seo.description,
-  ogDescription: seo.description,
-  ogImage: "/img/gruppenfoto-abteilung.jpg",
-  twitterCard: "summary_large_image"
-});
+  useSeoMeta({
+    title: seo.title,
+    ogTitle: seo.title,
+    description: seo.description,
+    ogDescription: seo.description,
+    ogImage: "/img/gruppenfoto-abteilung.jpg",
+    twitterCard: "summary_large_image",
+  });
 </script>
 
 <style lang="scss" scoped>

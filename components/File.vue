@@ -5,14 +5,14 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  src: {
-    type: String,
-    required: true
-  }
-});
+  const props = defineProps({
+    src: {
+      type: String,
+      required: true,
+    },
+  });
 
-const fileName = props.src.split(/[/;\\]+/).pop();
+  const fileName = props.src.split(/[/;\\]+/).pop();
 
 </script>
 

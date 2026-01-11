@@ -8,15 +8,15 @@
 </template>
 
 <script setup lang="ts">
+  import type { NuxtError } from "#app";
 
-import type { NuxtError } from "#app";
+  const { error } = defineProps<{
+    error: NuxtError
+  }>();
 
-const props = defineProps({
-  error: Object as () => NuxtError
-});
-
-const handleError = () => clearError({ redirect: "/" });
+  const handleError = () => clearError({ redirect: "/" });
 </script>
+
 
 <style lang="scss" scoped>
 .error {
