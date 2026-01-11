@@ -19,6 +19,7 @@
     "vue-use-fixed-header": "^2.0.3"
   },
   "devDependencies": {
-    "sass": "^1.77.8"
+    "sass": "^1.77.8",
+    "typescript": "^5.9.3"
   }
 }
