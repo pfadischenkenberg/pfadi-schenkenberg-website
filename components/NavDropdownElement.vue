@@ -68,6 +68,11 @@ function closeDropdown() {
     width: 100%;
 
 
+    @media screen and (max-width: var.$screen-size-medium) {
+      position: static;
+      width: 100%;
+    }
+
     @media screen and (max-width: var.$screen-size-small) {
       min-width: 50%;
     }
@@ -79,6 +84,11 @@ function closeDropdown() {
       background-color: rgba(var.$tan-hide-50, 0.2);
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(5px);
+
+      @media screen and (max-width: var.$screen-size-medium) {
+        background-color: rgba(var.$tan-hide-50, 0.8);
+        padding: 0.5rem 0;
+      }
 
       & > * > * {
         color: var.$burnt-sienna-700;
