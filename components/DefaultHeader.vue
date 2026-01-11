@@ -33,7 +33,7 @@ import { ref, watch } from 'vue';
 import { useFixedHeader } from 'vue-use-fixed-header';
 
 // For mobile:
-let expanded = ref(false);
+const expanded = ref(false);
 
 // Get current route
 const route = useRoute();
