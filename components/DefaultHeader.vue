@@ -29,17 +29,19 @@
 </template>
 
 <script setup lang="ts">
-import { watch } from "vue";
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import { useFixedHeader } from 'vue-use-fixed-header';
 
 // For mobile:
-let expanded = ref(false);
+const expanded = ref(false);
 
-watch(() => expanded, () => {
-  console.log("expanded: " + expanded);
+// Get current route
+const route = useRoute();
+
+// Close menu when route changes
+watch(() => route.path, () => {
+  expanded.value = false;
 });
-
 
 // "Smart" fixed header:
 const defaultHeaderRef = ref(null);
