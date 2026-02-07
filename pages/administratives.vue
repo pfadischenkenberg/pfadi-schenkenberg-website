@@ -22,9 +22,9 @@
         </div>
         <div class="admin-segment grid-container" id="schnuppern">
           <h2>Schnuppern</h2>
-          <p class="admin-segment-text">Um dich oder dein Kind zum Schnuppern anzumelden, schreibe der zuständigen
-            Leitperson eine E-Mail oder komme an einem offiziellen Schnupperanlass vorbei. Dieser findet für gewöhnlich
-            im März statt.</p>
+          <p class="admin-segment-text">Um dich oder dein Kind zum Schnuppern anzumelden, schreibe der <NuxtLink to="#kontakte">zuständigen
+            Leitperson</NuxtLink> eine E-Mail oder komme an einem offiziellen Schnupperanlass vorbei. Dieser findet jährlich
+            mitte März statt. Für Infos dazu kannst du dich gerne bei der <NuxtLink to="#kontakte">Abteilungs Leitung</NuxtLink> informieren.</p>
           <p class="admin-segment-text">Wenn man 2–3 mal zum Schnuppern vorbeigekommen ist und weiterhin kommen möchte,
             kann man das Anmeldeformular der Stufenleitung per Mail schicken oder es ausgedruckt an einen Anlass
             mitbringen.</p>
