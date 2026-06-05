@@ -17,6 +17,9 @@
             </li>
           </ul>
         </nav>
+        <div class="footer-donation">
+          <div id="rnw-paylink-button-pkpyt"></div>
+        </div>
         <NuxtLink class="footer-link-instagram" to="https://www.instagram.com/pfadi_schenkenberg/" target="_blank"
                   title="Link zum Schenkenberg Instagram Account" />
       </div>
@@ -28,6 +31,24 @@
 
 <script setup lang="ts">
 const year = new Date().getFullYear();
+
+onMounted(() => {
+  const script = document.createElement('script');
+  script.type = 'module';
+  script.textContent = `
+    import { PaylinkButton } from "https://unpkg.com/@raisenow/paylink-button@2/dist/PaylinkButton.js";
+    PaylinkButton.render("#rnw-paylink-button-pkpyt", {
+      "solution-id": "pkpyt",
+      "size": "small",
+      "width": "dynamic",
+      "icon": "gift",
+      "label": "Unterstütze uns!",
+      "border-radius": "9px",
+      "background-color": "#444444",
+    });
+  `;
+  document.head.appendChild(script);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -72,7 +93,7 @@ const year = new Date().getFullYear();
 
     ul {
       display: flex;
-      align-items: end;
+      align-items: center;
       justify-content: center;
       gap: 2rem;
 
@@ -88,6 +109,11 @@ const year = new Date().getFullYear();
           }
         }
       }
+    }
+
+    .footer-donation {
+      zoom: 0.55;
+      flex-shrink: 0;
     }
 
     .footer-link-instagram {
@@ -150,7 +176,6 @@ footer::before {
     align-items: center;
 
     gap: 0;
-
 
     .footer-logo {
       position: initial;
