@@ -15,11 +15,11 @@
             <li>
               <NuxtLink to="/impressum">Impressum</NuxtLink>
             </li>
+            <li class="footer-donation-item">
+              <div id="rnw-paylink-button-pkpyt"></div>
+            </li>
           </ul>
         </nav>
-        <div class="footer-donation">
-          <div id="rnw-paylink-button-pkpyt"></div>
-        </div>
         <NuxtLink class="footer-link-instagram" to="https://www.instagram.com/pfadi_schenkenberg/" target="_blank"
                   title="Link zum Schenkenberg Instagram Account" />
       </div>
@@ -108,12 +108,13 @@ onMounted(() => {
             text-decoration: underline;
           }
         }
-      }
-    }
 
-    .footer-donation {
-      zoom: 0.55;
-      flex-shrink: 0;
+        &.footer-donation-item {
+          zoom: 0.55;
+          display: flex;
+          align-items: center;
+        }
+      }
     }
 
     .footer-link-instagram {
@@ -190,6 +191,10 @@ footer::before {
 
       .footer-link-instagram {
         display: none;
+      }
+
+      ul .footer-donation-item {
+        zoom: 0.75;
       }
     }
 
