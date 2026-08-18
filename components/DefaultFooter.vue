@@ -15,6 +15,9 @@
             <li>
               <NuxtLink to="/impressum">Impressum</NuxtLink>
             </li>
+            <li class="footer-donation-item">
+              <div id="rnw-paylink-button-pkpyt"></div>
+            </li>
           </ul>
         </nav>
         <NuxtLink class="footer-link-instagram" to="https://www.instagram.com/pfadi_schenkenberg/" target="_blank"
@@ -28,6 +31,24 @@
 
 <script setup lang="ts">
 const year = new Date().getFullYear();
+
+onMounted(() => {
+  const script = document.createElement('script');
+  script.type = 'module';
+  script.textContent = `
+    import { PaylinkButton } from "https://unpkg.com/@raisenow/paylink-button@2/dist/PaylinkButton.js";
+    PaylinkButton.render("#rnw-paylink-button-pkpyt", {
+      "solution-id": "pkpyt",
+      "size": "small",
+      "width": "dynamic",
+      "icon": "gift",
+      "label": "Unterstütze uns!",
+      "border-radius": "9px",
+      "background-color": "#444444",
+    });
+  `;
+  document.head.appendChild(script);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -72,7 +93,7 @@ const year = new Date().getFullYear();
 
     ul {
       display: flex;
-      align-items: end;
+      align-items: center;
       justify-content: center;
       gap: 2rem;
 
@@ -86,6 +107,12 @@ const year = new Date().getFullYear();
           &:hover {
             text-decoration: underline;
           }
+        }
+
+        &.footer-donation-item {
+          zoom: 0.55;
+          display: flex;
+          align-items: center;
         }
       }
     }
@@ -151,7 +178,6 @@ footer::before {
 
     gap: 0;
 
-
     .footer-logo {
       position: initial;
       order: 1;
@@ -165,6 +191,10 @@ footer::before {
 
       .footer-link-instagram {
         display: none;
+      }
+
+      ul .footer-donation-item {
+        zoom: 0.75;
       }
     }
 
