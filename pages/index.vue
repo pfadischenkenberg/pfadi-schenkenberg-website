@@ -1,6 +1,11 @@
 <template>
   <div>
-    <DefaultHero :wave="false">Willkommen bei der</DefaultHero>
+    <div class="hero-wrapper">
+      <DefaultHero :wave="false">Willkommen bei der</DefaultHero>
+      <NuxtLink to="/administratives#dokumente" class="quartalsplan-badge">
+        Quartalspläne
+      </NuxtLink>
+    </div>
     <AnmeldenBanner />
     <main>
       <h1>Das sind wir</h1>
@@ -87,6 +92,44 @@ useSeoMeta({
 
 <style lang="scss" scoped>
 @use "assets/scss/includes" as var;
+
+.hero-wrapper {
+  position: relative;
+}
+
+.quartalsplan-badge {
+  position: absolute;
+  top: 5rem;
+  right: 1.5rem;
+  z-index: 10000;
+
+  display: inline-block;
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  color: var.$burnt-sienna-950;
+  text-decoration: none;
+
+  background-color: rgba(var.$tan-hide-300, 0.88);
+  border: 2.5px solid var.$burnt-sienna-400;
+  border-radius: 0.7rem;
+  padding: 0.45rem 1.1rem;
+  box-shadow: 2px 3px 8px rgba(var.$asparagus-950, 0.2);
+
+  transform: rotate(-4deg);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: rotate(-4deg) scale(1.07) translateY(-2px);
+    box-shadow: 4px 6px 14px rgba(var.$asparagus-950, 0.35);
+  }
+
+  @media screen and (max-width: var.$screen-size-small) {
+    top: 4rem;
+    right: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
 
 main {
   h1 {

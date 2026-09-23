@@ -29,7 +29,7 @@
             kann man das Anmeldeformular der Stufenleitung per Mail schicken oder es ausgedruckt an einen Anlass
             mitbringen.</p>
         </div>
-        <div class="admin-segment">
+        <div class="admin-segment" id="dokumente">
           <h2>Dokumente</h2>
           <div class="admin-segment-list">
             <div class="admin-segment-list-element">
